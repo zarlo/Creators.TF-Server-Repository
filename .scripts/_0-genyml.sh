@@ -24,7 +24,6 @@ allservers=(
     auspub
     sgppub
     uspotato1
-    eupotato1
     eupotato2
 )
 
