@@ -1,0 +1,51 @@
+// Advertisements 2.0
+// by Tsunami
+//
+// Types
+// -----
+// center: Center message
+// chat: Chat message
+// hint: Hint message
+// menu: Menu message
+// top: Top message
+//
+// Flags (optional)
+// -----
+// Accepts flags of admins that will not see the advertisement.
+// When omitted everyone will see the advertisement.
+// When left empty only admins will see the advertisement.
+"Advertisements"
+{
+    "1"
+    {
+        "chat"                  "{green}Think someone's breaking the rules? Use {lightgreen}/call"
+    }
+    "2"
+    {
+        "chat"                  "{green}Join our Discord community at {lightgreen}creators.tf/discord"
+    }
+    "3"
+    {
+        "chat"                  "{green}Donate to help support the project! {lightgreen}creators.tf/donate"
+    }
+    "4"
+    {
+        "chat"                  "{green}Familiarise yourself with our rules: {lightgreen}creators.tf/rules"
+    }
+    "5"
+    {
+        "chat"                  "{gold}Tired of fighting? Join the {yellow}Creators.TF Silly Servers{gold}! More information on our Discord: {yellow}creators.tf/discord"
+    }
+    "6"
+    {
+        "chat"                  "{green}Want to report a problem or leave some feedback? Contact us at {lightgreen}support@creators.tf{green} or simply leave a message on the {lightgreen}#feedback {green}channel on our Discord server."
+    }
+    "7"
+    {
+        "chat"                  "{green}See any hate speech or prohibited content in chat or on decals? Screenshot it and send it directly to {lightgreen}@ModMail {green}on our Discord."
+    }
+    "8"
+    {
+        "chat"                  "{green}Don't forget to {lightgreen}!nominate {green}the next map you want to play!"
+    }
+}

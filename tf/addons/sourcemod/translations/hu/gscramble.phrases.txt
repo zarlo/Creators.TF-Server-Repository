@@ -1,0 +1,206 @@
+﻿"Phrases"
+{
+	"ScrambledAlready"
+	{
+		"hu"		"Már volt egy keverés ebben a körben, próbáld meg a következőben"
+	}
+	"FlagBalance"
+	{
+		"hu"			"Kiegyenlítettlenség észlelve. Parancs végrehajtása {1} másodpercen belül"
+	}
+	"RestoreInnocentTeam"
+	{
+		"hu"		"{s} át lett helyezve. Szeretnél visszatérni az elöző csapatba annak ellenére, hogy az egyensúly felbomlik?"	
+	}
+	"RejoinMessage"
+	{
+		"hu"		"{1} visszatért a régi csapatba, annak ellenére, hogy egyensúly miatt át lett helyezve"
+	}
+	"OverrideUnCheck"
+	{
+		"hu"		"Auto-csapatkeverés visszaállítva a következő körre"
+	}
+	"OverrideCheck"
+	{
+		"hu"		"Auto-csapatkeverés blokkolva a következő körre"
+	}
+	"NowCommandReply"
+	{
+		"hu"		"Használat: sm_scramble <idő> <respawn 0/1> <mode 1-3> (módok: 1 random, 2 pontok alapján, 3 pont+idő)"
+	}
+	"AdminScrambleNow"
+	{
+		"hu"		"Csapatkeverés"
+	}
+	"AdminForceBalance"
+	{
+		"hu"		"Csapatkiegyenlítés kikényszerítése"		
+	}
+	"AdminResetVotes"
+	{
+		"hu"		"Nyilvános szavazás resetelése"
+	}
+	"RoundMessage"
+	{
+		"hu"		"Keverés, meghatározott kör szám elérve"
+	}
+	"NoCapMessage"
+	{
+		"hu"		"{1} csapat nem foglalta el a pontot elöző körben."
+	}	
+	"CancelScramble"
+	{
+		"hu"		"Keverés visszavonva."
+	}
+	"PrefAnnounce"
+	{
+		"hu"		"A csapatok kiegyelítése alatt, a preferált csapat megtartása érdekében írd be, hogy \"!preference <re/blu>\" !"
+	}
+	"PrefDisabled"
+	{
+		"hu"		"Ez a lehetőség most nincs használatban!"
+	}
+	"WinTime"
+	{
+		"hu"		"A győztes csapat kevesebb időn belül nyert mint {1}m:{2}s"
+	}
+	"FragDetection"
+	{
+		"hu"		"A győztes csapat elérte a ponthatárt!"
+	}
+	"DominationMessage"
+	{
+		"hu"		"A győztes csapatban dominálási különbség észlelve"
+	}
+	"RatioMessage"
+	{
+		"hu"		"Átlagos játékos pontszám eltérése észlelve"
+	}
+	"VoteRoundTimeReply"
+	{
+		"hu"		"A keverési szavazásnak el kell indulnia a kör vége elött {1}másodperccel"
+	}
+	"TeamRestore"
+	{
+		"hu"		"Előző csapatodban vagy, még tart a tiltás!"
+	}
+	"EnableReply"
+	{
+		"hu"		"Jelenleg nem fut a plugin"
+	}	
+	"BlockSwitchMessage"
+	{
+		"hu"		"Csapatváltás keverés vagy kiegyenlítés után tiltva"
+	}
+	"ShameMessage"
+	{
+		"hu"		"{1} megpróbált visszatérni, blokkolva"
+	}
+	"TeamChangedAll"
+	{
+		"hu"		"Kiegyenlítés miatt {1} áthelyezve a {2} csapatba"
+	}
+	"VoteTallied"
+	{
+		"hu"		"{1} szavaztak csapatkeverésre"
+	}
+	"ScrambleRound"
+	{		
+		"hu"		"A csapatok a következő kör elején meg lesznek keverve!"
+	}
+	"VoteWillStart"
+	{
+		"hu"		"Keverési szavazás indul az aktuális szavazás után"
+		
+	}
+	"ScrambleStartVote"
+	{
+		"hu"		"Keverés késleltetve"
+	}
+	"VoteFailed"
+	{
+		"hu"		"Szavazás sikertelen"
+	}
+	"VoteWin"
+	{
+		"hu"		"{2} játékosnak a {1} százaléka szeretne keverést"
+	}
+	"NotEnoughVotes"
+	{
+		"hu"		"Keverési szavazás sikertelen, kevés szavazat"
+	}
+	"MapEnding"
+	{
+		"hu"		"Folyamatban lévő keverés megszakítása"
+	}
+	"RedStreak"
+	{
+		"hu"		"A Piros csapat elérte a nyerési maximumot, keverés indítva"
+	}
+	
+	"BluStreak"
+	{
+		"hu"		"A Kék csapat elérte a nyerési maximumot, keverés indítva!"
+	}
+	"TeamChangedOne"
+	{
+		"hu"		"A csapatod megváltozott"
+	}
+	"PregameScrambled"
+	{
+		"hu"		"Csapatok megkeverve"
+	}
+	"Scrambled"
+	{
+		"hu"		"Csapatok megkeverve"
+	}
+	"ScrambleDelay"
+	{
+		"hu"		"A csapatkeverés lesz {1} másodpercen belül!"
+	}
+	"ResetReply"
+	{
+		"hu"		"Visszavonni {1} szavazást"
+	}
+	"NoScrambleReply"
+	{
+		"hu"		"Nincs mit visszavonni!"
+	}
+	"ArenaReply"
+	{
+		"hu"		"A plugin inaktív aréna módban"
+	}
+	"ScrambleReply"
+	{
+		"hu"		"A keverés már be lett állítva a kör végére!"
+	}
+	"NotAllowedReply"
+	{
+		"hu"		"Nem használhatod ezt a parancsot!"
+	}
+	"NoImbalnceReply"
+	{
+		"hu"		"A csapatok kiegyenlítettek"
+	}
+	"VoteDisabledReply"
+	{
+		"hu"		"Szavazás törölve"
+	}
+	"VoteDelayedReply"
+	{
+		"hu"		"A szavazás késleltetve van jelenleg!"
+	}
+	"NotEnoughPeopleVote"
+	{
+		"hu"		"Nincs elég játékos, hogy szavazni lehessen!"
+	}
+	"AlreadyVoted"
+	{
+		"hu"		"Már szavaztál!"
+	}
+	
+	"InvalidArgs"
+	{
+		"hu"		"Hibás parancsformátum"
+	}
+}

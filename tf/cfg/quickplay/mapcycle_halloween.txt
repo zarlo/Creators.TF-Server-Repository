@@ -1,0 +1,12 @@
+cp_manor_event
+cp_gorge_event
+koth_harvest_event
+koth_lakeside_event
+koth_viaduct_event
+plr_hightower_event
+sd_doomsday_event
+koth_hauntson_event_rc7
+koth_synthetic_event_rc3
+koth_spillway_event_rc4
+pl_terror_event_rc6
+pd_scarab_rc2b

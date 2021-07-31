@@ -1,0 +1,3 @@
+[submodule "tf/addons/sourcemod/scripting/include/stocksoup"]
+	path = tf/addons/sourcemod/scripting/include/stocksoup
+	url = https://github.com/nosoop/stocksoup

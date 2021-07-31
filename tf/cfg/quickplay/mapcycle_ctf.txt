@@ -1,0 +1,6 @@
+ctf_2fort
+ctf_doublecross
+ctf_landfall
+ctf_sawmill
+ctf_well
+ctf_turbine_pro_rc4

@@ -1,0 +1,15 @@
+Item
+{
+	name 			"Brick"
+	type 			"weapon"
+	item_class 		"tf_weapon_jar"
+	item_index 		58
+	item_logname	"brick"
+	world_model		"models/weapons/c_models/c_brick/c_brick.mdl"
+	preserve_attributes 1
+
+	attributes
+	{
+		"set throwable type" 1
+	}
+}

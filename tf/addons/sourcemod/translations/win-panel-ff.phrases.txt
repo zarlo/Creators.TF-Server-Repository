@@ -1,0 +1,68 @@
+"Phrases"
+{
+	"team0"
+	{
+		"en"		"Best players on BOTH teams"
+		"ru"		"Лучшие игроки обеих команд"
+	}
+	"team2"
+	{
+		"en"		"Best players on RED team"
+		"ru"		"Лучшие игроки в команде Красных"
+	}
+	"team3"
+	{
+		"en"		"Best players on BLU team"
+		"ru"		"Лучшие игроки в команде Синих"
+	}
+	"header"
+	{
+		"en"		"Score    Class            Name"
+		"ru"		"Очки      Класс              Ник"
+	}
+	"class1"
+	{
+		"en"		"Scout          "
+		"ru"		"Разведчик       "
+	}
+	"class2"
+	{
+		"en"		"Sniper         "
+		"ru"		"Снайпер          "
+	}
+	"class3"
+	{
+		"en"		"Soldier        "
+		"ru"		"Солдат            "
+	}
+	"class4"
+	{
+		"en"		"Demoman   "
+		"ru"		"Подрывник      "
+	}
+	"class5"
+	{
+		"en"		"Medic          "
+		"ru"		"Медик             "
+	}
+	"class6"
+	{
+		"en"		"Heavy         "
+		"ru"		"Пулеметчик     "
+	}
+	"class7"
+	{
+		"en"		"Pyro            "
+		"ru"		"Поджигатель   "
+	}
+	"class8"
+	{
+		"en"		"Spy             "
+		"ru"		"Шпион             "
+	}
+	"class9"
+	{
+		"en"		"Engineer     "
+		"ru"		"Инженер         "
+	}
+}

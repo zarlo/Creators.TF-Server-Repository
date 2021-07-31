@@ -1,0 +1,28 @@
+//---------------------------------------------------------------//
+// Creators.TF Mann vs. Machine Mapcycle
+//---------------------------------------------------------------//
+// This file defines what maps are allowed to be switched to in
+// Mann vs. Machine.
+//---------------------------------------------------------------//
+mvm_akure_rc1
+mvm_autumnull_rc2
+mvm_boogge_rc3c
+mvm_cliffside_b6
+mvm_dusk_rc7
+mvm_estate_rc1
+mvm_giza_b7
+mvm_goldpit_rc2
+mvm_hanami_rc1
+mvm_hideout_b3
+mvm_kelly_rc1b
+mvm_hoovydam_b8
+mvm_production_rc6
+mvm_rustvalley_rc3a
+mvm_seabed_b6
+mvm_sharp_rc9
+mvm_silentsky_rc4
+mvm_swirl_rc1
+mvm_tensai_rc3
+mvm_transmission_rc7a
+mvm_winterbridge_rc6
+mvm_yiresa_rc5a
