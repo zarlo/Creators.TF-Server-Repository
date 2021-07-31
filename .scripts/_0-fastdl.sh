@@ -1,4 +1,5 @@
 #!/bin/bash
+# by moonly days
 # Helper functions
 source .scripts/helpers.sh
 # obvious
