@@ -1,0 +1,189 @@
+﻿"Phrases"
+{
+	"OverrideUnCheck"
+	{
+		"de"		"Un-blocked the auto-scramble check for the next round"
+	}
+	"OverrideCheck"
+	{
+		"de"		"Blocked the auto-scramble check for the next round"
+	}
+	"NowCommandReply"
+	{
+		"de"		"Nutzung: sm_scramble <delay> <respawn 0/1> <mode 1-3>\nMode 1 = random\nMode 2 = score sort\nMode 3 = score sort per minute"
+	}
+	"AdminScrambleNow"
+	{
+		"de"		"Mischt die Teams"
+	}
+	"AdminForceBalance"
+	{
+		"de"		"Bewirkt ein ausgleichen der Teams"
+	}
+	"AdminResetVotes"
+	{
+		"de"		"Alle Puplic Abstimmungen zurückgesetzt"
+	}
+	"RoundMessage"
+	{
+		"de"		"Die Mischabstimmung ist erreicht"
+	}
+	"NoCapMessage"
+	{
+		"de"		"{1} Team hat diese Runde keinen Punkt erobert"
+	}	
+	"CancelScramble"
+	{
+		"de"		"Bevorstehende Mischung ist zurückgesetzt"
+	}
+	"PrefAnnounce"
+	{
+		"de"		"Schreib \"!preference <TEAM>\" um dem Plugin zu sagen welches Team Du bevorzugst, damit dies beim Autobalance bevorzugt wird"
+	}
+	"PrefDisabled"
+	{
+		"de"		"Die Bevorzugung ist deaktiviert"
+	}
+	"WinTime"
+	{
+		"de"		"Das Siegerteam gewann in weniger als {1}m:{2}s."
+	}
+	"FragDetection"
+	{
+		"de"		"Siegerteam frag Ratio-Limit überschritten"
+	}
+	"DominationMessage"
+	{
+		"de"		"Siegerteam Spieler-Herrschaft-Differenz festgestellt"
+	}
+	"RatioMessage"
+	{
+		"de"		"Durchschnittliche Spielerpunkte Differenz erreicht"
+	}
+	"VoteRoundTimeReply"
+	{
+		"de"		"Die Schlussabstimmung muss geschehen, wenn es noch mehr als (1) Sekunden in dieser Runde sind"
+	}
+	"TeamRestore"
+	{
+		"de"		"Dein altes Team ist während der Block-Zeit wieder hergestellt worden seit Du den Server verlassen und wieder betreten hast"
+	}
+	"EnableReply"
+	{
+		"de"		"Das Plugin ist derzeit über die convar deaktiviert."
+	}	
+	"BlockSwitchMessage"
+	{
+		"de"		"Teamwechsel werden nach einem Switch oder Mischen gesperrt."
+	}
+	"ShameMessage"
+	{
+		"de"		"{1} versucht die Teams umzuschichten"
+	}
+	"TeamChangedAll"
+	{
+		"de"		"{1} wurde zum Ausgleich ins {2} Team gewechselt"
+	}
+	"VoteTallied"
+	{
+		"de"		"{1} will Teams mischen. {2} von {3} erforderlichen Stimmen."
+	}
+	"ScrambleRound"
+	{		
+		"de"		"Die Teams werden am Anfang der nächsten Runde gemischt."
+	}
+	"VoteWillStart"
+	{
+		"de"		"Die Abstimmung zum Mischen startet nachdem die aktuelle Abstimmung beendet ist."
+		
+	}
+	"ScrambleStartVote"
+	{
+		"de"		"Mischen zum Ende der Runde ausgelöst, aufgrund der Abstimmung"
+	}
+	"VoteFailed"
+	{
+		"de"		"Abstimmung fehlgeschlagen! {1} Prozent von {2} Spielern stimmten dagegen"
+	}
+	"VoteWin"
+	{
+		"de"		"{1} Prozent von {2} Stimmten für das Mischen der Teams"
+	}
+	"NotEnoughVotes"
+	{
+		"de"		"Abstimmung fehlgeschlagen aufgrund unzureichender Stimmenanzahl. Nur {1}%%"
+	}
+	"MapEnding"
+	{
+		"de"		"Lösche aktives Mischen bevor die Map endet"
+	}
+	"RedStreak"
+	{
+		"de"		"RED Team ereicht den win-streak Auslöser zum Mischen."
+	}
+	
+	"BluStreak"
+	{
+		"de"		"BLU Team ereicht den win-streak Auslöser zum Mischen."
+	}
+	"TeamChangedOne"
+	{
+		"de"		"Dein Team wurde geändert"
+	}
+	"PregameScrambled"
+	{
+		"de"		"Teams wurden vor der eigentlichen Runde gemischt"
+	}
+	"Scrambled"
+	{
+		"de"		"Teams wurden gemischt"
+	}
+	"ScrambleDelay"
+	{
+		"de"		"Teams werden in {1} Sekunden gemischt."
+	}
+	"ResetReply"
+	{
+		"de"		"{1} Stimmen zurücksetzen."
+	}
+	"NoScrambleReply"
+	{
+		"de"		"Keine Mischungen zum abbrechen"
+	}
+	"ArenaReply"
+	{
+		"de"		"Plugin ist ausgeschaltet im Arena Modus mit aktivierter Warteschlange"
+	}
+	"ScrambleReply"
+	{
+		"de"		"Die Teams werden am Ende der Runde schon gemischt"
+	}
+	"NotAllowedReply"
+	{
+		"de"		"Sie sind nicht berechtigt, diesen Befehl auszuführen."
+	}
+	"NoImbalnceReply"
+	{
+		"de"		"Keine Unausgeglichenheit festgestellt"
+	}
+	"VoteDisabledReply"
+	{
+		"de"		"Abstimmung wurde deaktiviert"
+	}
+	"VoteDelayedReply"
+	{
+		"de"		"Abstimmung erst später möglich"
+	}
+	"NotEnoughPeopleVote"
+	{
+		"de"		"Nicht genügend Spieler um die Abstimmung zu starten"
+	}
+	"AlreadyVoted"
+	{
+		"de"		"Du hast bereits abgestimmt"
+	}
+	"InvalidArgs"
+	{
+		"de"		"Nicht zulässiger Befehl."
+	}
+}

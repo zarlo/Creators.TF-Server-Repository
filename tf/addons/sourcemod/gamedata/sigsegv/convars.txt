@@ -1,0 +1,33 @@
+// convars
+
+"Games"
+{
+	"#default"
+	{
+		"#supported"
+		{
+			engine "tf2"
+		}
+		
+		"sigsegv"
+		{
+			"addrs_group"
+			{
+				"[common]"
+				{
+					type "convar"
+					lib  "engine"
+				}
+				
+				"con_filter_enable"   "con_filter_enable"
+				"con_filter_text"     "con_filter_text"
+				"con_filter_text_out" "con_filter_text_out"
+				
+				"dtwatchent"   "dtwatchent"
+				"dtwatchvar"   "dtwatchvar"
+				"dtwatchclass" "dtwatchclass"
+				"dtwarning"    "dtwarning"
+			}
+		}
+	}
+}

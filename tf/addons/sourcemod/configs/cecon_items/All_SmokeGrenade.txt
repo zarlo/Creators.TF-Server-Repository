@@ -1,0 +1,18 @@
+Item
+{
+	name 			"Smoke Grenade"
+	type 			"weapon"
+	item_class 		"tf_weapon_throwable"
+	item_logname	"smoke_grenade"
+	world_model		"models/weapons/c_models/c_brick/c_brick.mdl"
+	preserve_attributes 1
+	
+	attributes
+	{
+		Attribute
+		{
+			name 	"set throwable type"
+			value 	2
+		}
+	}
+}

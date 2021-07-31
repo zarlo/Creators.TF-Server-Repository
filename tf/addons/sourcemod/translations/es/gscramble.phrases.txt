@@ -1,0 +1,253 @@
+﻿"Phrases"
+{
+	"BlockJointeam"
+	{
+		"es" 			"Cambio de Equipo Bloqueado. Este servidor realiza una selección automática de equipos."
+	}
+	"VoteAd"
+	{
+		"es"			"Teclea '{1}' para iniciar una votación para mezclar los equipos"
+	}
+	"YourBuddyLeft"
+	{
+		"es"			"Tu amigo se ha desconectado"
+	}
+	"BuddyDisabledError"
+	{
+		"es"			"El sistema de amigos esta desactivado"
+	}
+	"BuddyArgError"
+	{
+		"es"			"Uso: sm_addbuddy <amigo>"
+	}
+	"SpecChangeBlock"
+	{
+		"es"			"No puedes ser un espectador si esto produce un desequilibrio"
+	}
+	"AddedBuddy"
+	{
+		"es"			"{1} es ahora tu amigo"
+	}
+	"SomeoneAddedYou"
+	{
+		"es"			"¡{1} te ha escogido para que seas su amigo!"
+	}
+	"ChoseANewBuddy"
+	{
+		"es"			"Tu antiguo amigo, {1}, ha escogido un nuevo amigo"
+	}
+	"AlreadyHasABuddy"
+	{
+		"es"		"Este jugador ya tiene un amigo"
+	}
+	"AdminBlockVoteReply"
+	{
+		"es"		"No puedes iniciar una votación para mezclar los equipos mientras haya un administrador conectado."
+	}
+	"ScrambledAlready"
+	{
+		"es"		"Ya ha habido una mezcla de equipos en esta ronda. Inténtalo de nuevo cuando esta ronda acabe."
+	}
+	"FlagBalance"
+	{
+		"es"		"Desequilibrio detectado. Una posible acción al respecto comenzará en {1} segundo(s)."
+	}
+	"RestoreInnocentTeam"
+	{
+		"es"		"{s} ha sido forzado a volver a su antiguo equipo, ¿te gustaría reincorporarte a tu anterior equipo ya que has sido trasladado recientemente a este otro?"	
+	}
+	"RejoinMessage"
+	{
+		"es"		"{1} optó por reincorporarse a su equipo anterior después de que un jugador que se había reconectado a la partida fuese trasladado a su equipo original."
+	}
+	"OverrideUnCheck"
+	{
+		"es"		"El chequeo para la mezcla automática de equipos ha sido desbloqueado para la siguiente ronda"
+	}
+	"OverrideCheck"
+	{
+		"es"		"El chequeo para la mezcla automática de equipos ha sido bloqueado para la siguiente ronda"
+	}
+	"NowCommandReply"
+	{
+		"es"		"Uso: sm_scramble <retraso> <respawn 0/1> <modo 1-3>\nModo 1 = aleatorio\nModo 2 = puntuación total\nModo 3 = puntuación por minuto"
+	}
+	"AdminScrambleNow"
+	{
+		"es"		"Mezcla de equipos activada"
+	}
+	"AdminForceBalance"
+	{
+		"es"		"Forzar el equilibrio de los equipos"
+	}
+	"AdminResetVotes"
+	{
+		"es"		"Reiniciar todos los triggers públicos de votación"
+	}
+	"RoundMessage"
+	{
+		"es"		"Se ha alcanzado el límite de rondas para mezclar los equipos."
+	}
+	"NoCapMessage"
+	{
+		"es"		"El equipo {1} no capturó ningún punto en esta ronda."
+	}	
+	"CancelScramble"
+	{
+		"es"		"Cancelada la votación pendiente."
+	}
+	"PrefAnnounce"
+	{
+		"es"		"¡Escribe \"!preference <equipo>\" para indicarle al plug-in qué equipo prefieres para que el auto-balance te asigne una alta prioridad!"
+	}
+	"PrefDisabled"
+	{
+		"es"		"El sistema de preferencias está desactivado"
+	}
+	"WinTime"
+	{
+		"es"		"El equipo ganador ganó en menos de {1}m:{2}s."
+	}
+	"FragDetection"
+	{
+		"es"		"El equipo ganador excedió el ratio límite de frags"
+	}
+	"DominationMessage"
+	{
+		"es"		"Diferencia detectada entre jugadores-dominaciones en el equipo ganador."
+	}
+	"RatioMessage"
+	{
+		"es"		"Diferencia detectada en la media jugadores-puntuación"
+	}
+	"VoteRoundTimeReply"
+	{
+		"es"		"La votación final para la mezcla de equipos debe activarse cuando queden más de {1} segundos restantes en la ronda."
+	}
+	"TeamRestore"
+	{
+		"es"		"Su anterior equipo ha sido reestablecido ya que te has desconectado y reconectado durante el período de bloqueo."
+	}
+	"EnableReply"
+	{
+		"es"		"El plug-in está actualmente desactivado desde la convar."
+	}	
+	"BlockSwitchMessage"
+	{
+		"es"		"Los cambios de equipo están bloqueados tras la mezcla de equipos."
+	}
+	"ShameMessage"
+	{
+		"es"		"{1} está intentando cambiar de equipo. ¡Que vergüenza!"
+	}
+	"TeamChangedAll"
+	{
+		"es"		"{1} ha sido trasladado al equipo {2} para equilibrar los equipos."
+	}
+	"VoteTallied"
+	{
+		"es"		"{1} ha votado para mezclar los equipos. {2} de {3} votos necesarios."
+	}
+	"ScrambleRound"
+	{		
+		"es"		"Los equipos se mezclarán al comienzo de la siguiente ronda."
+	}
+	"VoteWillStart"
+	{
+		"es"		"La votación para la mezcla de equipos comenzará cuando la actual votación termine."
+		
+	}
+	"ScrambleStartVote"
+	{
+		"es"		"Mezcla de equipos activada para el final de la ronda debido a la votación."
+	}
+	"VoteFailed"
+	{
+		"es"		"Votación Fallida. El {1}%% de {2} jugadores votó en contra de mezclar los equipos."
+	}
+	"VoteWin"
+	{
+		"es"		"El {1}%% de {2} jugadores votó por mezclar los equipos."
+	}
+	"NotEnoughVotes"
+	{
+		"es"		"La votación para la mezcla de equipos falló debido a un número insuficiente de votos. Tan solo el {1}%%"
+	}
+	"MapEnding"
+	{
+		"es"		"Cancelando la mezcla de equipos activa debido al fin del mapa actual."
+	}
+	"RedStreak"
+	{
+		"es"		"El equipo RED alcanzó el límite de victorias requerido para mezclar los equipos."
+	}
+	
+	"BluStreak"
+	{
+		"es"		"El equipo BLU alcanzó el límite de victorias requerido para mezclar los equipos."
+	}
+	"TeamChangedOne"
+	{
+		"es"		"Tu equipo ha sido cambiado."
+	}
+	"PregameScrambled"
+	{
+		"es"		"Los equipos se han mezclado antes del inicio de la partida."
+	}
+	"Scrambled"
+	{
+		"es"		"Se han mezclado los equipos."
+	}
+	"ScrambleDelay"
+	{
+		"es"		"Los equipos se mezclarán en {1} segundos."
+	}
+	"ResetReply"
+	{
+		"es"		"Reiniciar {1} votos."
+	}
+	"NoScrambleReply"
+	{
+		"es"		"No hay ninguna mezcla de equipos que cancelar."
+	}
+	"ArenaReply"
+	{
+		"es"		"El plug-in está desactivado en el modo arena con la cola activada."
+	}
+	"ScrambleReply"
+	{
+		"es"		"La mezcla de equipos tendrá lugar al finalizar esta ronda."
+	}
+	"NotAllowedReply"
+	{
+		"es"		"No estás autorizado para ejecutar este comando."
+	}
+	"NoImbalnceReply"
+	{
+		"es"		"No se ha detectado ningún desequilibrio entre los equipos."
+	}
+	"VoteDisabledReply"
+	{
+		"es"		"La votación ha sido desactivada."
+	}
+	"VoteDelayedReply"
+	{
+		"es"		"La votación para la mezcla de equipos ha sido retrasada por el momento."
+	}
+	"NotEnoughPeopleVote"
+	{
+		"es"		"No hay suficientes personas para iniciar una votación para mezclar los equipos."
+	}
+	"AlreadyVoted"
+	{
+		"es"		"Ya has votado."
+	}
+	"InvalidArgs"
+	{
+		"es"		"Argumento de comando inválido."
+	}
+	"StatsMessage"
+	{
+		"es"		"La mezcla de equipos trasladó {1} de {2} jugadores. {3}%"
+	}
+}

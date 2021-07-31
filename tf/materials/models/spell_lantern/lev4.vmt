@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/spell_lantern/lev4"
+	"$phong" "1"
+	"$phongexponent" ".5"
+	"$phongboost" "1"
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges"	"[.25 1 4]"
+	"$basemapalphaphongmask" "1"
+	  $nocull 1
+
+	"$rimlight" "1"
+	"$rimlightexponent" ".5"
+	"$rimlightboost" "2"
+
+	"$selfillum" "1"
+	
+
+	"$glowcolor" "1"
+
+	"$envmap" "cubemaps/cubemap_gold001"	
+	"$envmaptint" "[2.5 2.5 1.15]"
+
+}
+
+

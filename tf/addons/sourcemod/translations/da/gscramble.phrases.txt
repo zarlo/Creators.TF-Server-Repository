@@ -1,0 +1,205 @@
+﻿"Phrases"
+{
+	"ScrambledAlready"
+	{
+		"da"		"Holdene er allerede blevet blandet i denne runde. Prøv igen når denne runde ender."
+	}
+	"FlagBalance"
+	{
+		"da"			"Ubalance fundet. Mulig handling vil begynde om {1} sekund(er)"
+	}
+	"RestoreInnocentTeam"
+	{
+		"da"		"{s} er blevet tvunget tilbage på dette hold, vil du gerne slutte dig til det andet hold, siden du for nylig blev balanceret til dette hold?"	
+	}
+	"RejoinMessage"
+	{
+		"da"		"{1} har valgt at slutte sig til sit gamle hold, efter en genforbindende spiller blev tvunget på sit hold"
+	}
+	"OverrideUnCheck"
+	{
+		"da"		"Fjernede blokkering for auto-bland check for næste runde"
+	}
+	"OverrideCheck"
+	{
+		"da"		"Blokkerede auto-bland check for næste runde"
+	}
+	"NowCommandReply"
+	{
+		"da"		"Brug: sm_scramble <forsinkelse> <respawn 0/1> <mode 1-3>\nMode 1 = tilfældig\nMode 2 = score sortering\nMode 3 = score sortering per minut"
+	}
+	"AdminScrambleNow"
+	{
+		"da"		"Blandede holdene"
+	}
+	"AdminForceBalance"
+	{
+		"da"		"Tvang balance i holdene"
+	}
+	"AdminResetVotes"
+	{
+		"da"		"Nulstil alle offentlige stemme udløsere"
+	}
+	"RoundMessage"
+	{
+		"da"		"Bland runde udløser er nået"
+	}
+	"NoCapMessage"
+	{
+		"da"		"{1} fik ingen point i sidste runde."
+	}	
+	"CancelScramble"
+	{
+		"da"		"Afbrød den ventende blanding."
+	}
+	"PrefAnnounce"
+	{
+		"da"		"Sig \"!preference <red/blu>\" for at lade modulet vide hvilket hold du foretrækker, så autobalance vil give dig højere prioritet!"
+	}
+	"PrefDisabled"
+	{
+		"da"		"Præference systemet er deaktiveret"
+	}
+	"WinTime"
+	{
+		"da"		"Det vindene hold vandt på mindre end {1}m:{2}s."
+	}
+	"FragDetection"
+	{
+		"da"		"Vindene hold frag rate begrænsning overskredet"
+	}
+	"DominationMessage"
+	{
+		"da"		"Vinder hold spiller-dominerings-difference fundet"
+	}
+	"RatioMessage"
+	{
+		"da"		"Gennemsnitlig spiller score forskel fundet"
+	}
+	"VoteRoundTimeReply"
+	{
+		"da"		"Den sidste afstemning om at blande holdene skal ske når der er mere end {1} sekunder tilbage af runden"
+	}
+	"TeamRestore"
+	{
+		"da"		"Du er blevet placeret på det hold du var på før du forlod serveren, mens det ikke var tilladt at skifte.
+	}
+	"EnableReply"
+	{
+		"da"		"Modulet er i øjeblikket deaktiveret via cvar."
+	}	
+	"BlockSwitchMessage"
+	{
+		"da"		"Der kan ikke skiftes hold efter de er blevet blandet."
+	}
+	"ShameMessage"
+	{
+		"da"		"{1} forsøger at skifte hold. Hvilken skam!"
+	}
+	"TeamChangedAll"
+	{
+		"da"		"{1} er blevet flyttet til {2} for at balancere holdene."
+	}
+	"VoteTallied"
+	{
+		"da"		"{1} stemmer for at blande holdene. {2} stemmer ud af {3} påkrævet."
+	}
+	"ScrambleRound"
+	{		
+		"da"		"Holdene vil blivet blandet ved slutningen af runden."
+	}
+	"VoteWillStart"
+	{
+		"da"		"Afstemningen om at blande holdene vil starte efter den nuværende afstemning slutter."
+		
+	}
+	"ScrambleStartVote"
+	{
+		"da"		"Holdene blandes ved rundens slutning som følge af afstemningen."
+	}
+	"VoteFailed"
+	{
+		"da"		"Afstemningen slog fejl {1} procent af {2} spillere stemte imod at blande holdene."
+	}
+	"VoteWin"
+	{
+		"da"		"{1} procent af {2} spillere stemte om af få holdene blandet."
+	}
+	"NotEnoughVotes"
+	{
+		"da"		"Afstemningen om at blande holdene har slået fejl pga. utilstrækkelige stemmer. Kun {1} procent stemte."
+	}
+	"MapEnding"
+	{
+		"da"		"Holdene blandes ikke fordi banen skiftes."
+	}
+	"RedStreak"
+	{
+		"da"		"Det røde hold har vundet runder nok til at holdene blandes."
+	}
+	
+	"BluStreak"
+	{
+		"da"		"Det blå hold har vundet runder nok til at holdene blandes."
+	}
+	"TeamChangedOne"
+	{
+		"da"		"Dit hold er blevet ændret."
+	}
+	"PregameScrambled"
+	{
+		"da"		"Holdene er blevet blandet fordi spillet starter."
+	}
+	"Scrambled"
+	{
+		"da"		"Holdene er blevet blandet."
+	}
+	"ScrambleDelay"
+	{
+		"da"		"Holdene blandes om {1} sekunder."
+	}
+	"ResetReply"
+	{
+		"da"		"Nulstil {1} stemmer."
+	}
+	"NoScrambleReply"
+	{
+		"da"		"Ingen blanding at annullere."
+	}
+	"ArenaReply"
+	{
+		"da"		"Modulet er deaktiveret på arena baner hvor kø er slået til."
+	}
+	"ScrambleReply"
+	{
+		"da"		"En blanding er allerede planlagt til slutningen af denne runde."
+	}
+	"NotAllowedReply"
+	{
+		"da"		"Du har ikke tilladelse til at køre denne kommando."
+	}
+	"NoImbalnceReply"
+	{
+		"da"		"Ingen ubalance fundet."
+	}
+	"VoteDisabledReply"
+	{
+		"da"		"Afstemning er deaktiveret."
+	}
+	"VoteDelayedReply"
+	{
+		"da"		"Afstemning om at blande holdene er i øjeblikket forsinket."
+	}
+	"NotEnoughPeopleVote"
+	{
+		"da"		"Ikke nok spillere til at starte en afstemning."
+	}
+	"AlreadyVoted"
+	{
+		"da"		"Du har allerede stemt."
+	}
+	"InvalidArgs"
+	{
+		"da"		"Ugyldig kommando argument."
+	}
+}

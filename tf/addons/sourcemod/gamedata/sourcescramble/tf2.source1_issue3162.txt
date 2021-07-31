@@ -1,0 +1,28 @@
+"Games"
+{
+	"tf"
+	{
+		"MemPatches"
+		{
+			"CTFPistol_ScoutPrimary::Push()::CorrectAttacker"
+			{
+				"signature"			"CTFPistol_ScoutPrimary::Push()"
+				"linux"
+				{
+					"offset"		"4E7h"
+					"verify"		"\x89\x5C\x24\x08"
+					"patch"			"\x89\x7C\x24\x08"
+				}
+			}
+		}
+		
+		"Signatures"
+		{
+			"CTFPistol_ScoutPrimary::Push()"
+			{
+				"library"	"server"
+				"linux"		"@_ZN22CTFPistol_ScoutPrimary4PushEv"
+			}
+		}
+	}
+}

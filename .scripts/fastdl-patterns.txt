@@ -1,0 +1,13 @@
+models/**/*.mdl
+models/**/*.vvd
+models/**/*.dx90.vtx
+models/**/*.dx80.vtx
+models/**/*.sw.vtx
+models/**/*.phy
+models/**/*.ani
+maps/**/*.bsp
+sound/**/*.mp3
+sound/**/*.wav
+materials/**/*.vmt
+materials/**/*.vtf
+scripts/items/mvm_*.txt

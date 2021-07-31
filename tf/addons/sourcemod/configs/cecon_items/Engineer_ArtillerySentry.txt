@@ -1,0 +1,14 @@
+Item
+{
+	name 			"Artillery Sentry"
+	type 			"weapon"
+	item_class 		"tf_weapon_pda_engineer_build"
+	item_logname	"art_sentry_pda"
+	preserve_attributes 1
+
+	attributes
+	{
+		"sentry gun override"					2
+		"sentry level 3 max health value"		99999
+	}
+}

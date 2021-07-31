@@ -1,0 +1,19 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# put this here just in case
+
+# Unix-style newlines with a newline ending every file + UTF 8
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+# sourcepawn specific -
+# 4 spaces trim extra whitespace convert tabs to -> spaces at least until editorconfig implements smart tabs:
+# https://github.com/editorconfig/editorconfig/issues/323
+[*.{sp,inc}]
+
+#indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+translate_tabs_to_spaces = true
