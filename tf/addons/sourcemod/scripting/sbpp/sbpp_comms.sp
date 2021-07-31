@@ -2714,7 +2714,7 @@ stock void ReadConfig()
 			iNumTimes--;
 		if (serverID == 0)
 		{
-			LogError("You must set valid `ServerID` value in sourcebans.cfg!");
+			LogMessage("You must set valid `ServerID` value in sourcebans.cfg!");
 			if (ConfigWhiteListOnly)
 			{
 				LogError("ServersWhiteList feature disabled!");

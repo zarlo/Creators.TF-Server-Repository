@@ -32,7 +32,7 @@ tf/cfg/*
 !tf/cfg/pure_server_whitelist.txt
 !tf/cfg/sd_doomsday_event.cfg
 !tf/cfg/ctf_*.cfg
-!tf/cfg/quickplay/_id.cfg
+tf/cfg/quickplay/_id.cfg
 
 # fix sv pure
 !tf/cfg/pure_server_*
