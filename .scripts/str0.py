@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+# by nosoop - https://git.csrd.science/nosoop/py-str0patch
 
 """
 Finds the location of strings and patches the first character to the null terminator,

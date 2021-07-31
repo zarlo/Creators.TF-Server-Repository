@@ -4,7 +4,7 @@ This is the repository that contains all of the code, configs, and content for t
 To clone this project:
 
 ```
-git clone --recurse-submodules <git@gitlab.com:creators_tf/gameservers/servers.git>
+git clone --recurse-submodules `git@gitlab.com:creators_tf/gameservers/servers.git`
 ```
 or if you've already cloned the project,
 
@@ -80,4 +80,4 @@ STRTA: or Scripts To Rule Them All:
 - `.scripts/_1-pull.sh`: Updates the repository in it's current directory with master 
 - `.scripts/_2-build.sh`: Recursively compiles any uncompiled `.sp` plugin in it's current directory and (if given a git reference) any `.sp` in need of an update.
 
- 
+

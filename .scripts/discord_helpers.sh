@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
+# by sappho.io
 
 # webhook url
 WEBHOOK_URL="***REPLACED PRIVATE URL***"

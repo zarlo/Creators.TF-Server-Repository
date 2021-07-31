@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# by sappho.io
+
 # job names
 jobnames=(
     pull

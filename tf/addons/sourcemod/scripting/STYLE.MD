@@ -1,4 +1,4 @@
-## Creators.TF Sourcepawn Style Guide
+## Creators.TF Sourcepawn Style Guide, written by sappho.io
 
 Take a look at the [API](https://sourcemod.dev) if you ever need a reference for inbuilt funcs, and don't be afraid to ask any questions you might have. Source sucks ass, and SourcePawn isn't the most sane language either.
 That being said, here's some simple rules we can all follow to avoid bugs and confusion
