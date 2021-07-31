@@ -73,8 +73,6 @@ Handle g_hHUD;
 //Used later to decide what type of ban to place
 ConVar g_hExternalBan;
 
-int g_iConnections;
-
 //Our main admin menu handle >.>
 TopMenu g_hAdminMenu;
 TopMenuObject menu_category;
@@ -83,8 +81,6 @@ TopMenuObject menu_category;
 Handle g_hBanForward;
 Handle g_hUnbanForward;
 
-//Were we late loaded?
-bool g_bLate;
 
 //Used for the glow that is applied when tracing a spray
 //int g_PrecacheRedGlow;
@@ -105,8 +101,6 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
     CreateNative("ssh_IsBanned", Native_IsBanned);
 
     RegPluginLibrary("ssh");
-
-    g_bLate = late;
 
     return APLRes_Success;
 }
@@ -214,7 +208,7 @@ public void OnPluginStart() {
         OnAdminMenuReady(topmenu);
     }
 
-    SQL_Connector();
+    //SQL_Connector();
 }
 
 //When the map starts we want to create timers, cache our glow effect, and clear any info that may have decided to stick around.
@@ -243,10 +237,6 @@ public void OnClientPutInServer(int client)
 {
     g_fSprayVector[client] = ZERO_VECTOR;
     g_bSpraybanned[client] = false;
-
-    if (g_Database) {
-        CheckBan(client);
-    }
 }
 
 //If you unload the admin menu, we don't want to keep using it :/
@@ -517,115 +507,6 @@ public void OnAdminMenuCreated(Handle aTopMenu) {
 
     menu_category = topmenu.AddCategory("Spray Commands", CategoryHandler);
 }
-
-/******************************************************************************************
- *                               SQL METHODS FOR SPRAY BANS                               *
- ******************************************************************************************/
-
- //Connects us to the database and reads the databases.cfg
-void SQL_Connector() {
-    delete g_Database;
-
-    if (!SQL_CheckConfig("ssh")) {
-        SetFailState("PLUGIN STOPPED - Reason: No config entry found for 'ssh' in databases.cfg - PLUGIN STOPPED");
-    }
-
-    Database.Connect(SQL_ConnectorCallback, "ssh");
-}
-
-//What actually is called to establish a connection to the database.
-//public SQL_ConnectorCallback(Handle owner, Handle hndl, const char[] error, any data) {
-public void SQL_ConnectorCallback(Database db, const char[] error, any data) {
-    if (!db || error[0]) {
-        LogError("Connection to SQL database has failed, reason: %s", error);
-
-        g_iConnections++;
-
-        SQL_Connector();
-
-        if (g_iConnections == MAX_CONNECTIONS) {
-            SetFailState("Connection to SQL database has failed too many times (%d), plugin unloaded to prevent spam.", MAX_CONNECTIONS);
-        }
-
-        return;
-    }
-
-    g_Database = db;
-
-    DBDriver dbDriver = g_Database.Driver;
-    char driver[16];
-    dbDriver.GetIdentifier(driver, sizeof(driver));
-
-    if (StrEqual(driver, "mysql", false)) {
-        SQL_LockDatabase(g_Database);
-        SQL_FastQuery(g_Database, "SET NAMES \"UTF8\"");
-        SQL_UnlockDatabase(g_Database);
-
-        g_Database.Query(SQL_CreateTableCallback, "CREATE TABLE IF NOT EXISTS `ssh` (`auth` VARCHAR(32) NOT NULL, `name` VARCHAR(32) DEFAULT '<unknown>', PRIMARY KEY (`auth`)) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;");
-    }
-    else if (StrEqual(driver, "sqlite", false)) {
-        g_Database.Query(SQL_CreateTableCallback, "CREATE TABLE IF NOT EXISTS `ssh` (`auth` VARCHAR(32) NOT NULL, `name` VARCHAR(32) DEFAULT '<unknown>', PRIMARY KEY (`auth`));");
-    }
-
-    delete dbDriver;
-}
-
-//More SQL Stuff
-public void SQL_CreateTableCallback(Database db, DBResultSet results, const char[] error, any data) {
-    if (!db || !results || error[0]) {
-        LogError(error);
-        return;
-    }
-
-    if (g_bLate) {
-        for (int i = 1; i <= MaxClients; i++) {
-            if (IsValidClient(i)) {
-                OnClientPutInServer(i);
-            }
-        }
-    }
-}
-
-//What is called to check in the database if a player is spray banned.
-void CheckBan(int client) {
-    if (!IsValidClient(client) || !g_Database) {
-        return;
-    }
-
-    char auth[32];
-    if (!GetClientAuthId(client, AuthId_Steam2, auth, 32, true)) {
-        CreateTimer(5.0, timerCheckBan, GetClientUserId(client));
-        return;
-    }
-
-    char query[256];
-    FormatEx(query, sizeof query, "SELECT * FROM ssh WHERE auth = '%s'", auth);
-    g_Database.Query(sqlQuery_CheckBan, query, GetClientUserId(client));
-}
-
-public Action timerCheckBan(Handle timer, int userid) {
-    int client = GetClientOfUserId(userid);
-    if (!client) {
-        return Plugin_Stop;
-    }
-
-    CheckBan(client);
-
-    return Plugin_Stop;
-}
-
-public void sqlQuery_CheckBan(Database db, DBResultSet results, const char[] error, int userid) {
-    if (!db || !results || error[0]) {
-        LogError("CheckBan query failed. (%s)", error);
-        return;
-    }
-
-    int client = GetClientOfUserId(userid);
-    if (client) {
-        g_bSpraybanned[client] = results.FetchRow();
-    }
-}
-
 
 
 /******************************************************************************************
