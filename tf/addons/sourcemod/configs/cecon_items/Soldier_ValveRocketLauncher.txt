@@ -1,0 +1,25 @@
+Item
+{
+	name 			"Valve Rocket Launcher"
+	type 			"weapon"	
+	item_class 		"tf_weapon_rocketlauncher"
+	item_index 		205
+	item_logname	"valve_rl"
+	preserve_attributes 1
+	
+	weapon_ammo 	20200000
+	weapon_clip 	64
+	
+	attributes
+	{
+		"damage bonus"					1010000
+		"clip size bonus" 				1010000
+		"fire rate bonus"				0.25
+		"heal on hit for rapidfire"		250
+		"critboost on kill"				10
+		"Projectile speed increased"	1.5
+		"move speed bonus"				2
+		"maxammo primary increased"		1010000
+		"attach particle effect"		1
+	}
+}

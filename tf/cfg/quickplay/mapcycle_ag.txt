@@ -1,0 +1,17 @@
+ctf_2fort
+ctf_landfall
+ctf_turbine
+plr_hightower
+plr_nightfall_final
+cp_degrootkeep
+ctf_foundry
+ctf_hellfire
+ctf_thundermountain
+pass_brickyard
+pass_district
+pass_timbertown
+rd_asteroid
+pd_watergate
+pd_monster_bash
+sd_doomsday
+tc_hydro

@@ -1,0 +1,262 @@
+﻿"Phrases"
+{
+	"BlockJointeam"
+	{
+		"pl" 			"Zmienianie drużyn zablokowane. Ten serwer wymusza auto dołączanie."
+	}
+	"VoteAd"
+	{
+		"pl"			"Wpisujac na czacie '{1}' oddajesz głos za wymieszaniem drużyn."
+	}
+	"YourBuddyLeft"
+	{
+		"pl"			"Twój przyjaciel opuścił serwer."
+	}
+	"BuddyDisabledError"
+	{
+		"pl"			"System przyjaciół jest wyłączony."
+	}
+	"BuddyArgError"
+	{
+		"pl"			"Wpisz w konsoli: sm_addbuddy <nick>"
+	}
+	"SpecChangeBlock"
+	{
+		"pl"			"Nie można wejść w tryb obserwatora jeśli może to spowodować brak balansu w drużynach."
+	}
+	"AddedBuddy"
+	{
+		"pl"			"{1} jest teraz twoim przyjacielem."
+	}
+	"SomeoneAddedYou"
+	{
+		"pl"			"{1} dodał cię do swoich przyjaciół."
+	}
+	"ChoseANewBuddy"
+	{
+		"pl"			"Twój stary kolega {1} wybrał nowego przyjaciela."
+	}
+	"AlreadyHasABuddy"
+	{
+		"pl"		    "Ten gracz ma już przyjaciół."
+	}
+	"AdminBlockVoteReply"
+	{
+		"pl"		    "Nie można włączyć głosowania za wymieszaniem drużyn jeśli admin jest na serwerze."
+	}
+	"ScrambledAlready"
+	{
+		"pl"		    "Drużyny były już wymieszane w tej rundzie. Spróbuj ponownie w następnej."
+	}
+	"FlagBalance"
+	{
+		"pl"			"Wykryto brak balansu w drużynach. Możliwa akcja za {1} sekund/e."
+	}
+	"RestoreInnocentTeam"
+	{
+		"pl"		    "{s} został przeniesiony do tej drużyny, czy chcesz wrócić do poprzedniej bo już raz zostałeś pzeniesiony?"	
+	}
+	"RejoinMessage"
+	{
+		"pl"		    "{1} po ponownym podlaczeniu wrocil do swojej poczatkowej druzyny."
+	}
+	"OverrideUnCheck"
+	{
+		"pl"		    "Auto mieszanie drużyn odblokowane. Sprawdź w następnej rundzie."
+	}
+	"OverrideCheck"
+	{
+		"pl"		    "Auto mieszanie drużyn zablokowane. Sprawdź w następnej rundzie."
+	}
+	"NowCommandReply"
+	{
+		"pl"		    "Uzyj: sm_scramble <opoznienie> <odrodź martwych graczy> 0/1> <tryb 1-3>\nMode 1 = losowo\nMode 2 = sortowanie wg. punktów\nMode 3 = sortowanie wg. punktów na minutę"
+	}
+	"AdminScrambleNow"
+	{
+		"pl"		    "Przełączanie mieszania drużyn"
+	}
+	"AdminForceBalance"
+	{
+		"pl"		    "Wymuszono balans drużyn"
+	}
+	"AdminResetVotes"
+	{
+		"pl"		    "Zresetuj wszystkie oddane głosy"
+	}
+	"RoundMessage"
+	{
+		"pl"		    "The scramble round trigger has been reached"
+	}
+	"NoCapMessage"
+	{
+		"pl"		    "Drużyna {1} nie zdołała zająć punktu w ostatniej rundzie."
+	}	
+	"CancelScramble"
+	{
+		"pl"		    "Anuluj trwające mieszanie drużyn"
+	}
+	"PrefAnnounce"
+	{
+		"pl"		    "Wpisz na czacie \"!preference <DRUŻYNA>\" aby przekazać informacje dla pluginu jaką drużynę wolisz i przy auto balansie będziesz mieć wysoki priorytet przy ewentualnym przeniesieniu do innej drużyny
+	}
+	"PrefDisabled"
+	{
+		"pl"		    "System preferencji jest wyłączony"
+	}
+	"WinTime"
+	{
+		"pl"		    "Zwyecięska drużyna wygrała w czasie krótszym niż {1}m:{2}s."
+	}
+	"FragDetection"
+	{
+		"pl"		    "Zwycięska drużyna miała zbyty wiele fragów w stosunku do przegranej drużyny."
+	}
+	"DominationMessage"
+	{
+		"pl"		    "Zwycięska drużyna miała zbyt wiele dominacji w stosunku do przgranej drużyny."
+	}
+	"RatioMessage"
+	{
+		"pl"		    "Wykryto zbyt dużą różnicę średniej liczby punktów graczy w obydwóch drużynach."
+	}
+	"VoteRoundTimeReply"
+	{
+		"pl"		    "Końcowe głosowanie za wymieszaniem drużyn musi nastąpić gdy pozostało więcej niż {1} sekund do końca rundy."
+	}
+	"TeamRestore"
+	{
+		"pl"		    "Zostałeś z powrotem przeniesiony do swojej początkowej drużyny z powodu ponownego podłączenia w trakcie blokady."
+	}
+	"EnableReply"
+	{
+		"pl"		    "Plugin jest obecnie wyłączony przez komendę."
+	}	
+	"BlockSwitchMessage"
+	{
+		"pl"		    "Zmiana drużyny jest blokowana tuż po jej zmianie lub wymieszaniu"
+	}
+	"ShameMessage"
+	{
+		"pl"		    "{1} próbuje z powrotem zmienić drużynę"
+	}
+	"TeamChangedAll"
+	{
+		"pl"		    "{1} został przeniesiony do {2} aby zachować balans drużyn."
+	}
+	"VoteTallied"
+	{
+		"pl"		    "{1} oddał głos za wymieszaniem drużyn. {2} z {3} głosów są potrzebne do wymieszania drużyn"
+	}
+	"ScrambleRound"
+	{		
+		"pl"		    "Drużyny zostaną wymieszane na początku następnej rundy."
+	}
+	"VoteWillStart"
+	{
+		"pl"		    "Głosowanie za wymieszaniem drużyn rozpocznie się po zebraniu odpowiedniej liczby osób które wpisały 'scramble' na czacie."		
+	}
+	"ScrambleStartVote"
+	{
+		"pl"		    "Mieszanie drużyn na koniec rundy wywołane przez głosowanie."
+	}
+	"VoteFailed"
+	{
+		"pl"		    "Głosowanie nie powiodło się: {1} procent z {2} graczy zagłosowało przeciwko mieszaniu drużyn."
+	}
+	"VoteWin"
+	{
+		"pl"		    "{1} procent z {2} graczy głosuje za uruchomieniem głosowania na mieszanie drużyn."
+	}
+	"NotEnoughVotes"
+	{
+		"pl"		    "Głosowanie nie zostało uznane ze względu na niewystarczającą liczbę głosów. Tylko {1}%%"
+	}
+	"MapEnding"
+	{
+		"pl"		    "Anulowanie trwającego mieszania drużyn ze względu na zakończenie mapy"
+	}
+	"RedStreak"
+	{
+		"pl"		    "Drużyna czerwonych zdobyła zbyt wiele zwycięstw z rzędu."
+	}
+	
+	"BluStreak"
+	{
+		"pl"		    "Drużyna niebieskich zdobyła zbyt wiele zwycięstw z rzędu."
+	}
+	"TeamChangedOne"
+	{
+		"pl"		    "Twoja drużyna została zmieniona."
+	}
+	"PregameScrambled"
+	{
+		"pl"		    "Drużyny zostały wymieszane przed rozpoczęciem rozgrywki."
+	}
+	"Scrambled"
+	{
+		"pl"		    "Drużyny zostały wymieszane."
+	}
+	"ScrambleDelay"
+	{
+		"pl"		    "Drużyny zostaną wymieszane za {1} sekund/e"
+	}
+	"ResetReply"
+	{
+		"pl"		    "Zresetowano {1} głosów."
+	}
+	"NoScrambleReply"
+	{
+		"pl"		    "Nie ma aktywnego mieszania drużyn do anulowania"
+	}
+	"ArenaReply"
+	{
+		"pl"		    "Plugin jest wyłączony w trybie arena jeśli kolejkowanie jest aktywne."
+	}
+	"ScrambleReply"
+	{
+		"pl"		    "Mieszanie drużyn zostanie przeprowadzone wraz z końcem tej rundy."
+	}
+	"NotAllowedReply"
+	{
+		"pl"		    "Nie masz dostępu do tej komendy"
+	}
+	"NoImbalnceReply"
+	{
+		"pl"		    "Nie wykryto braku balansu w drużynach."
+	}
+	"VoteDisabledReply"
+	{
+		"pl"		    "Głosowanie zostało wyłączone."
+	}
+	"VoteDelayedReply"
+	{
+		"pl"		    "Głosowanie jest w tej chwili opóźnione."
+	}
+	"NotEnoughPeopleVote"
+	{
+		"pl"		    "Za mało osób do głosowania za wymieszaniem drużyn."
+	}
+	"AlreadyVoted"
+	{
+		"pl"		    "Już oddałeś swój głos."
+	}
+	"InvalidArgs"
+	{
+		"pl"		    "Nieprawidłowa wartość komendy."
+	}
+	"StatsMessage"
+	{
+		"#format"	"{1:i},{2:i},{3:s}"
+		"pl"		"Scramble zamienione {1} z {2} graczy. {3}%."
+	}
+	"ForceMessage"
+	{
+		"pl"		"Drużyny są obecnie siłą wyważone . Admini / Dawcy mogą być, ale jest mało prawdopodobne , aby zostać zamienione."
+	}
+	"ImmunityDisabled"
+	{
+		"#format"	"{1:i}"
+		"pl"		"Kontrole admin / dawcy są teraz wyłączone , ponieważ w ciągu %{1} zserwera ustawiony jest odporny."
+	}
+}

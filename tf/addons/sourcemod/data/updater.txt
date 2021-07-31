@@ -1,0 +1,22 @@
+"Updater"
+{
+	"Information"
+	{
+		"Version"
+		{
+			"Latest"	"1.3.1"
+		}
+		
+		"Notes"	"Find a list of my plugins (and links to their threads) at www.doctormckay.com. Changes:"
+		"Notes" " - Updated gamedata"
+	}
+	
+	"Files"
+	{
+		"Plugin"	"Path_SM/plugins/player_analytics.smx"
+		"Plugin"	"Path_SM/gamedata/detect_os.games.txt"
+		"Source"	"Path_SM/scripting/player_analytics.sp"
+		"Source"	"Path_SM/scripting/mckayupdater.sp"
+		"Source"	"Path_SM/scripting/include/player_analytics.inc"
+	}
+}

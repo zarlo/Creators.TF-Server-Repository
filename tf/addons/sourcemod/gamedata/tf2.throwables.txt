@@ -1,0 +1,26 @@
+"Games"
+{
+	"tf"
+	{
+		"Offsets"
+		{
+			"CTFProjectile_Throwable::InitThrowable"
+			{
+				"linux"		"269"
+				"windows"	"268"
+			}
+			"CTFProjectile_Arrow::InitArrow"
+			{
+				"linux"		"241"
+				"windows"	"240"
+			}
+			"CBaseCombatCharacter::GiveAmmo"
+			{
+				"linux"		"257"
+				"windows"	"256"
+			}
+		}
+	}
+}
+// from i don't know
+// used in ./tf/addons/sourcemod/scripting/attributes/ce_set_throwable_type.sp

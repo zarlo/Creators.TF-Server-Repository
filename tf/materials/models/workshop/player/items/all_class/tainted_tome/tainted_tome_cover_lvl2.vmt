@@ -1,0 +1,78 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"models/workshop/player/items/all_class/tainted_tome/tainted_tome_color_base"
+	"$bumpmap"		"models/workshop/player/items/all_class/tainted_tome/tainted_tome_normal"
+	"$lightwarptexture"		"models/player/pyro/pyro_lightwarp"
+
+	"$phong"		"1"
+	"$phongexponent"		"25"
+	"$phongboost"		"0.100000"
+	"$phongfresnelranges"		"[.25 .5 1]"
+
+	"$rimlight"		"1"
+	"$rimlightexponent"		"4"
+	"$rimlightboost"		"2"
+
+	//"$color2"		 "{92 40 26}"
+	//"$color2"		 "{82 47 97}"
+	//"$color2"		 "{43 69 101}"
+	"$color2"		 "{51 73 31}"
+	//"$color2"		 "{42 95 73}"
+	"$bumpmapalphaphongmask"		"1"
+
+	"$cloakPassEnabled"		"1"
+	"$detail"		"effects/tiledfire/fireLayeredSlowTiled512"
+
+	"$detailscale"		"5"
+	"$detailblendfactor"		"0"
+	"$detailblendmode"		"6"
+	"$yellow"		"0"
+
+	// Tinting
+	"$blendtintbybasealpha" "1" 
+ 	"$blendtintcoloroverbase" "0.75"
+  
+	"$colortint_base" "{51 73 31}"
+	"$colortint_tmp" "[0 0 0]" 
+
+	$nocull 1
+
+"Proxies"
+	{
+		"invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"ItemTintColor"
+		{
+			"resultVar" "$colortint_tmp"
+		}
+		"SelectFirstIfNonZero"
+		{
+			"srcVar1"	"$colortint_tmp"
+			"srcVar2"	"$colortint_base"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}
+
+

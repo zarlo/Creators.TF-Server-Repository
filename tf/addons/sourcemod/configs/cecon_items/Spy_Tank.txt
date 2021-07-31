@@ -1,0 +1,10 @@
+Item
+{
+	name 			"A Suspiciously Sharp Tank"
+	type 			"weapon"
+	item_class 		"tf_weapon_knife"
+	item_index 		194
+	item_logname	"sus_tank"
+	world_model		"models/bots/boss_bot/boss_tank.mdl"
+	preserve_attributes 1
+}

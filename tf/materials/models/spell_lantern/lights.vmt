@@ -1,0 +1,36 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/spell_lantern/lights"
+
+	"proxies"
+	{
+		"invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar"		"$detail"
+			"animatedtextureframenumvar"		"$detailframe"
+			"animatedtextureframerate"		"30"
+		}
+		"BurnLevel"
+		{
+			"resultVar"		"$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar"		"$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1"		"$yellow"
+			"resultVar"		"$color2"
+		}
+		"TextureScroll"
+		{
+			"texturescrollvar"		"$basetexturetransform"
+			"texturescrollrate"		"0.500000"
+			"texturescrollangle"		"0"
+		}
+	}
+}

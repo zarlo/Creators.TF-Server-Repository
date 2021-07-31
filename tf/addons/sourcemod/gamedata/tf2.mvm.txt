@@ -1,0 +1,54 @@
+"Games"
+{
+	/* Team Fortress 2 */
+	"tf"
+	{
+		"Signatures"
+		{
+            "CTFGameRules::DistributeCurrencyAmount"	//(int)
+			{
+				"library"			"server"
+				"windows"			"\x56\x8B\xF1\x8B\x46\x2A\x85\xC0\x75\x2A\xE8\x2A\x2A\x2A\x2A\xFF\x76\x20\x8B\xC8\x8B\x10\xFF\x52\x44\x85\xC0\x74\x2A\xFF\x76\x14\x8B\xC8\xFF\x76\x10\xE8\x2A\x2A\x2A\x2A\x5E"
+				"linux"				"@_ZN12CTFGameRules24DistributeCurrencyAmountEiP9CTFPlayerbbb"
+				"mac"				"@_ZN12CTFGameRules24DistributeCurrencyAmountEiP9CTFPlayerbbb"
+			}
+            "CPopulationManager::JumpToWave" //int
+            {
+				"library"			"server"
+				"windows"			"\x56\x8B\xF1\x8B\x46\x2A\x85\xC0\x75\x2A\xE8\x2A\x2A\x2A\x2A\xFF\x76\x20\x8B\xC8\x8B\x10\xFF\x52\x44\x85\xC0\x74\x2A\xFF\x76\x14\x8B\xC8\xFF\x76\x10\xE8\x2A\x2A\x2A\x2A\x5E"
+				"linux"				"@_ZN18CPopulationManager10JumpToWaveEjf"
+				"mac"				"@_ZN18CPopulationManager10JumpToWaveEjf"
+			}
+			"AllocPooledString"
+			{
+				"library"			"server"
+				"linux"				"@_Z17AllocPooledStringPKc"
+				"mac"				"@_Z17AllocPooledStringPKc"
+			}
+			"CBaseServer::GetClient"
+			{
+				"library"			"server"
+				"linux"				"@_ZN11CBaseServer9GetClientEi"
+				"mac"				"@_ZN11CBaseServer9GetClientEi"
+			}
+			"CTFPlayerShared::Burn"
+			{
+				"library"			"server"
+				"linux"				"@_ZN15CTFPlayerShared4BurnEP9CTFPlayerP13CTFWeaponBasef"
+				"mac"				"@_ZN15CTFPlayerShared4BurnEP9CTFPlayerP13CTFWeaponBasef"
+			}
+
+            // cecon_mvm_events
+            "CTFPlayerShared::GetConditionProvider" //CBaseEntity * (int)
+            {
+                "library"           "server"
+                "windows"           "\x55\x8B\xEC\x56\x8B\x75\x08\x57\x56\x8B\xF9\xE8\xD0\x19\x00\x00\x84\xC0\x74\x48\x83\xFE\x0B\x75"
+                "linux"             "@_ZNK15CTFPlayerShared20GetConditionProviderE7ETFCond"
+                "mac"               "@_ZNK15CTFPlayerShared20GetConditionProviderE7ETFCond"
+            }
+        }
+    }
+}
+
+// no idea what this is from but use tf2.wearables gamedata for the GetWearables func please
+// AttribHookValueFloat is in tf2attributes
