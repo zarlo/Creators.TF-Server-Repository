@@ -1,0 +1,24 @@
+"Games"
+{
+	/* Team Fortress 2 */
+	"tf"
+	{
+		"Offsets"
+		{
+			"CTFPlayer::EquipWearable"
+			{
+				"windows"	"431"
+				"linux"		"432"
+				"mac"		"432"
+			}
+
+			"CTFPlayer::RemoveWearable"
+			{
+				"windows"	"432"
+				"linux"		"433"
+				"mac"		"433"
+			}
+		}
+	}
+}
+// https://forums.alliedmods.net/showthread.php?p=1308831 ? maybe? don't think we need this

@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/spell_lantern/lev1"
+	"$phong" "1"
+	"$phongexponent" ".5"
+	"$phongboost" "1"
+	"$lightwarptexture" "models\player\pyro\pyro_lightwarp"	
+	"$phongfresnelranges"	"[.25 1 4]"
+	"$basemapalphaphongmask" "1"
+
+	"$rimlight" "1"
+	"$rimlightexponent" ".5"
+	"$rimlightboost" "2"
+
+}

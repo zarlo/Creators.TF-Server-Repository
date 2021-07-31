@@ -1,0 +1,885 @@
+﻿"Phrases"
+{
+	//Punishment menu title
+	//{Name} ({SteamID}). Last Logo sprayed {#Seconds}s ago.
+	"Title"
+	{
+		"#format"		"{1:s},{2:s},{3:d}"
+		"en"			"{1} ({2}). Last Logo sprayed {3}s ago."
+		"fr"			"{1} ({2}). Dernier spray il y a {3}s."
+		"de"			"{1} ({2}). Letztes Logo wurde vor {3}s gespruht." 
+		"hu"			"{1} ({2}). Utolso Logo {3}s -e fujva."
+		"da"			"{1} ({2}). Sidste logo malet for {3} sekunder siden."
+		"ru"			"{1} ({2}). Последняя надпись сделана {3}сек. назад."
+		"pl"			"{1} ({2}). Ostatnie logo zostało namalowane {3} sekundy temu."
+		"pt"			"{1} ({2}). Último spray colocado a {3} segundos atrás."
+		"es"			"{1} ({2}). Último spray pulverizado hace {3} segundos."
+	}
+
+	//Admin spray menu title
+	"Admin Spray Menu"
+	{
+		"en"			"Select a player"
+		"fr"			"Selectionnez un joueur"
+		"de"			"Spieler wahlen"
+		"hu"			"Valassz egy jatekost"
+		"da"			"Vaelg en spiller"
+		"ru"			"Выберите игрока"
+		"pl"			"Wybierz gracza"
+		"pt"			"Selecione um jogador"
+		"es"			"Seleccione un jugador"
+	}
+
+	//Punishment option
+	"Warn"
+	{
+		"en"			"Warn Player"
+		"fr"			"Avertir le joueur"
+		"de"			"Spieler warnen"
+		"hu"			"Jatekos figyelmeztetese"
+		"da"			"Advar Spiller"
+		"ru"			"Предупредить игрока"
+		"pl"			"Ostrzeż gracza"
+		"pt"			"Ameaçar jogador"
+		"es"			"Avisar al Jugador"
+	}
+
+	//Punishment option
+	"SlapWarn"
+	{
+		"en"			"Slap and warn Player for %d dmg"
+		"fr"			"Gifler et avertir le joueur pour %d dmg"
+		"de"			"Spieler warnen und mit %d Schaden ohrfeigen"
+		"hu"			"Figyelmeztesd es usd meg %d hp-val a jetekost"
+		"da"			"Sla og advar spiller for %d i skade"
+		"ru"			"Ударить и предупредить Игрока на %d ед. здоровья"
+		"pl"			"Uderz na %d dmg i ostrzeż gracza"
+		"pt"			"Bater e ameaçar Jogador com %d de dano."
+		"es"			"Abofetear y Avisar al jugador con %d puntos de daño"
+	}
+
+	//Punishment option
+	"Slay"
+	{
+		"en"			"Slay Player"
+		"fr"			"Executer le joueur"
+		"de"			"Spieler erschlagen"
+		"hu"			"Jatekos leutese"
+		"da"			"Draeb Spiller"
+		"ru"			"Убить Игрока"
+		"pl"			"Zgładź gracza"
+		"pt"			"Assassinar Jogador"
+		"es"			"Matar al Jugador"
+	}
+
+	//Punishment option
+	//Burn Player for {#of Seconds} seconds
+	"BurnWarn"
+	{
+		"en"			"Burn Player for %d seconds"
+		"fr"			"Bruler le Joueur pendant %d secondes"
+		"de"			"Spieler anzunden fur %d Sekunden"
+		"hu"			"Jatekos felgyujtasa %d masodpercre"
+		"da"			"Antaend spiller i %d sekunder"
+		"ru"			"Поджечь Игрока на %d секунд"
+		"pl"			"Podpal gracza na %d sekundy"
+		"pt"			"Queimar Jogador por %d segundos"
+		"es"			"Quemar al Jugador durante %d segundos"
+	}
+
+	//Punishment option
+	"Freeze"
+	{
+		"en"			"Freeze"
+		"fr"			"Geler"
+		"de"			"Einfrieren"
+		"hu"			"Fagyaszd"
+		"da"			"Frys"
+		"ru"			"Заморозить"
+		"pl"			"Zamroź"
+		"pt"			"Congelar"
+		"es"			"Congelar"
+	}
+
+	//Punishment option
+	"Beacon"
+	{
+		"en"			"Beacon"
+		"fr"			"Rayon lumineux"
+		"de"			"Leuchtfeuer"
+		"hu"			"Jelzofeny"
+		"da"			"Blink"
+		"ru"			"Маяк"
+		"pl"			"Oznaczenie"
+		"pt"			"Indicar"
+		"es"			"Marcar"
+	}
+
+	//Punishment option
+	"FreezeBomb"
+	{
+		"en"			"Freeze Bomb"
+		"fr"			"Bombe glacante"
+		"de"			"Eisbombe"
+		"hu"			"Jegbomba"
+		"da"			"Frost bombe"
+		"ru"			"Ледяная бомба"
+		"pl"			"Bomba z zamrożeniem"
+		"pt"			"Bomba de Gelo"
+		"es"			"Bomba de Hielo"
+	}
+
+	//Punishment option
+	"FireBomb"
+	{
+		"en"			"Fire Bomb"
+		"fr"			"Bombe incendiaire"
+		"de"			"Feuerbombe"
+		"hu"			"Tuzbomba"
+		"da"			"Ildbombe"
+		"ru"			"Огненная бомба"
+		"pl"			"Bomba z podpaleniem"
+		"pt"			"Bomba de Fogo"
+		"es"			"Bomba de Fuego"
+	}
+
+	//Punishment option
+	"TimeBomb"
+	{
+		"en"			"Time Bomb"
+		"fr"			"Bombe a retardement"
+		"de"			"Zeitbombe"
+		"hu"			"Idozitettbomba"
+		"da"			"Tidsbombe"
+		"ru"			"Бомба-таймер"
+		"pl"			"Bomba zegarowa"
+		"pt"			"Bomba Explosiva"
+		"es"			"Bomba Temporizada"
+	}
+
+	//Punishment option
+	"Drug"
+	{
+		"en"			"Drug"
+		"fr"			"Droguer"
+		"de"			"Unter Drogen setzen"
+		"hu"			"Drogozd"
+		"da"			"Bedov"
+		"ru"			"Опьянить"
+		"pl"			"Naćpaj"
+		"pt"			"Drogar"
+		"es"			"Drogar"
+	}
+
+	//Punishment option
+	"Kick"
+	{
+		"en"			"Kick Player"
+		"fr"			"Kicker le joueur"
+		"de"			"Spieler vom Server werfen"
+		"hu"			"Jatekos kirugasa"
+		"da"			"Fjern spiller"
+		"ru"			"Выкинуть с сервера"
+		"pl"			"Wyrzuć gracza"
+		"pt"			"Kickar Jogador"
+		"es"			"Expulsar al Jugador"
+	}
+
+	//Punishment option
+	//Ban Player for {#Minutes} minute(s)
+	"Ban"
+	{
+		"en"			"Ban Player for %d minute(s)"
+		"fr"			"Bannir le joueur pour %d minute(s)"
+		"de"			"Spieler fur %d Minute(n) bannen"
+		"hu"			"Jatekos kitiltasa %d percre"
+		"da"			"Bandlys spiller i %d minut(ter)"
+		"ru"			"Забанить Игрока на %d минут"
+		"pl"			"Zbanuj gracza"
+		"pt"			"Banir jogador por %d minuto(s)"
+		"es"			"Banear al Jugador %d minuto(s)"
+	}
+
+	//Punishment option
+	"PBan"
+	{
+		"en"			"Ban Player permanently"
+		"fr"			"Bannir definitivement le joueur"
+		"de"			"Spieler permanent bannen"
+		"hu"			"Jatekos vegeleges kitiltasa"
+		"da"			"Bandlyst spiller permamant"
+		"ru"			"Забанить Игрока"
+		"pl"			"Zbanuj gracza permanentnie"
+		"pt"			"Banir Jogador Permanentemente"
+		"es"			"Banear al Jugador Permanentemente"
+	}
+
+	//Menu option
+	"Trace"
+	{
+		"en"			"Trace Spray"
+		"fr"			"Tracer un spray"
+		"de"			"Spruher aufspuren"
+		"hu"			"Spray lekovetese"
+		"da"			"Spor Spray"
+		"ru"			"Определить Spray"
+		"pl"			"Śledź spraya"
+		"pt"			"Indentificar Spray"
+		"es"			"Rastrear Spray"
+	}
+
+	//Menu option
+	"Remove"
+	{
+		"en"			"Remove Spray"
+		"fr"			"Effacer le spray"
+		"de"			"Spray entfernen"
+		"hu"			"Spray eltavolitasa"
+		"da"			"Fjern Spray"
+		"ru"			"Убрать Spray"
+		"pl"			"Usuń spraya"
+		"pt"			"Remover Spray"
+		"es"			"Eliminar Spray"
+	}
+
+	//Menu option
+	"AdminSpray"
+	{
+		"en"			"Admin Spray"
+		"fr"			"Administration des sprays"
+		"de"			"Admin Spray"
+		"hu"			"Admin Spray"
+		"da"			"Administrer Spray"
+		"ru"			"Админка Спреев (Spray)"
+		"pl"			"Administracja sprayami"
+		"pt"			"Copiar Spray"
+		"es"			"Administrar Sprays"
+	}
+
+	//Warning
+	"Please change"
+	{
+		"en"			"Please change your spray logo, it is inappropirate."
+		"fr"			"Veuillez changer votre logo-spray, il n'est pas acceptable ici."
+		"de"			"Bitte andere dein Spraylogo, es ist inakzeptabel."
+		"hu"			"Valtoztasd meg a spray-logodat, mert nem elfogadhato"
+		"da"			"Vaer venlig at aendre dit spray logo. Det er upassende."
+		"ru"			"Измените ваш логотип спрея, он неуместен."
+		"pl"			"Zmień proszę swojego spraya, ponieważ jego treść jest niedozwolona."
+		"pt"			"Por favor, mude seu spray. Ele é inapropriado para este servidor."
+		"es"			"Por favor, cambie su spray, es inapropiado."
+	}
+
+	//Kick reason
+	"Bad Spray Logo"
+	{
+		"en"			"Bad Spray Logo"
+		"fr"			"Spray inacceptable"
+		"de"			"Inakzeptables Spraylogo"
+		"hu"			"Nem elfogadhato Spray Logo"
+		"da"			"Uacceptabelt Spray Logo"
+		"ru"			"Некорректный логотип спрея"
+		"pl"			"Zły spray"
+		"pt"			"Spray Inaceitável"
+		"es"			"Spray Inapropiado"
+	}
+
+	//Command reply
+	"Could Not Find"
+	{
+		"en"			"Could not find target"
+		"fr"			"Impossible de trouver la cible"
+		"de"			"Kann Ziel nicht finden"
+		"hu"			"Cel nem talalhato"
+		"da"			"Kunne ikke finde malet"
+		"ru"			"Не могу определить цель"
+		"pl"			"Nie można znaleźć celu"
+		"pt"			"Não é possível achar o jogador"
+		"es"			"No se pudo localizar el objetivo"
+	}
+
+	//Punishment reply
+	//Could not find player {Name} ({SteamID})
+	"Could Not Find Name ID"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Could not find player {1} ({2})"
+		"fr"			"Impossible de trouver le joueur {1} ({2})"
+		"de"			"Kann Spieler {1} ({2}) nicht finden"
+		"hu"			"Jatekeos {1} ({2}) nem talalhato"
+		"da"			"Kunne ikke finde spiller {1} ({2})"
+		"ru"			"Не могу найти игрока {1} ({2})"
+		"pl"			"Nie można znaleźć gracza {1} ({2})"
+		"pt"			"Não é possível achar o jogador {1} ({2})"
+		"es"			"No se pudo encontrar al jugador {1} ({2})"
+	}
+
+	//Punishment reply
+	//Could not find player {Name}
+	"Could Not Find Name"
+	{
+		"en"			"Could not find player %s"
+		"fr"			"Impossible de trouver le joueur %s"
+		"de"			"Kann Spieler %s nicht finden"
+		"hu"			"Nem talalhato a %s nevu jatekos"
+		"da"			"Kunne ikke finde spiller %s"
+		"ru"			"Не могу найти игрока %s"
+		"pl"			"Nie można znaleźć gracza %s"
+		"pt"			"Não é possível achar o jogador %s"
+		"es"			"No se pudo encontrar al jugador %s"
+	}
+
+	//Punishment annoucement
+	//Warned player {Name} ({SteamID})
+	"Warned"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Warned player {1} ({2})"
+		"fr"			"{1} a ete averti ({2})"
+		"de"			"Spieler {1} ({2}) verwarnt"
+		"hu"			"{1} ({2}) jatekos figyelmeztetve"
+		"da"			"Advarede spiller {1} ({2})"
+		"ru"			"Игрок {1} предупрежден ({2})"
+		"pl"			"Ostrzeżono gracza {1} ({2})"
+		"pt"			"Ameaçou jogador {1} ({2})"
+		"es"			"Se avisó al jugador {1} ({2})"
+	}
+
+	//Punishment annoucement
+	//Slapped and warned player {Name} ({SteamID}) for {#Damage} dmg
+	"Slapped And Warned"
+	{
+		"#format"		"{1:s},{2:s},{3:d}"
+		"en"			"Slapped and warned player {1} ({2}) for {3} dmg"
+		"fr"			"{1} gifle et averti ({2}) pour {3} dmg"
+		"de"			"Spieler {1} ({2}) verwarnt und mit {3} Schaden geohrfeigt"
+		"hu"			"{1} ({2}) jatekos figyelmezteve es megutve {3} Hp-val"
+		"da"			"Slog og advarede spiller {1} ({2}) for {3} i skade"
+		"ru"			"Игрок {1}({2}) предупрежден и потерял {3} ед. здоровья"
+		"pl"			"Uderzono na {3} dmg i ostrzeżono gracza {1} ({2})"
+		"pt"			"Bateu e ameaçou jogador {1} ({2}) com {3} de dano"
+		"es"			"Se abofeteó y avisó al jugador {1} ({2}) con {3} puntos de daño"
+	}
+
+	//Punishment annoucement
+	//Slayed and warned player {Name} ({SteamID})
+	"Slayed And Warned"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Slayed and warned player {1} ({2})"
+		"fr"			"{1} ({2}) execute et averti"
+		"de"			"Spieler {1} ({2}) verwarnt und erschlagen"
+		"hu"			"{1} ({2}) jatekos leutve es figyelmeztetve"
+		"da"			"Draebte og advarede spiller {1} ({2})"
+		"ru"			"Игрок {1} ({2}) был предупрежден и убит"
+		"pl"			"Zgładzono i ostrzeżono gracza {1} ({2})"
+		"pt"			"Assassinou e ameaçou jogador {1} ({2})"
+		"es"			"Se asesinó y avisó al jugador {1} ({2})"
+	}
+
+	//Punishment annoucement
+	//Burnt and warned player {Name} ({SteamID})
+	"Burnt And Warned"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Burnt and warned player {1} ({2})"
+		"fr"			"{1} ({2}) brule et averti"
+		"de"			"Spieler {1} ({2}) verwarnt und angzundet"
+		"hu"			"{1} ({2}) jatekos felgyujtva es figyelmeztetve"
+		"da"			"Antaendte og advarede spiller {1} ({2})"
+		"ru"			"Игрок {1} ({2}) предупрежден и подожжён"
+		"pl"			"Podpalono i ostrzeżono gracza {1} ({2})"
+		"pt"			"Queimou e ameaçou jogador {1} ({2})"
+		"es"			"Se quemó y avisó al jugador {1} ({2})"
+	}
+
+	//Punishment annoucement
+	//Froze player {Name} ({SteamID})
+	"Froze"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Froze player {1} ({2})"
+		"fr"			"Joueur {1} ({2}) gele"
+		"de"			"Spieler {1} ({2}) eingefroren"
+		"hu"			"{1} ({2}) jatekos lefagyasztva"
+		"da"			"Fros spiller {1} ({2})"
+		"ru"			"Игрок {1} ({2}) заморожен"
+		"pl"			"Zamroź gracza {1} ({2})"
+		"pt"			"Congelou jogador {1} ({2})"
+		"es"			"Se congeló al jugador {1} ({2})"
+	}
+
+	//Punishment annoucement
+	//Put a beacon on player {Name} ({SteamID})
+	"Beaconed"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Put a beacon on player {1} ({2})"
+		"fr"			"Rayon lumineux active sur le joueur {1} ({2})"
+		"de"			"Spieler {1} ({2}) zum Leuchtfeuer gemacht"
+		"hu"			"{1} ({2}) jatekos jelzofennye valt"
+		"da"			"Placerede blink pa spiller {1} ({2})"
+		"ru"			"На игрока {1} ({2}) установлен маяк"
+		"pl"			"Ustaw oznaczenie na graczu {1} ({2})"
+		"pt"			"Colocou um indicador no jogador {1} ({2})"
+		"es"			"Se marcó al jugador {1} ({2})"
+	}
+
+	//Punishment annoucement
+	//Put a freeze bomb on player {Name} ({SteamID})
+	"FreezeBombed"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Put a freeze bomb on player {1} ({2})"
+		"fr"			"Bombe glacante lancee sur le joueur {1} ({2})"
+		"de"			"Spieler {1} ({2}) zur Eisbombe gemacht"
+		"hu"			"{1} ({2}) jatekosbol jegbomba lett"
+		"da"			"Placerede frost bombe pa spiller {1} ({2})"
+		"ru"			"На игрока {1} ({2}) установлена ледяная бомба"
+		"pl"			"Ustaw bombę zamrażającą na graczu {1} ({2})"
+		"pt"			"Colocou uma bomba de gelo no jogador {1} ({2})"
+		"es"			"Se le colocó una bomba de hielo al jugador {1} ({2})"
+	}
+
+	//Punishment annoucement
+	//Put a fire bomb on player {Name} ({SteamID})
+	"FireBombed"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Put a fire bomb on player {1} ({2})"
+		"fr"			"Bombe incendiaire lancee sur le joueur {1} ({2})"
+		"de"			"Spieler {1} ({2}) zur Feuerbombe gemacht"
+		"hu"			"{1} ({2}) jatekosbol tuzbomba lett"
+		"da"			"Placerede ildbombe pa spiller {1} ({2})"
+		"ru"			"На игрока {1} ({2}) установлена огненная бомба"
+		"pl"			"Ustaw bombę z podpaleniem na graczu {1} ({2})"
+		"pt"			"Colocou uma bomba de fogo no jogador {1} ({2})"
+		"es"			"Se le colocó una bomba de fuego al jugador {1} ({2})"
+	}
+
+	//Punishment annoucement
+	//Put a time bomb on player {Name} ({SteamID})
+	"TimeBombed"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Put a time bomb on player {1} ({2})"
+		"fr"			"Bombe a retardement lancee sur le joueur {1} ({2})"
+		"de"			"Spieler {1} ({2}) zur Zeitbombe gemacht"
+		"hu"			"{1} ({2}) jatekosbol idozitettbomba lett"
+		"da"			"Placerede tidsbombe pa spiller {1} ({2})"
+		"ru"			"На игрока {1} ({2}) установлена бомба с таймером"
+		"pl"			"Ustaw bombę zegarową na graczu {1} ({2})"
+		"pt"			"Colocou uma bomba explosiva no jogador {1} ({2})"
+		"es"			"Se le colocó una bomba temporizada al jugador {1} ({2})"
+	}
+
+	//Punishment message
+	//Drugged player {1} ({2})
+	"Drugged"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Drugged player {1} ({2})"
+		"fr"			"Joueur {1} ({2}) drogue"
+		"de"			"Spieler {1} ({2}) unter Drogen gesetzt"
+		"hu"			"{1} ({2}) jatekos bedrogozva"
+		"da"			"Bedovede spiller {1} ({2})"
+		"ru"			"Игрок {1} ({2}) опьянен"
+		"pl"			"Naćpano gracza {1} ({2})"
+		"pt"			"Drogou jogador {1} ({2})"
+		"es"			"Se drogó al jugador {1} ({2})"
+	}
+
+	//Punishment annoucement
+	//Kicked player {Name} ({SteamID}) for a bad spray logo
+	"Kicked"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Kicked player {1} ({2}) for a bad spray logo"
+		"fr"			"{1} ({2}) kicke a cause d'un spray inacceptable"
+		"de"			"Spieler {1} ({2}) wegen eines inakzeptablen Spraylogos vom Server geworfen"
+		"hu"			"{1} ({2}) jatekos kirugva, nem megfelelo spar-logo miatt"
+		"da"			"Fjernede spiller {1} ({2}) for uacceptabelt spray logo"
+		"ru"			"Игрок {1} ({2}) кикнут за неподобающий спрей"
+		"pl"			"Wyrzucono gracza {1} ({2}) za niedozwolonego spraya"
+		"pt"			"Kickou jogador {1} ({2}) por spray inapropriado"
+		"es"			"El jugador {1} ({2}) ha sido expulsado por poner un spray inapropiado"
+	}
+
+	//Punishment annoucement
+	//"{AdminName} banned player {Name} ({SteamID}) for {#Minutes} minutes for a bad spray logo"
+	"Banned"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:d}"
+		"en"			"{1} banned player {2} ({3}) for {4} minutes for a bad spray logo"
+		"fr"			"{2} ({3}) a ete banni pour {4} minutes a cause de son spray par {1}"
+		"de"			"{1} hat Spieler {2} ({3}) fur {4} Minuten wegen eines inakzeptablen Spraylogos gebannt"
+		"hu"			"{1} admin kitiltotta {2} ({3}) jatekost {4} percre, nem megfelelo spray-logo miatt"
+		"da"			"{1} bandlyste spiller {2} ({3}) i {4} minutter for uacceptabelt spray logo"
+		"ru"			"{1} забанил игрока {2} ({3}) на {4} минуты за неприемлемый спрей"
+		"pl"			"{1} zbanował gracza {2} ({3}) na {4} minuty za niedozwolonego spraya"
+		"pt"			"{1} baniu jogador {2} ({3}) por {4} minutos por spray inapropriado"
+		"es"			"{1} baneó al jugador {2} ({3}) {4} minutos por poner un spray inapropiado"
+	}
+
+	//Punishment annoucement
+	//"{AdminName} banned player {Name} ({SteamID}) for {#Minutes} minutes with {External Ban Name} for a bad spray logo"
+	"EBanned"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:d},{5:s}"
+		"en"			"{1} banned player {2} ({3}) for {4} minutes with {5} for a bad spray logo"
+		"fr"			"{2} ({3}) banni pour {4} minutes avec {5} pour spray inacceptable par {1}"
+		"de"			"{1} hat Spieler {2} ({3}) fur {4} Minuten mit {5} fur ein inakzeptables Spraylogo gebannt"
+		"hu"			"{1} admin kitiltotta {2} ({3}) jatekost {4} percre, {5}  neven, nem megfelelo spray-logo miatt"
+		"da"			"{1} bandlyste spiller {2} ({3}) i {4} minutter med {5} for uacceptabelt spray logo"
+		"ru"			"{1} забанил игрока {2} ({3}) на {4} минуты с сообщением {5} за неприемлемый спрей"
+		"pl"			"{1} zbanował gracza {2} ({3}) na {4} minuty z {5} za niedozwolonego spraya"
+		"pt"			"{1} baniu jogador {2} ({3}) por {4} minutos com {5} por spray inapropriado"
+		"es"			"{1} baneó al jugador {2} ({3}) {4} minutos con {5} por poner un spray inapropiado"
+	}
+
+	//Punishment annoucement
+	//"{AdminName} permanently banned player {Name} ({SteamID}) for a bad spray logo"
+	"PBanned"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} permanently banned player {2} ({3}) for a bad spray logo"
+		"fr"			"{2} ({3}) definitivement banni pour spray inacceptable par {1}"
+		"de"			"{1} hat Spieler {2} ({3}) fur ein inakzeptables Spraylogo permanent gebannt"
+		"hu"			"{1} admin veglegesen kitiltotta {2} ({3}) jatekost,nem megfelelo spray-logo miatt"
+		"da"			"{1} bandlyste spiller {2} ({3}) permanent for uacceptabelt spray logo"
+		"ru"			"{1} забанил игрока {2} ({3}) за неприемлемый спрей"
+		"pl"			"{1} permanentnie zbanował gracza {2} ({3}) za niedozwolonego spraya"
+		"pt"			"{1} baniu permanentemente jogador {2} ({3}) por spray inapropriado"
+		"es"			"{1} baneó permanentemente al jugador {2} ({3}) por poner un spray inapropiado"
+	}
+
+	//Punishment annoucement
+	//"{AdminName} permanently banned player {Name} ({SteamID}) for a bad spray logo with {External Ban Name}"
+	"EPBanned"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s}"
+		"en"			"{1} permanently banned player {2} ({3}) for a bad spray logo with {4}"
+		"fr"			"{2} ({3}) definitivement banni pour spray inacceptable avec {4} par {1}"
+		"de"			"{1} hat Spieler {2} ({3}) wegen eines inakzeptablen Spraylogos mit {4} permanent gebannt"
+		"hu"			"{1} admin veglegesen kitiltotta {2} ({3}) jatekost, {4} neven,nem megfelelo spray-logo miatt"
+		"da"			"{1} bandlyste spiller {2} ({3}) permanent for uacceptabelt spray logo med {4}"
+		"ru"			"{1} забанил игрока {2} ({3}) с сообщением {4} за неприемлемый спрей"
+		"pl"			"{1} permanentnie zbanował gracza {2} ({3}) za niedozwolonego spraya z {4}"
+		"pt"			"{1} baniu permanentenmente jogador {2} ({3}) por spray inapropriado com {4}"
+		"es"			"{1} baneó permanentemente al jugador {2} ({3}) con {4} por poner un spray inapropiado"
+	}
+
+	//Command reply
+	//Sprayed by: {Name} ({SteamID})
+	"Sprayed"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"Sprayed by: {1} ({2})"
+		"fr"			"Spray de {1} ({2})"
+		"de"			"Gespruht von: {1} ({2})"
+		"hu"			"{1} ({2}) fujta"
+		"da"			"Malet af: {1} ({2})"
+		"ru"			"Спрей сделан: {1} ({2})"
+		"pl"			"Namalowane przez: {1} ({2})"
+		"pt"			"Colocado por: {1} ({2})"
+		"es"			"Spray de: {1} ({2})"
+	}
+
+	//Command reply
+	//Sprayed by: {Name}
+	"Sprayed Name"
+	{
+		"en"			"Sprayed by: %s"
+		"fr"			"Spray de %s"
+		"de"			"Gespruht von: %s"
+		"hu"			"%s fujtva"
+		"da"			"Malet af: %s"
+		"ru"			"Спрей сделан: %s"
+		"pl"			"Namalowane przez: %s"
+		"pt"			"Colocado por: %s"
+		"es"			"Spray de: %s"
+	}
+
+	//Command reply
+	//{AdminName} sprayed {Target}'s spray
+	"Admin Sprayed"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"{1} sprayed {2}'s spray"
+		"fr"			"Spray de {2} applique par {1}"
+		"de"			"{1} spruhte {2}'s Spraylogo"
+		"hu"			"{1} admin atfujta a {2} spray-logojat"
+		"da"			"{1} brugte {2}'s spray"
+		"ru"			"{1} нарисовал спрей {2}"
+		"pl"			"{1} namalował spraya {2}"
+		"pt"			"{1} copiou o spray do jogador {2}"
+		"es"			"{1} pulverizó el spray de {2}"
+	}
+
+	//Command Reply
+	"Cannot Spray"
+	{
+		"en"			"Error: Cannot spray the target's spray"
+		"fr"			"Impossible d'appliquer le spray de la cible"
+		"de"			"Fehler: Kann das Spraylogo des Ziels nicht spruhen"
+		"hu"			"Hiba: Nem lehet atfujni a celbavett spray-logot"
+		"da"			"Fejl: Kan ikke bruge malets spray"
+		"ru"			"Ошибка: Не могу нарисовать заданный спрей"
+		"pl"			"Błąd: Nie można namalować spraya gracza"
+		"pt"			"Erro: Não é possível copiar o spray do jogador"
+		"es"			"Error: No se puede colocar el spray del objetivo"
+	}
+
+	//Command reply
+	//Spray by {Name} ({SteamID}), {#Seconds}s ago.
+	"Spray By"
+	{
+		"#format"		"{1:s},{2:s},{3:d}"
+		"en"			"Spray by {1} ({2}), {3} seconds ago"
+		"fr"			"Spray de {1} ({2}), il y a {3} secondes"
+		"de"			"Gespruht von {1} ({2}), vor {3} Sekunden"
+		"hu"			"A spray-logot {1} ({2}) jatekos fujta, {3} masodperce"
+		"da"			"Malet af {1} ({2}), for {3} sekunder siden"
+		"ru"			"Нарисовано {1} ({2}), {3} секунд назад"
+		"pl"			"Namalowane przez {1} ({2}), {3} sekundy temu"
+		"pt"			"Colocado por {1} ({2}) a {3} segundos atrás"
+		"es"			"Spray de {1} ({2}), pulverizado hace {3} segundos"
+	}
+
+	//Command reply
+	"No Spray"
+	{
+		"en"			"No spray were found on where you are looking at"
+		"fr"			"Heu, il n'y a pas de spray a cet endroit !"
+		"de"			"Da wo du hinguckst ist kein Spraylogo zu finden"
+		"hu"			"Ahova nezel nincs spray-logo"
+		"da"			"Intet spray blev fundet der hvor du kigger" 
+		"ru"			"Там, куда вы смотрите спреев не обнаружено"
+		"pl"			"Nie znaleziono spraya, tam gdzie patrzysz"
+		"pt"			"Nenhum spray foi encontrado no local para onde você está apontando"
+		"es"			"No se encontró ningún spray en el lugar al que estás mirando"
+	}
+
+	//Command reply
+	//Spray from {Name} ({SteamID}) has been removed by {AdminName}
+	"Spray Removed"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"Spray from {1} ({2}) has been removed by {3}"
+		"fr"			"Le spray de {1} ({2}) a ete efface par {3}"
+		"de"			"Gespruht von {1} ({2}) wurde entfernt von {3}"
+		"hu"			"{1} ({2}) jatekos spray-logojat {3} tavolitva el."
+		"da"			"{1} ({2})'s logo blev fjernet af {3}"
+		"ru"			"Спрей {1} ({2}) был удален {3}"
+		"pl"			"Spray gracza {1} ({2}) został usunięty przez {3}"
+		"pt"			"Spray do jogador {1} ({2}) foi removido por {3}"
+		"es"			"El spray de {1} ({2}) ha sido elimindao por {3}"
+	}
+
+	//Punishment logging
+	//{AdminName} warned player {Name} ({SteamID})
+	"Log Warned"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} warned player {2} ({3})"
+		"fr"			"{2} a ete averti ({3}) par {1}"
+		"de"			"{1} verwarnt Spieler {2} ({3})"
+		"hu"			"{1} figyelmeztette {2} ({3})"
+		"da"			"{1} advarede spiller {2} ({3})"
+		"ru"			"{1} предупредил игрока {2} ({3})"
+		"pl"			"{1} ostrzegł gracza {2} ({3})"
+		"pt"			"{1} ameaçou jogador {2} ({3})"
+		"es"			"{1} avisó al jugador {2} ({3})"
+	}
+
+	//Punishment logging
+	//{AdminName} slapped and warned player {Name} ({SteamID})
+	"Log Slapped And Warned"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:d}"
+		"en"			"{1} slapped and warned player {2} ({3}) for {4} dmg"
+		"fr"			"{2} a gifle et averti ({3}) par {1} pour {4} dmg"
+		"de"			"{1} verwarnt Spieler {2} ({3}) und ohrfeigt ihn mit {4} Schaden"
+		"hu"			"{1} megutotte es figyelmeztette {2} ({3})  {4} Hp-val"
+		"da"			"{1} slog og advarede spiller {2} ({3}) for {4} i skade"
+		"ru"			"{1} ударил и предупредил игрока {2} ({3}) забрав {4} повреждений"
+		"pl"			"{1} ostrzegł i uderzył na {4} dmg gracza {2} ({3})"
+		"pt"			"{1} bateu e ameaçou jogador {2} ({3}) com {4} de dano"
+		"es"			"{1} abofeteó y avisó al jugador {2} ({3}) con {4} puntos de daño"
+	}
+
+	//Punishment logging
+	//{AdminName} slayed and warned player {Name} ({SteamID})
+	"Log Slayed And Warned"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} slayed and warned player {2} ({3})"
+		"fr"			"{1} a execute et averti le joueur {2} ({3})"
+		"de"			"{1} verwarnt und erschlagt Spieler {2} ({3})"
+		"hu"			"{1} leutotte es figyelmeztette {2} ({3})"
+		"da"			"{1} draebte og advarede spiller {2} ({3})"
+		"ru"			"{1} предупредил и убил игрока {2} ({3})"
+		"pl"			"{1} ostrzegł i zgładził gracza {2} ({3})"
+		"pt"			"{1} assassinou e ameaçou jogador {2} ({3})"
+		"es"			"{1} asesinó y avisó al jugador {2} ({3})"
+	}
+
+	//Punishment logging
+	//{AdminName} burnt and warned player {Name} ({SteamID})
+	"Log Burnt And Warned"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} burnt and warned player {2} ({3})"
+		"fr"			"{1} a brule et averti le joueur {2} ({3})"
+		"de"			"{1} verwarnt und zundet Spieler {2} ({3}) an"
+		"hu"			"{1} felgyujtotta es figyelmeztette {2} ({3})"
+		"da"			"{1} antaendte og advarede spiller {2} ({3})"
+		"ru"			"{1} предупредил и поджег игрока {2} ({3})"
+		"pl"			"{1} ostrzegł i podpalił gracza {2} ({3})"
+		"pt"			"{1} queimou e ameaçou jogador {2} ({3})"
+		"es"			"{1} quemó y avisó al jugador {2} ({3})"
+	}
+
+	//Punishment annoucement
+	//{AdminName} froze player {Name} ({SteamID}) for a bad spray logo
+	"Log Froze"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} froze player {2} ({3}) for a bad spray logo"
+		"fr"			"{1} a gele le joueur {2} ({3}) a cause d'un logo inacceptable"
+		"de"			"{1} hat Spieler {2} ({3}) fur ein inakzeptables Spraylogo eingefroren"
+		"hu"			"{1} lefagyasztotta es figyelmeztette {2} ({3})"
+		"da"			"{1} fros spiller {2} ({3}) for uacceptabelt spray logo"
+		"ru"			"{1} заморозил игрока {2} ({3}) за неподобающий спрей"
+		"pl"			"{1} zamroził gracza {2} ({3}) za niedozwolony spray"
+		"pt"			"{1} congelou jogador {2} ({3}) por spray inapropriado"
+		"es"			"{1} congeló al jugador {2} ({3}) por poner un spray inapropiado"
+	}
+
+	//Punishment annoucement
+	//{AdminName} put a beacon on player {Name} ({SteamID}) for a bad spray logo
+	"Log Beaconed"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} put a beacon on player {2} ({3}) for a bad spray logo"
+		"fr"			"{1} a active un rayon lumineux sur le joueur {2} ({3}) a cause d'un logo inacceptable"
+		"de"			"{1} hat Spieler {2} ({3}) fur ein inakzeptables Spraylogo zum Leuchtfeuer gemacht"
+		"hu"			"{1} jelzofenyt tett {2} ({3}) , nem megfelelo spray-logo miatt"
+		"da"			"{1} placerede blink pa spiller {2} ({3}) for uacceptabelt spray logo"
+		"ru"			"{1} поставил маяк на игрока {2} ({3}) за неподобающий спрей"
+		"pl"			"{1} ustawił oznaczenie na graczu {2} ({3}) za niedozwolony spray"
+		"pt"			"{1} colocou um indicador no jogador {2} ({3}) por spray inapropriado"
+		"es"			"{1} marcó al jugador {2} ({3}) por poner un spray inapropiado"
+	}
+
+	//Punishment annoucement
+	//{AdminName} put a freeze bomb on player {Name} ({SteamID}) for a bad spray logo
+	"Log FreezeBombed"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} put a freeze bomb on player {2} ({3}) for a bad spray logo"
+		"fr"			"{1} a lance une bombe glacante sur le joueur {2} ({3}) a cause d'un logo inacceptable"
+		"de"			"{1} hat Spieler {2} ({3}) fur ein inakzeptables Spraylogo zur Eisbombe gemacht"
+		"hu"			"{1} jegbombava valtoztatta {2} ({3}) nem megfelelo spray-logo miatt"
+		"da"			"{1} placerede frostbombe pa spiller {2} ({3}) for uacceptabelt spray logo"
+		"ru"			"{1} установил ледяную бомбу на игрока {2} ({3}) за неподобающий спрей"
+		"pl"			"{1} ustawił bombę z zamrożeniem na graczu {2} ({3}) za niedozwolony spray"
+		"pt"			"{1} colocou uma bomba de gelo no jogador {2} ({3}) por spray inapropriado"
+		"es"			"{1} colocó una bomba de hielo sobre {2} ({3}) por poner un spray inapropiado"
+	}
+
+	//Punishment annoucement
+	//{AdminName} put a fire bomb on player {Name} ({SteamID}) for a bad spray logo
+	"Log FireBombed"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} put a fire bomb on player {2} ({3}) for a bad spray logo"
+		"fr"			"{1} a lance une bombe incendiaire sur le joueur {2} ({3}) a cause d'un logo inacceptable"
+		"de"			"{1} hat Spieler {2} ({3}) fur ein inakzeptables Spraylogo zur Feuerbombe gemacht"
+		"hu"			"{1} tuzbombava valtoztatta {2} ({3}) nem megfelelo spray-logo miatt"
+		"da"			"{1} placerede ildbombe pa spiller {2} ({3}) for uacceptabelt spray logo"
+		"ru"			"{1} установил огненную бомбу на игрока {2} ({3}) за неподобающий спрей"
+		"pl"			"{1} ustawił bombę z podpaleniem na graczu {2} ({3}) za niedozwolony spray"
+		"pt"			"{1} colocou uma bomba de fogo no jogador {2} ({3}) por spray inapropriado"
+		"es"			"{1} colocó una bomba de fuego sobre {2} ({3}) por poner un spray inapropiado"
+	}
+
+	//Punishment annoucement
+	//{AdminName} put a time bomb on player {Name} ({SteamID}) for a bad spray logo
+	"Log TimeBombed"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} put a time bomb on player {2} ({3}) for a bad spray logo"
+		"fr"			"{1} a lance une bombe a retardement sur le joueur {2} ({3}) a cause d'un logo inacceptable"
+		"de"			"{1} hat Spieler {2} ({3}) fur ein inakzeptables Spraylogo zur Zeitbombe gemacht"
+		"hu"			"{1} idozitettbombava valtoztatta {2} ({3}) nem megfelelo spray-logo miatt"
+		"da"			"{1} placerede ildbombe pa {2} ({3}) for uacceptabelt spray logo"
+		"ru"			"{1} установил бомбу-таймер на игрока {2} ({3}) за неподобающий спрей"
+		"pl"			"{1} ustawił bombę zegarową na graczu {2} ({3}) za niedozwolony spray"
+		"pt"			"{1} colocou uma bomba explosiva no jogador {2} ({3}) por spray inapropriado"
+		"es"			"{1} colocó una bomba temporizada sobre {2} ({3}) por poner un spray inapropiado"
+	}
+
+	//Punishment message
+	//{AdminName} drugged player {Name} ({SteamID}) for a bad spray logo
+	"Log Drugged"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} drugged player {2} ({3}) for a bad spray logo"
+		"fr"			"{1} a drogue le joueur {2} ({3}) a cause d'un logo inacceptable"
+		"de"			"{1} hat Spieler {2} ({3}) fur ein inakzeptables Spraylogo unter Drogen gesetzt"
+		"hu"			"{1} bedrogozta {2} ({3}) nem megfelelo spray-logo miatt"
+		"da"			"{1} bedovede spiller {2} ({3}) for uacceptabelt spray logo"
+		"ru"			"{1} опьянил игрока {2} ({3}) за неподобающий спрей"
+		"pl"			"{1} naćpał gracza {2} ({3}) za niedozwolony spray"
+		"pt"			"{1} drogou o jogador {2} ({3}) por spray inapropriado"
+		"es"			"{1} drogó al jugador {2} ({3}) por poner un spray inapropiado"
+	}
+
+	//Punishment logging
+	//{AdminName} kicked player {Name} ({SteamID}) for a bad spray logo
+	"Log Kicked"
+	{
+		"#format"		"{1:s},{2:s},{3:s}"
+		"en"			"{1} kicked player {2} ({3}) for a bad spray logo"
+		"fr"			"{2} ({3}) kicke a cause d'un spray inacceptable par {1}"
+		"de"			"{1} hat Spieler {2} ({3}) fur ein inakzeptables Spraylogo vom Server geworfen"
+		"hu"			"{1} admin kirugta {2} ({3}) jatekost, nem megfelelo spray-logo miatt"
+		"da"			"{1} fjernede spiller {2} ({3}) for uacceptabelt spray logo"
+		"ru"			"{1} кикнул игрока {2} ({3}) за неподобающий спрей"
+		"pl"			"{1} wyrzucił gracza {2} ({3}) za niedozwolony spray"
+		"pt"			"{1} kickou o jogador {2} ({3}) por spray inapropriado"
+		"es"			"{1} expulsó al jugador {2} ({3}) por poner un spray inapropiado"
+	}
+
+	//Command fail reply
+	//{AdminName} tried to punish {OtherAdminName} but failed. {OtherAdminName} has higher immunity.
+	"Admin Immune Log"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"{1} tried to punish {2} but failed. {2} has higher immunity."
+		"fr"			"{1} a echoue a punir {2}. {2} a une immunite superieure."
+		"de"			"{1} Versuch {2} zu bestrafen schlug fehl. {2} hat eine hoehere Immunitat."
+		"hu"			"{1} meg akarta fenyiteni {2} -t, de racseszett, mert neki magasabb az immunitasa!"
+		"da"			"{1} kan ikke straffe {2}. {2} har hojere immunitet."
+		"ru"			"{1} попытался наказать игрока {2}, но не смог. {2} имеет больший иммунитет."
+		"pl"			"{1} chciał coś zrobić {2}, ale mu się nie udało. {2} ma wyższy immunitet."
+		"pt"			"{1} tentou punir o jogador {2} mas falhou. {2} possui maior imunidade."
+		"es"			"{1} intentó castigar a {2} pero falló. {2} tiene un nivel superior de inmunidad."
+	}
+
+	//Command fail reply
+	//You tried to punish {OtherAdminName} but failed. {OtherAdminName} has higher immunity.
+	"Admin Immune"
+	{
+		"en"			"You tried to punish %s but failed. %s has higher immunity."
+		"fr"			"Tu as echoue a punir %s. %s a une imminute superieure."
+		"de"			"Leider schlug dein Versuch %s zu bestrafen fehl. %s hat eine hoehere Immunitat."
+		"hu"			"Megprobaltad megfenyiteni %s -t, de magasabb az immunitasa!"
+		"da"			"%s kan ikke straffes. %s har hojere immunitet."
+		"ru"			"Вы пытались наказать %s, но провалились. %s имеет больший иммунитет."
+		"pl"			"Chciałeś coś zrobić %s, ale Ci się nie udało. %s ma wyższy immunitet."
+		"pt"			"Você tentou punir o jogador %s mas falhou. %s possui maior imunidade."
+		"es"			"Intentaste castigar al jugador %s pero fallaste. %s tiene un nivel superior de inmunidad."
+	}
+}

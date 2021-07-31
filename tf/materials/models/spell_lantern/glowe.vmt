@@ -1,0 +1,30 @@
+"UnLitGeneric"
+{
+	"$basetexture" "models\spell_lantern\glowe"
+	$translucent 1
+	$additive 1
+	"$model" "1"
+	$nocull 1
+	"$cloakPassEnabled"		"1"
+
+		"$blendtintbybasealpha"		"1"
+		//"$blendtintcoloroverbase"		"1"
+		"$colortint_base"		"{255 150 230}"
+		"$color2"		"{255 120 230}"
+		"$colortint_tmp"		"[0 0 0]"	
+		
+		"Proxies"
+		{
+			"ItemTintColor"
+			{
+				"resultVar"		"$colortint_tmp"
+			}
+			"SelectFirstIfNonZero"
+			{
+				"srcVar1"		"$colortint_tmp"
+				"srcVar2"		"$colortint_base"
+				"resultVar"		"$color2"
+			}
+		}
+}
+

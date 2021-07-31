@@ -1,0 +1,252 @@
+﻿"Phrases"
+{
+	"BlockJointeam"
+	{
+		"fr" 			"Blocage du changement d'équipe. Ce serveur utilise le système de sélection automatique des équipes"
+	}
+	"VoteAd"
+	{
+		"fr"			"Taper '{1}' pour demander un vote pour mélanger les équipes"
+	}
+	"YourBuddyLeft"
+	{
+		"fr"			"Votre ami a quitté la partie"
+	}
+	"BuddyDisabledError"
+	{
+		"fr"			"Le système d'ami est désactivé"
+	}
+	"BuddyArgError"
+	{
+		"fr"			"Usage: sm_addbuddy <buddy>"
+	}
+	"SpecChangeBlock"
+	{
+		"fr"			"Vous ne pouvez pas rejoindre les spectateurs si cela créé un déséquilibre dans les équipes"
+	}
+	"AddedBuddy"
+	{
+		"fr"			"{1} est maintenant votre ami"
+	}
+	"SomeoneAddedYou"
+	{
+		"fr"			"{1} vous a choisi comme ami!"
+	}
+	"ChoseANewBuddy"
+	{
+		"fr"			"Votre ancien ami {1} a choisi un nouvel ami"
+	}
+	"AlreadyHasABuddy"
+	{
+		"fr"			"Ce joueur a déjà un ami"
+	}
+	"AdminBlockVoteReply"
+	{
+		"fr"			"Vous ne pouvez pas mélanger les équipes tant qu'un admin est connecté"
+	}
+	"ScrambledAlready"
+	{
+		"fr"			"Il y a déjà eu un mélange des équipe ce round.  Rééssayez à la fin de ce round"
+	}
+	"FlagBalance"
+	{
+		"fr"			"Déséquilibre détecté. Action possible dans {1} seconde(s)"
+	}
+	"RestoreInnocentTeam"
+	{
+		"fr"		"{s} a été rétabli dans cette équipe, voulez vous rejoindre votre ancienne équipe?"	
+	}
+	"RejoinMessage"
+	{
+		"fr"		"{1} a choisi de rejoindre son équipe d'origine après qu'un joueur se soit reconnecté et forcé de rejoindre son ancienne équipe"
+	}
+	"OverrideUnCheck"
+	{
+		"fr"		"Déblocage du mélange automatique des équipes pour le prochain round"
+	}
+	"OverrideCheck"
+	{
+		"fr"		"Blocage du mélange automatique des équipes pourl e prochain round"
+	}
+	"NowCommandReply"
+	{
+		"fr"		"Usage: sm_scramble <delay> <respawn dead player 0/1> <mode 1-3>\nMode 1 = random\nMode 2 = score sort\nMode 3 = score sort per minute"
+	}
+	"AdminScrambleNow"
+	{
+		"fr"		"Mélange les Equipes"
+	}
+	"AdminForceBalance"
+	{
+		"fr"		"Force l'équilibrage des équipes"
+	}
+	"AdminResetVotes"
+	{
+		"fr"		"Remet à zéro les votes des joueurs"
+	}
+	"RoundMessage"
+	{
+		"fr"		"La condition de mélange des équipes en fin de round a été atteinte"
+	}
+	"NoCapMessage"
+	{
+		"fr"		"L'équipe {1} n'a pas capturé de point lors du dernier round."
+	}	
+	"CancelScramble"
+	{
+		"fr"		"Annule le mélange des équipes en cours."
+	}
+	"PrefAnnounce"
+	{
+		"fr"		"Taper \"!preference <red/blu>\" pour indiquer au plugin qu'elle équipe vous préférez afin que vous ayez la priorité lors d'un éventuel équilibrage automatique!"
+	}
+	"PrefDisabled"
+	{
+		"fr"		"Le système de préférence est désactivé"
+	}
+	"WinTime"
+	{
+		"fr"		"L'équipe victorieuse a gagné en moins de {1}m:{2}s."
+	}
+	"FragDetection"
+	{
+		"fr"		"La limite de ratio de frag a été atteinte par l'équipe gagnante"
+	}
+	"DominationMessage"
+	{
+		"fr"		"Détection d'une différence de domination de joueurs dans l'équipe gagnante"
+	}
+	"RatioMessage"
+	{
+		"fr"		"Détection d'une différence de score moyen d'équipe"
+	}
+	"VoteRoundTimeReply"
+	{
+		"fr"		"Le vote final de mélange des équipes doit intervenir lorsqu'il reste moins de {1} secondes dans le round"
+	}
+	"TeamRestore"
+	{
+		"fr"		"Votre vieille équipe a été restaurée puisque vous avez débranché et avez reconnecté pendant le temps de bloc."
+	}
+	"EnableReply"
+	{
+		"fr"		"Le plugin actuellement est rendu infirme via le convar"
+	}	
+	"BlockSwitchMessage"
+	{
+		"fr"		"Changement d'équipe impossible après un equilibrage"
+	}
+	"ShameMessage"
+	{
+		"fr"		"{1} a éssayé de changer d'équipe. Quel honte!"
+	}
+	"TeamChangedAll"
+	{
+		"fr"		"{1} est passé dans l'équipe {2} pour équilibrer les équipes"
+	}
+	"VoteTallied"
+	{
+		"fr"		"{1} a voté pour mélanger les équipes. (Reçu {2} sur {3} votes requis)"
+	}
+	"ScrambleRound"
+	{		
+		"fr"		"Les équipes seront mélangées à la fin du round"
+	}
+	"VoteWillStart"
+	{
+		"fr"		"Le vote pour mélanger les équipes commencera une fois le vote actuel terminé"		
+	}
+	"ScrambleStartVote"
+	{
+		"fr"		"Mélange des équipes déclenché en fin de round due au vote"
+	}
+	"VoteFailed"
+	{
+		"fr"		"{1}%% des {2} joueurs ont voté contre mélangé les équipes"
+	}
+	"VoteWin"
+	{
+		"fr"		"{1}%% des {2} joueurs ont voté pour mélangé les équipes"
+	}
+	"NotEnoughVotes"
+	{
+		"fr"		"Échec du vote pour mélanger les équipes à cause du nombre insuffisant de votant (seulement {1}%%)"
+	}
+	"MapEnding"
+	{
+		"fr"		"Annulation du mélange des équipe actif à cause de la fin de la carte."
+	}
+	"RedStreak"
+	{
+		"fr"		"L'équipe rouge a atteint le nombre de victoire requis pour déclencher le mélange des équipes"
+	}
+	
+	"BluStreak"
+	{
+		"fr"		"L'équipe bleue a atteint le nombre de victoire requis pour déclencher le mélange des équipes"
+	}
+	"TeamChangedOne"
+	{
+		"fr"		"Votre équipe a été changé"
+	}
+	"PregameScrambled"
+	{
+		"fr"		"Les équipes ont été mélangé avant le lancement de la partie"
+	}
+	"Scrambled"
+	{
+		"fr"		"Les équipes ont été mélangé"
+	}
+	"ScrambleDelay"
+	{
+		"fr"		"Les équipes seront mélangées dans {1} secondes"
+	}
+	"ResetReply"
+	{
+		"fr"		"Remise à zéro des {1} votes"
+	}
+	"NoScrambleReply"
+	{
+		"fr"		"Aucun mélange d'équipe à annuler"
+	}
+	"ArenaReply"
+	{
+		"fr"		"Plugin désactivé en mode arena avec file d'attente activé"
+	}
+	"ScrambleReply"
+	{
+		"fr"		"Mélange des équipes déjà prévu pour la fin du round"
+	}
+	"NotAllowedReply"
+	{
+		"fr"		"Vous n'êtes pas autorisé à utiliser cette commande"
+	}
+	"NoImbalnceReply"
+	{
+		"fr"		"Pas de déséquilibre dans les équipes détecté"
+	}
+	"VoteDisabledReply"
+	{
+		"fr"		"Le vote a été désactivé"
+	}
+	"VoteDelayedReply"
+	{
+		"fr"		"Vote pour mélanger les équipes est désactivé pour le moment"
+	}
+	"NotEnoughPeopleVote"
+	{
+		"fr"		"Pas assez de personnes pour lancer le vote pour mélanger les équipes"
+	}
+	"AlreadyVoted"
+	{
+		"fr"		"Vous avez déjà voté"
+	}
+	"InvalidArgs"
+	{
+		"fr"		"Argument de commande invalide"
+	}
+	"StatsMessage"
+	{
+		"fr"		"Scramble a echangé {1} sur {2} joueurs. {3}%"
+	}
+}

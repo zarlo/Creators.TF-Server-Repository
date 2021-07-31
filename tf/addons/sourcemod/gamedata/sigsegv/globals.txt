@@ -1,0 +1,113 @@
+// globals
+
+"Games"
+{
+	"#default"
+	{
+		"#supported"
+		{
+			engine "tf2"
+		}
+		
+		"sigsegv"
+		{
+			"addrs_group"
+			{
+				"[common]"
+				{
+					type "sym"
+					lib  "server"
+				}
+				
+				"gpGlobals" "gpGlobals"
+				
+				"debugoverlay" "debugoverlay"
+				
+				"usermessages" "usermessages"
+				
+				"TheNavMesh"  "TheNavMesh"
+				"TheNavAreas" "TheNavAreas"
+				
+				"g_pObjectiveResource" "g_pObjectiveResource"
+				
+				"CGameRulesProxy::s_pGameRulesProxy" "_ZN15CGameRulesProxy17s_pGameRulesProxyE"
+				
+				"g_hUpgradeEntity" "g_hUpgradeEntity"
+				
+				"g_MannVsMachineUpgrades" "g_MannVsMachineUpgrades"
+				
+				"g_hControlPointMasters" "g_hControlPointMasters"
+				
+				"g_pPopulationManager" "g_pPopulationManager"
+				
+//				"s_pszNextPopfile" "s_pszNextPopfile"
+				
+				"lagcompensation" "lagcompensation"
+				
+				"s_pTokenBuf" "_ZL11s_pTokenBuf"
+				
+				"g_aTeamNames"  "g_aTeamNames"
+				"g_aTeamColors" "g_aTeamColors"
+
+				"g_aClassNames"                    "g_aClassNames"
+				"g_aPlayerClassNames"              "g_aPlayerClassNames"
+				"g_aPlayerClassNames_NonLocalized" "g_aPlayerClassNames_NonLocalized"
+				"g_aRawPlayerClassNames"           "g_aRawPlayerClassNames"
+				"g_aRawPlayerClassNamesShort"      "g_aRawPlayerClassNamesShort"
+				
+				"g_aWeaponNames" "g_aWeaponNames"
+				
+				"g_aConditionNames" "_ZL17g_aConditionNames"
+				
+				"g_szLoadoutStrings"           "g_szLoadoutStrings"
+				"g_szLoadoutStringsForDisplay" "g_szLoadoutStringsForDisplay"
+				
+				"g_szBotModels"                "g_szBotModels"
+				"g_szBotBossModels"            "g_szBotBossModels"
+				"g_szPlayerRobotModels"        "g_szPlayerRobotModels"
+				"g_szBotBossSentryBusterModel" "g_szBotBossSentryBusterModel"
+				
+				"s_TankModel"     "_ZL11s_TankModel"
+				"s_TankModelRome" "_ZL15s_TankModelRome"
+				
+				"g_szRomePromoItems_Hat"  "g_szRomePromoItems_Hat"
+				"g_szRomePromoItems_Misc" "g_szRomePromoItems_Misc"
+				
+				"g_TeamVisualSections" "g_TeamVisualSections"
+				
+				"s_TFTeamManager" "s_TFTeamManager"
+				
+				"g_EventQueue" "g_EventQueue"
+				"g_voteController" "g_voteController"
+
+				"g_TETFParticleEffect" "_ZL20g_TETFParticleEffect"
+				"g_pFullFileSystem" "g_pFullFileSystem"
+
+				"CSceneEntity::m_pcvSndMixahead" "_ZN12CSceneEntity16m_pcvSndMixaheadE"
+
+				"DT_TFPlayer::g_SendTable" "_ZN11DT_TFPlayer11g_SendTableE"
+				"g_CTFPlayer_ClassReg" "_ZL20g_CTFPlayer_ClassReg"
+				
+				"g_MedigunEffects" "g_MedigunEffects"
+				"g_pMonsterResource" "g_pMonsterResource"
+				
+				
+			}
+			
+			"addrs_group"
+			{
+				"[common]"
+				{
+					type "sym"
+					lib  "engine"
+				}
+				"g_PropTypeFns" "g_PropTypeFns"
+				
+				"g_MapListMgr" "g_MapListMgr"
+				"g_FrameSnapshotManager" "_ZL22g_FrameSnapshotManager"
+				"g_SharedEdictChangeInfo" "g_SharedEdictChangeInfo"
+				"hltv" "hltv"
+			}
+		}
+	}
+}

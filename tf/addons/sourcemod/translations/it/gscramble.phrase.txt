@@ -1,0 +1,220 @@
+﻿"Phrases"
+{
+	"ScrambledAlready"
+	{
+		"it"		"C'è già stato un mescolamento delle squadre in questo round. Prova ancora alla fine del round."
+	}
+
+	"FlagBalance"
+	{
+		"it"			"Sbilanciamento rilevato. Possibile riequilibrio in {1} secondi"
+	}
+	"RestoreInnocentTeam"
+	{
+		"it"		"{s} è stato rimandato in questa squadra, vuoi tornare nella squadra in cui eri prima del bilanciamento?"	
+	}
+	"RejoinMessage"
+	{		
+		"it"		"{1} ha scelto di rientrare nella squadra da cui era stato spostato dato che un giocatore si è ricollegato ed è tornato nel team in cui era."
+	}
+	"OverrideUnCheck"
+	{
+		"it"		"Sbloccata la verifica del mescolamento automatico delle squadre per il prossimo round"
+	}
+	"OverrideCheck"
+	{
+		"it"		"Bloccata la verifica del mescolamento automatico delle squadre per il prossimo round"
+	}
+	"NowCommandReply"
+	{
+		"it"		"Usare: sm_scramble <delay> <respawn 0/1> <mode 1-3>\nMode 1 = casuale\nMode 2 = in base al punteggio\nMode 3 = punteggio al minuto"
+	}
+	"AdminScrambleNow"
+	{
+		"it"		"Attivato il mescolamento delle squadre"
+	}
+	"AdminForceBalance"
+	{
+		"it"		"Bilanciamento forzto dele squadre"
+	}
+	"AdminResetVotes"
+	{
+		"it"		"Votazioni azzerate"
+	}
+	"RoundMessage"
+	{
+		"it"		"La quota per il mescolamento delle squadre è stata raggiunta"
+	}
+	"NoCapMessage"
+	{
+		"it"		"La squadra {1} non ha eseguito catturate nell'ultimo round."
+	}	
+	"CancelScramble"
+	{
+		"it"		"Mescolamento squadre annullato."
+	}
+	"PrefAnnounce"
+	{
+		"it"		"Scrivi in chat \"!preference <TEAM>\" per impostare il team in cui vuoi essere inserito dal bilanciamento automatico"
+	}
+	"PrefDisabled"
+	{
+		"it"		"Sistema di preferenze disabilitato"
+	}
+	"WinTime"
+	{
+		"it"		"I vincitori vincono in meno di {1}m:{2}s."
+	}
+	"FragDetection"
+	{
+		"it"		"Limite di uccisioni da parte della squadra vincente superato"
+	}
+	"DominationMessage"
+	{
+		"it"		"Rilevata disuguaglianza di dominazioni da parte della squadra vincente"
+	}
+	"RatioMessage"
+	{
+		"it"		"Rilevata disuguaglianza Punteggio medio"
+	}
+	"VoteRoundTimeReply"
+	{
+		"it"		"I voti necessari per il mescolamento squadre devono essere raggiunti entro {1} secondi dalla fine del round."
+	}
+	"TeamRestore"
+	{
+		"it"		"Il tuo vecchio team è stato recuperato dopo la disconnessione e riconnessione."
+	}
+	"EnableReply"
+	{
+		"it"		"Il plugin è stato disabilitato tramite l'apposita convar."
+	}	
+	"BlockSwitchMessage"
+	{
+		"it"		"Non si può cambiare team dopo uno scambio o un mescolamento squadre."
+	}
+	"ShameMessage"
+	{
+		"it"		"{1} sta provando a rientrare nella squadra. Vergogna!"
+	}
+	"TeamChangedAll"
+	{
+		"it"		"{1} è stato spostato nei {2} per bilanciare le squadre."
+	}
+	"VoteTallied"
+	{
+		"it"		"{1} ha votato per mescolare le squadre. {2} di {3} voti necessari."
+	}
+	"ScrambleRound"
+	{		
+		"it"		"Le squadre verranno mescolate all'inizio del prossimo Round."
+	}
+	"VoteWillStart"
+	{
+		"it"		"La votazione per il mescolamento delle squadre inizierà dopo che il voto attuale sarà terminato."
+		
+	}
+	"ScrambleStartVote"
+	{
+		"it"		"Mescolamento squadre attivato per la fine del turno grazie al voto."
+	}
+	"VoteFailed"
+	{
+		"it"		"Votazione fallita: il {1} percento di {2} giocatori hanno votato contro il mescolamento squadre."
+	}
+	"VoteWin"
+	{
+		"it"		"Il {1} percento di {2} Giocatori ha votato per il mescolamento delle squadre."
+	}
+	"NotEnoughVotes"
+	{
+		"it"		"Il voto per il mescolamento delle squadre è fallito a causa di voti insufficienti. Solo il {1}%%"
+	}
+	"MapEnding"
+	{
+		"it"		"Voto cancellato a cusa della modifica della mappa."
+	}
+	"RedStreak"
+	{
+		"it"		"La squadra Rossa ha raggiunto il numero massimo di vittorie, mescolamento squadre attivato."
+	}
+	
+	"BluStreak"
+	{
+		"it"		"La squadra Blu ha raggiunto il numero massimo di vittorie, mescolamento squadre attivato."
+	}
+	"TeamChangedOne"
+	{
+		"it"		"La tua squadra è stata cambiata."
+	}
+	"PregameScrambled"
+	{
+		"it"		"Squadra mescolata prima della partita."
+	}
+	"Scrambled"
+	{
+		"it"		"Le squadre sono state mescolate."
+	}
+	"ScrambleDelay"
+	{
+		"it"		"Le squadre saranno mescolate in {1} secondi."
+	}
+	"ResetReply"
+	{
+		"it"		"azzerati {1} voti."
+	}
+	"NoScrambleReply"
+	{
+		"it"		"Nessun mescolamento squadre da annullare."
+	}
+	"ArenaReply"
+	{
+		"it"		"Il Plugin è disabilitato in arena mode con le code abilitate."
+	}
+	"ScrambleReply"
+	{
+		"it"		"Un mescolamento è già stato programmato alla fine di questo round."
+	}
+	"NotAllowedReply"
+	{
+		"it"		"Non sei autorizzato ad eseguire questo comando."
+	}
+	"NoImbalnceReply"
+	{
+		"it"		"Nessuno sbilanciamento rilevato."
+	}
+	"VoteDisabledReply"
+	{
+		"it"		"Le votazioni sono state disabilitate."
+	}
+	"VoteDelayedReply"
+	{
+		"it"		"La votazione per il mescolamento squadre è attualmente in attesa."
+	}
+	"NotEnoughPeopleVote"
+	{
+		"it"		"Numero giocatori insufficienti per la votazione."
+	}
+	"AlreadyVoted"
+	{
+		"it"		"Hai già votato"
+	}
+	"InvalidArgs"
+	{
+		"it"		"Parametro non valido."
+	}
+	"StatsMessage"
+	{
+		"#format"	"{1:i},{2:i},{3:s}"
+		"it"		"Scramble scambiato {1} di {2} giocatori. {3}%"
+	}
+	"ForceMessage"
+	{
+		"it"		"Le squadre sono ora in fase di forza bilanciata. Amministratori / donatori possono essere, ma è improbabile che siano scambiati."
+	}
+	"ImmunityDisabled"
+	{
+		"#format"	"{1:i}"
+		"it"		"Controlli Admin / donatori sono ora disabilitati perché oltre il %{1} del server è impostato per essere immune."
+	}
+}

@@ -1,0 +1,23 @@
+"Games"
+{
+	/* Team Fortress 2 */
+	"tf"
+	{
+		"Signatures"
+		{
+            "CTFPlayerShared::GetConditionProvider"	//CBaseEntity * (int)
+			{
+				"library"			"server"
+				"linux"				"@_ZNK15CTFPlayerShared20GetConditionProviderE7ETFCond"
+				"mac"				"@_ZNK15CTFPlayerShared20GetConditionProviderE7ETFCond"
+			}
+
+			"CAttributeManager::AttribHookValueFloat" //float (float, char const*, CBaseEntity const*, CUtlVector<CBaseEntity*, CUtlMemory<CBaseEntity*, int> >*, bool)
+            {
+				"library"			"server"
+				"linux"				"@_ZN17CAttributeManager15AttribHookValueIfEET_S1_PKcPK11CBaseEntityP10CUtlVectorIPS4_10CUtlMemoryIS8_iEEb"
+				"mac"				"@_ZN17CAttributeManager15AttribHookValueIfEET_S1_PKcPK11CBaseEntityP10CUtlVectorIPS4_10CUtlMemoryIS8_iEEb"
+			}
+        }
+    }
+}

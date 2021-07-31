@@ -1,0 +1,280 @@
+﻿"Phrases"
+{
+	"BlockJointeam"
+	{
+		"en" 			"Team Change Blocked. This server is enforcing auto-team selection"
+	}
+	"VoteAd"
+	{
+		"#format"		"{1:s}"
+		"en"			"Say '{1}' to trigger a scramble vote"
+	}
+	"YourBuddyLeft"
+	{
+		"en"			"Your buddy has left the game"
+	}
+	"BuddyDisabledError"
+	{
+		"en"			"The buddy system is disabled"
+	}
+	"BuddyArgError"
+	{
+		"en"			"Usage: sm_addbuddy <buddy>"
+	}
+	"SpecChangeBlock"
+	{
+		"en"			"You cannot join spectator if it will cause an imbalance"
+	}
+	"AddedBuddy"
+	{
+		"#format"		"{1:s}"
+		"en"			"{1} is now your buddy"
+	}
+	"SomeoneAddedYou"
+	{
+		"#format"		"{1:s}"
+		"en"			"{1} has chosen you to be their buddy!"
+	}
+	"ChoseANewBuddy"
+	{
+		"#format"		"{1:s}"
+		"en"			"Your old buddy {1} has chosen a new buddy"
+	}
+	"AlreadyHasABuddy"
+	{
+		"en"		"This player already has a buddy"
+	}
+	"AdminBlockVoteReply"
+	{
+		"en"		"You cannot start a scramble vote while there is an admin connected"
+	}
+	"ScrambledAlready"
+	{
+		"en"		"There was a scramble already this round.  Try again after this round ends"
+	}
+	"FlagBalance"
+	{
+		"#format"		"{1:i}"
+		"en"			"Imbalance detected. Possible action will begin in {1} second(s)"
+	}
+	"RestoreInnocentTeam"
+	{
+		"#format"	"{1:s}"
+		"en"		"{s} has been forced back onto this team, would you like to rejoin your old team since you were recently balanced to this one?"	
+	}
+	"RejoinMessage"
+	{
+		"#format" 	"{1:s}"
+		"en"		"{1} has opted to rejoin their original team after a reconnecting player was forced back onto their team"
+	}
+	"OverrideUnCheck"
+	{
+		"en"		"Un-blocked the auto-scramble check for the next round"
+	}
+	"OverrideCheck"
+	{
+		"en"		"Blocked the auto-scramble check for the next round"
+	}
+	"NowCommandReply"
+	{
+		"en"		"Usage: sm_scramble <delay> <respawn dead players 0/1> <mode 1-3>\nMode 1 = random\nMode 2 = score sort\nMode 3 = score sort per minute"
+	}
+	"AdminScrambleNow"
+	{
+		"en"		"Toggled a scramble"
+	}
+	"AdminForceBalance"
+	{
+		"en"		"Forced-balanced the teams"
+	}
+	"AdminResetVotes"
+	{
+		"en"		"Reset all public vote triggers"
+	}
+	"RoundMessage"
+	{
+		"en"		"The scramble round trigger has been reached"
+	}
+	"NoCapMessage"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} team did not capture a point last round."
+	}	
+	"CancelScramble"
+	{
+		"en"		"Cancelled the pending scramble."
+	}
+	"PrefAnnounce"
+	{
+		"en"		"Say \"!preference <TEAM>\" to tell the plugin what team you prefer so the autobalance will place high priority on you!"
+	}
+	"PrefDisabled"
+	{
+		"en"		"The preference system is disabled"
+	}
+	"WinTime"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"The winning team team won in less than {1}m:{2}s."
+	}
+	"FragDetection"
+	{
+		"en"		"Winning team frag ratio limit exceeded"
+	}
+	"DominationMessage"
+	{
+		"en"		"Winning team player-domination-difference detected"
+	}
+	"RatioMessage"
+	{
+		"en"		"Average team player score difference detected"
+	}
+	"VoteRoundTimeReply"
+	{
+		"#format"	"{1:i}"
+		"en"		"The final vote-scramble must happen when there are more than {1} seconds remaining in the round"
+	}
+	"TeamRestore"
+	{
+		"en"		"Your old team has been restored since you disconnected and reconnected during the block time."
+	}
+	"EnableReply"
+	{
+		"en"		"The plugin is currently disabled via the convar."
+	}	
+	"BlockSwitchMessage"
+	{
+		"en"		"Team changes are blocked after a switch or scramble."
+	}
+	"ShameMessage"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} is trying to re-stack the teams. For shame!"
+	}
+	"TeamChangedAll"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"{1} has been changed to {2} to balance the teams."
+	}
+	"VoteTallied"
+	{
+		"#format"	"{1:s},{2:i},{3:i}"
+		"en"		"{1} has voted to scramble the teams. {2} out of {3} votes needed."
+	}
+	"ScrambleRound"
+	{		
+		"en"		"Teams will scramble at the beginning of the next round."
+	}
+	"VoteWillStart"
+	{
+		"en"		"The scramble vote will start after the current vote ends."
+		
+	}
+	"ScrambleStartVote"
+	{
+		"en"		"Scramble triggered for end-of-round due to vote."
+	}
+	"VoteFailed"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"Vote Failed: {1} Percent of {2} Players Voted against Vote Scramble."
+	}
+	"VoteWin"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"{1} Percent of {2} Players Voted for Vote Scramble."
+	}
+	"NotEnoughVotes"
+	{
+		"#format"	"{1:i}"
+		"en"		"Vote Scramble has failed due to insufficient Votes. Only {1}%%"
+	}
+	"MapEnding"
+	{
+		"en"		"Canceling active scramble due to map ending."
+	}
+	"RedStreak"
+	{
+		"en"		"Red team reached the win-streak scramble trigger."
+	}	
+	"BluStreak"
+	{
+		"en"		"Blu team reached the win-streak scramble trigger."
+	}
+	"TeamChangedOne"
+	{
+		"en"		"Your team has been changed."
+	}
+	"PregameScrambled"
+	{
+		"en"		"Teams have been pre-game scrambled."
+	}
+	"Scrambled"
+	{
+		"en"		"Teams have been scrambled."
+	}
+	"ScrambleDelay"
+	{
+		"#format"	"{1:i}"
+		"en"		"Teams will scramble in {1} seconds."
+	}
+	"ResetReply"
+	{
+		"#format"	"{1:i}"
+		"en"		"Reset {1} votes."
+	}
+	"NoScrambleReply"
+	{
+		"en"		"No Scramble to cancel."
+	}
+	"ArenaReply"
+	{
+		"en"		"Plugin is disabled in arena mode with queue enabled."
+	}
+	"ScrambleReply"
+	{
+		"en"		"A scramble is already set to happen at the end of this round."
+	}
+	"NotAllowedReply"
+	{
+		"en"		"You are not allowed to run this command."
+	}
+	"NoImbalnceReply"
+	{
+		"en"		"No imbalance detected."
+	}
+	"VoteDisabledReply"
+	{
+		"en"		"Voting has been disabled."
+	}
+	"VoteDelayedReply"
+	{
+		"en"		"Scramble voting is delayed at the moment."
+	}
+	"NotEnoughPeopleVote"
+	{
+		"en"		"Not enough people to votescramble."
+	}
+	"AlreadyVoted"
+	{
+		"en"		"You have already voted."
+	}
+	"InvalidArgs"
+	{
+		"en"		"Invalid command argument."
+	}
+	"StatsMessage"
+	{
+		"#format"	"{1:i},{2:i},{3:s}"
+		"en"		"Scramble swapped {1} out of {2} players. {3}%"
+	}
+	"ForceMessage"
+	{
+		"en"		"Teams are now being force-balanced. Admins/Donors may be, but are unlikely to be swapped."
+	}
+	"ImmunityDisabled"
+	{
+		"#format"	"{1:i}"
+		"en"		"Admin/Donor checks are now disabled because over %{1} of the server is set to be immune."
+	}
+}

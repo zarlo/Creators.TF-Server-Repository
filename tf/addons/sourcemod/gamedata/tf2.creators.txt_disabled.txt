@@ -1,0 +1,22 @@
+"Games"
+{
+	"tf"
+	{
+		"Signatures"
+		{
+			"GEconItemSchema"
+			{
+				"library"	"server"
+				"linux"		"@_Z15GEconItemSchemav"
+				"windows"	"\xE8\x2A\x2A\x2A\x2A\x83\xC0\x04\xC3"
+			}
+
+			"CEconItemSchema::GetAttributeDefinitionByName"
+			{
+				"library"			"server"
+				"linux"				"@_ZN15CEconItemSchema28GetAttributeDefinitionByNameEPKc"
+				"windows"			"\x55\x8B\xEC\x83\xEC\x14\x53\x8B\x5D\x08\x56\x57\x8B\xF9\x85\xDB"
+			}
+		}
+	}
+}
