@@ -1,0 +1,5 @@
+you ***must*** strip the trailing newline from cleaner.cfg. If you don't, the server will crash and nothing will be outputted to console.
+
+just please make sure to run the following cmd:
+
+truncate -s -1 cleaner.cfg
