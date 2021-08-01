@@ -12,7 +12,7 @@
 
 
 //Used to easily access my cvars out of an array.
-#define PLUGIN_VERSION "1.3.4"
+#define PLUGIN_VERSION "1.3.5"
 enum {
       ENABLED = 0
     , ANTIOVERLAP
@@ -365,7 +365,7 @@ public Action CheckAllTraces(Handle hTimer)
                 {
                     FormatEx(strMessage, sizeof(strMessage), "Sprays are too close together to determine owner!");
                 }
-                else if (spraydist <= 64)
+                else if (spraydist <= 128)
                 {
                     strMessage[0] = '\0';
                     //Generate the text that is to be shown on your screen.
