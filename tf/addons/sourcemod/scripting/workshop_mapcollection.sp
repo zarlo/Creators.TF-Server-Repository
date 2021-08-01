@@ -122,7 +122,7 @@ public void Load_Mapcycle_From_Collection(const char[] data) {
 				vdf.GetString("publishedfileid", value, sizeof(value)); // Add to mapcycle_workshop.txt
 				Format(map, sizeof map, "workshop/%s", value);
 				GetMapDisplayName(map, displayName, sizeof displayName);
-				PrintToServer("//%s\n%s", displayName, map);
+				//PrintToServer("//%s\n%s", displayName, map);
 			}
 		} while(vdf.GotoNextKey());
 	}
