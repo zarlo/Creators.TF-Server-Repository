@@ -79,8 +79,11 @@ elif sid > 200 and sid <= 299:
     if sid <= 204:
         type = "Quickplay"
 
-    elif sid <= 210:
+    elif sid <= 208:
         type = "Vanilla+"
+
+    elif sid <= 212:
+        type = "DigitalDirective"
 
 
 elif sid > 300 and sid <= 399:

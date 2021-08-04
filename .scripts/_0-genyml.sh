@@ -17,7 +17,6 @@ jobs=(
 # all servers tags
 allservers=(
     virginiapub
-    chicago3
     lapub
     eupub
     eu2pub
