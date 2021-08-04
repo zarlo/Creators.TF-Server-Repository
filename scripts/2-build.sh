@@ -14,8 +14,7 @@ COMPILED_DIR="plugins"
 # Exclusion lists, use /dir/ for directories and /file_ for file_*.sp
 EXCLUDE_COMPILE="/stac/ /include/ /disabled/ /external/ /economy/ /discord/"
 EXCLUDE_COMPILE="grep -v -e ${EXCLUDE_COMPILE// / -e }"
-# putting optional here instead of nothing
-EXCLUDE_CLEANUP="/optional/"
+EXCLUDE_CLEANUP="/external/"
 EXCLUDE_CLEANUP="grep -v -e ${EXCLUDE_CLEANUP// / -e }"
 
 # Temporary files
