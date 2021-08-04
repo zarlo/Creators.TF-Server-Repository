@@ -29,7 +29,7 @@ usage()
     echo "This script looks for all uncompiled .sp files"
     echo "and if a reference is given, those that were updated"
     echo "Then it compiles everything"
-    echo "Usage: ./build.sh <reference>"
+    echo "Usage: ./2-build.sh <reference>"
     exit 1
 }
 

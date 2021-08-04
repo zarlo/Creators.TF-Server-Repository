@@ -6,8 +6,8 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 # Helper functions
 source ${SCRIPT_DIR}/helpers.sh
 
-PULL_SH="_1-pull.sh"
-BUILD_SH="_2-build.sh"
+PULL_SH="1-pull.sh"
+BUILD_SH="2-build.sh"
 
 
 usage()
@@ -17,8 +17,8 @@ usage()
     echo "    pull: Cleans and pulls the repo (if applicable)"
     echo "    build: Build unbuilt and updated plugins"
     echo "    <arguments>: All arguments are passed down to the command, for more info check"
-    echo "      ./.scripts/${PULL_SH} usage"
-    echo "      ./.scripts/${BUILD_SH} usage"
+    echo "      ./scripts/${PULL_SH} usage"
+    echo "      ./scripts/${BUILD_SH} usage"
     exit 1
 }
 

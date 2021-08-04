@@ -6,7 +6,7 @@ stages:
 
 fastdl:
   stage: fastdl
-  script: ./.scripts/_0-fastdl.sh
+  script: ./scripts/0-fastdl.sh
   needs: []
   tags:
   - fastdl
@@ -17,7 +17,7 @@ fastdl:
 
 compile_plugins:
   stage: compile_plugins
-  script: ./.scripts/_2-build.sh
+  script: ./scripts/2-build.sh
   needs: []
   tags:
   - worker
@@ -25,7 +25,7 @@ compile_plugins:
 # this generates our yml so we don't run on more servers than needed
 generate-yml:
   stage: genyml
-  script: ./.scripts/_0-genyml.sh | tee cfg.yml
+  script: ./scripts/0-genyml.sh | tee cfg.yml
   artifacts:
     paths:
       - cfg.yml
