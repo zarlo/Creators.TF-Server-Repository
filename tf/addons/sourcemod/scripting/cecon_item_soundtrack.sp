@@ -653,9 +653,11 @@ public Action teamplay_broadcast_audio(Event hEvent, const char[] szName, bool b
 			}
 		}
 
+		// FireToClient DOES NOT CLOSE THE HANDLE, so we run event.Cancel() after we're done
 		if(StrEqual(sSound, ""))
 		{
 			hEvent.FireToClient(i);
+			hEvent.Cancel();
 
 		} else {
 			Event hNewEvent = CreateEvent("teamplay_broadcast_audio");
@@ -665,6 +667,7 @@ public Action teamplay_broadcast_audio(Event hEvent, const char[] szName, bool b
 			hNewEvent.SetInt("override", 1);
 			hNewEvent.SetString("sound", sSound);
 			hNewEvent.FireToClient(i);
+			hNewEvent.Cancel();
 		}
 	}
 
