@@ -657,7 +657,8 @@ public Action teamplay_broadcast_audio(Event hEvent, const char[] szName, bool b
 		if(StrEqual(sSound, ""))
 		{
 			hEvent.FireToClient(i);
-			hEvent.Cancel();
+			// we don't need to close this handle, it's fired by the game, not us
+			// hEvent.Cancel();
 
 		} else {
 			Event hNewEvent = CreateEvent("teamplay_broadcast_audio");
@@ -667,6 +668,7 @@ public Action teamplay_broadcast_audio(Event hEvent, const char[] szName, bool b
 			hNewEvent.SetInt("override", 1);
 			hNewEvent.SetString("sound", sSound);
 			hNewEvent.FireToClient(i);
+			// we made this, so let's close it
 			hNewEvent.Cancel();
 		}
 	}
