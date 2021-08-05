@@ -968,7 +968,7 @@ bool IsUserLagging(int userid, bool checkcmdnum = true, bool checktickcount = tr
             \nisCmdnumSequential = %i\
             \nisTickcountInOrder = %i\
             \nisTickcountRepeated = %i\
-            \ntickspersec[Cl] = %f",
+            \ntickspersec[Cl] = %i",
             Cl,
             isCmdnumSequential(userid),
             isTickcountInOrder(userid),
