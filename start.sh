@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # colors
-source .scripts/helpers.sh
+source scripts/helpers.sh
 
 # a2s shennanigans
 export STEAM_GAMESERVER_RATE_LIMIT_200MS=25
