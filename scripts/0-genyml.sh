@@ -10,7 +10,7 @@ jobnames=(
 
 # scripts to execute for each job - adjust flags here
 jobs=(
-    "./scripts/ci.sh pull -v"
+    "./scripts/ci.sh pull -v -c"
     "./scripts/ci.sh build"
 )
 
