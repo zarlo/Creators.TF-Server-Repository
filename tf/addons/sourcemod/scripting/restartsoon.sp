@@ -28,14 +28,16 @@ public Action restart(int Cl, int args)
     }
     else
     {
-    	if (GetRealClientCount() > 0)
-    	{
-	        b_restart = true;
-	        ReplyToCommand(Cl, "Server will restart on map change.");
-	    } else {
-	    	ReplyToCommand(Cl, "Restarting since there are no players on this server.");
-	    	RestartNow();
-	    }
+        if (GetRealClientCount() > 0)
+        {
+            b_restart = true;
+            ReplyToCommand(Cl, "Server will restart on map change.");
+        }
+        else
+        {
+            ReplyToCommand(Cl, "Restarting since there are no players on this server.");
+            RestartNow();
+        }
     }
 }
 
@@ -63,13 +65,13 @@ public Action kill(int Cl, int args)
     {
         if (GetRealClientCount() > 0)
         {
-	    b_kill = true;
-	    ReplyToCommand(Cl, "Server will die on map change.");
+            b_kill = true;
+            ReplyToCommand(Cl, "Server will die on map change.");
         }
         else
         {
-	    ReplyToCommand(Cl, "Killing since there are no players on this server.");
-	    KillNow();
+            ReplyToCommand(Cl, "Killing since there are no players on this server.");
+            KillNow();
         }
     }
 }
@@ -87,13 +89,14 @@ public Action unkill(int Cl, int args)
     }
 }
 
-void RestartNow() 
+void RestartNow()
 {
     ServerCommand("sm_kick @humans This server is restarting. Please rejoin in about 30 seconds");
-    ServerCommand("quit");
+    ServerCommand("sm_syskill");
+    ServerCommand("sm_syskill -9");
 }
 
-void KillNow() 
+void KillNow()
 {
     ServerCommand("sm_kick @humans This server is closing");
     ServerCommand("killserver");
@@ -115,13 +118,13 @@ public void OnMapStart()
 
 stock int GetRealClientCount()
 {
-	int count = 0;
-	for (int i = 1; i <= MaxClients; i++)
-	{
-		if (IsClientInGame(i) && !IsFakeClient(i) && !IsClientSourceTV(i) && !IsClientReplay(i))
-		{
-			count++;
-		}
-	}
-	return count;
+    int count = 0;
+    for (int i = 1; i <= MaxClients; i++)
+    {
+        if (IsClientInGame(i) && !IsFakeClient(i) && !IsClientSourceTV(i) && !IsClientReplay(i))
+        {
+            count++;
+        }
+    }
+    return count;
 }
