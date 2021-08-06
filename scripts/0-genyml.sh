@@ -19,7 +19,6 @@ allservers=(
     virginiapub
     lapub
     eupub
-    eu2pub
     auspub
     sgppub
     uspotato1
