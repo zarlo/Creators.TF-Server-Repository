@@ -149,6 +149,11 @@ cleanup_plugins()
         elif [ ${SP_FILE_COUNT} -eq 1 ]; then
             # If only one *.sp counterpart was found then all is good
             debug "${line} -> ${SP_FILE}"
+            # If the ${SP_FILE} lives on the exclusion list, then delete the compiled plugin
+            if [[ ${SP_FILE} == */disabled/* ]] || [[ ${SP_FILE} == */external/* ]]; then
+                important "Plugin is disabled or external, deleting the compiled file"
+                rm -fv ${line}
+            fi
         else
             # If more than one *.sp counterpart was found, then print a warning (for cleanup)
             warn "${line} -> ${SP_FILE//$'\n'/ - }"
