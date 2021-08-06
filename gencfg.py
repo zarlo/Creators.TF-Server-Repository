@@ -57,19 +57,15 @@ pubs = False
 
 
 if sid > 100 and sid <= 199:
+    c_region = "EU 1"
 
-    # EU 1 Pub Servers
-    if sid <= 108:
-        c_region = "EU 1"
+    if sid <= 104:
+        type = "Quickplay"
 
-        if sid <= 104:
-            type = "Quickplay"
-        else:
-            type = "Vanilla+"
+    elif sid <= 108:
+        type = "Vanilla+"
 
-    # EU 1 MvM Servers
-    else:
-        c_region = "EU 1"
+    elif sid <= 112:
         type = "DigitalDirective"
 
 elif sid > 200 and sid <= 299:
