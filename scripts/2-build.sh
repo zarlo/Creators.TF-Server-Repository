@@ -12,7 +12,7 @@ SPCOMP_PATH="scripting/spcomp64"
 SCRIPTS_DIR="scripting"
 COMPILED_DIR="plugins"
 # Exclusion lists, use /dir/ for directories and /file_ for file_*.sp
-EXCLUDE_COMPILE="/stac/ /include/ /disabled/ /external/ /economy/ /discord/"
+EXCLUDE_COMPILE="/stac/ /include/ /disabled/ /external/ /economy/ /discord/ /tf2-comp-fixes/"
 EXCLUDE_COMPILE="grep -v -e ${EXCLUDE_COMPILE// / -e }"
 EXCLUDE_CLEANUP="/external/ /disabled/"
 EXCLUDE_CLEANUP="grep -v -e ${EXCLUDE_CLEANUP// / -e }"
