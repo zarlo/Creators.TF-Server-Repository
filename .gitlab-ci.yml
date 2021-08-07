@@ -26,10 +26,12 @@ compile_plugins:
 
 github:
   stage: github
-  script: ./.scripts/push-to-github.sh
+  script: ./scripts/push-to-github.sh
   needs: []
   tags:
   - backend
+  only:
+  - master
 
 # Secret Detection
 #include:
