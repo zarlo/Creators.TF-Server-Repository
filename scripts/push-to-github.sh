@@ -1,5 +1,5 @@
 #!/bin/bash
-source .scripts/helpers.sh
+source scripts/helpers.sh
 
 # written by sappho.io
 
