@@ -1,8 +1,10 @@
 stages:
   - fastdl
   - compile_plugins
+  - github
   - genyml
   - trigger
+#  - test
 
 fastdl:
   stage: fastdl
@@ -21,6 +23,22 @@ compile_plugins:
   needs: []
   tags:
   - worker
+
+github:
+  stage: github
+  script: ./.scripts/push-to-github.sh
+  needs: []
+  tags:
+  - backend
+
+# Secret Detection
+#include:
+#  - template: Secret-Detection.gitlab-ci.yml
+
+#secret_detection:
+#  tags:
+#    - sast-runner
+
 
 # this generates our yml so we don't run on more servers than needed
 generate-yml:
