@@ -962,18 +962,6 @@ bool IsUserLagging(int userid, bool checkcmdnum = true, bool checktickcount = tr
         )
     )
     {
-        LogMessage("[StAC] [DEBUG] player %N is lagging - last lag %f, cur time %f", Cl, timeSinceLagSpikeFor[Cl], engineTime[Cl][0]);
-        LogMessage("\
-            [StAC] [DEBUG] player %N -\
-            \nisCmdnumSequential = %i\
-            \nisTickcountInOrder = %i\
-            \nisTickcountRepeated = %i\
-            \ntickspersec[Cl] = %i",
-            Cl,
-            isCmdnumSequential(userid),
-            isTickcountInOrder(userid),
-            isTickcountRepeated(userid),
-            tickspersec[Cl]);
         timeSinceLagSpikeFor[Cl] = engineTime[Cl][0];
         return true;
     }
