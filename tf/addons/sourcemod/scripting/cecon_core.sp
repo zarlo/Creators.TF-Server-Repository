@@ -35,6 +35,8 @@ public Plugin myinfo =
 	url = "https://creators.tf"
 }
 
+// Economy credentials aren't needed in a local build, which talks to the API in a "read only" mode.
+#if !defined LOCAL_BUILD
 //-------------------------------------------------------------------
 // Economy Credentials
 //-------------------------------------------------------------------
@@ -47,7 +49,7 @@ char m_sAuthorizationKey[129];	// Value to put into "Authorization" header, when
 
 // True if all credentials have loaded succesfully.
 bool m_bCredentialsLoaded = false;
-
+#endif
 
 //-------------------------------------------------------------------
 // Schema
@@ -96,6 +98,8 @@ enum struct CEQueuedEvent
 
 
 
+// The coordinator module is disabled on a local build.
+#if !defined LOCAL_BUILD
 
 //-------------------------------------------------------------------
 // Coordinator
@@ -115,10 +119,11 @@ int m_iFailureCount = 0;					// Amount of failures that we have encountered in a
 // we timeout our requests if a certain amount of failures were made.
 #define COORDINATOR_FAILURE_TIMEOUT 180.0
 
-ConVar 	ce_coordinator_enabled,		// If true, coordinator will be online.
-		ce_credentials_filename;	// Filename of the econome config.
 
+ConVar 	ce_coordinator_enabled;		// If true, coordinator will be online.
+ConVar	ce_credentials_filename;	// Filename of the econome config.
 ConVar  g_hostport;
+#endif
 
 //-------------------------------------------------------------------
 // Purpose: Fired when plugin starts.
@@ -126,18 +131,25 @@ ConVar  g_hostport;
 public void OnPluginStart()
 {
 	// ----------- COORD ------------ //
+	
+	// If we are a local build, disable everything relating to the coordinator at compile
+	// since they will not be able to pull jobs without an API key.
+#if !defined LOCAL_BUILD
 
-	// ConVars
+	// Enable the coordinator.
 	ce_coordinator_enabled = CreateConVar("ce_coordinator_enabled", "1", "If true, coordinator will be online.");
+	
+	// Filename to load credentials from. This mainly consists of an Authorization key.
 	ce_credentials_filename = CreateConVar("ce_credentials_filename", "economy.cfg", "Filename of the econome config.");
-	ce_events_per_frame = CreateConVar("ce_events_per_frame", "2", "Don't process more than X events per a frame.");
-
-	HookConVarChange(ce_coordinator_enabled, ce_coordinator_enabled__CHANGED);
+	
+	// If these two ConVar's change, hook it so we can change our internal variables accordingly.
 	HookConVarChange(ce_credentials_filename, ce_credentials_filename__CHANGED);
-
+	HookConVarChange(ce_coordinator_enabled, ce_coordinator_enabled__CHANGED);
+	
 	// Start long polling in 5 seconds. Why? I don't know yet.
 	// TODO: THIS PROBABLY CAN BE REMOVED
 	CreateTimer(5.0, Timer_InitialStartLongPolling);
+#endif
 
 	// ----------- SCHEMA ----------- //
 
@@ -153,10 +165,15 @@ public void OnPluginStart()
 
 	// ----------- EVENTS ----------- //
 
+	// Create a forward handle that fires when the client receives an event.
 	g_hOnClientEvent = CreateGlobalForward("CEcon_OnClientEvent", ET_Ignore, Param_Cell, Param_String, Param_Cell, Param_Cell);
-	RegAdminCmd("ce_events_test", cTestEvnt, ADMFLAG_ROOT, "Tests a CEcon event.");
-	ce_events_queue_debug = CreateConVar("ce_events_queue_debug", "0");
+	
+	// Events that we'll process each frame.
+	ce_events_per_frame = CreateConVar("ce_events_per_frame", "2", "Don't process more than X events per a frame.");
+	
+	// Debugging:
 	ce_events_log = CreateConVar("ce_events_log", "0");
+	ce_events_queue_debug = CreateConVar("ce_events_queue_debug", "0");
 	ce_events_log_event_filter = CreateConVar("ce_events_log_event_filter", "");
 
 	// Hook all needed entities when plugin late loads.
@@ -164,7 +181,9 @@ public void OnPluginStart()
 
 	HookEvent("player_spawn", player_spawn);
 
+#if !defined LOCAL_BUILD // This is used in a function when we're not in a local build.
 	g_hostport = FindConVar("hostport");
+#endif
 	m_hEventsQueue = new ArrayList(sizeof(CEQueuedEvent));
 }
 
@@ -191,10 +210,16 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 	//------------------------------------------------
 	// Core
-
-	CreateNative("CEcon_GetAccessKey", Native_GetAccessKey);
+	
 	CreateNative("CEcon_GetBaseBackendURL", Native_GetBaseBackendURL);
+	
+#if !defined LOCAL_BUILD
+	// If we're using a local build, we won't be needing these natives.
+	// The default API url will be https://creators.tf, and there wont
+	// be a need for an access key or authorization key.
+	CreateNative("CEcon_GetAccessKey", Native_GetAccessKey);
 	CreateNative("CEcon_GetAuthorizationKey", Native_GetAuthorizationKey);
+#endif
 
 	//------------------------------------------------
 	// Schema
@@ -240,10 +265,13 @@ public void Steam_FullyLoaded()
 //-------------------------------------------------------------------
 public void Steam_OnReady()
 {
+#if !defined LOCAL_BUILD
 	ReloadEconomyCredentials();
+#endif
 	Schema_CheckForUpdates(false);
 }
 
+#if !defined LOCAL_BUILD
 public void ce_credentials_filename__CHANGED(ConVar cvar, char[] oldval, char[] newval)
 {
 	ReloadEconomyCredentials();
@@ -304,6 +332,7 @@ public void ReloadEconomyCredentials()
 	// Start coordinator request, if it's not started already.
 	SafeStartCoordinatorPolling();
 }
+#endif
 
 //-------------------------------------------------------------------
 // Purpose: Returns true if client is a real player that
@@ -363,9 +392,14 @@ public bool IsEntityValid(int entity)
 public any Native_GetBaseBackendURL(Handle plugin, int numParams)
 {
 	int size = GetNativeCell(2);
+#if !defined LOCAL_BUILD
 	SetNativeString(1, m_sBaseEconomyURL, size);
+#else
+	SetNativeString(1, DEFAULT_ECONOMY_BASE_URL, size);
+#endif
 }
 
+#if !defined LOCAL_BUILD
 //-------------------------------------------------------------------
 // Native: CEcon_GetAccessKey
 //-------------------------------------------------------------------
@@ -383,6 +417,7 @@ public any Native_GetAuthorizationKey(Handle plugin, int numParams)
 	int size = GetNativeCell(2);
 	SetNativeString(1, m_sAuthorizationKey, size);
 }
+#endif
 
 //============= Copyright Amper Software, All rights reserved. ============//
 //
@@ -416,6 +451,9 @@ public any Native_GetAuthorizationKey(Handle plugin, int numParams)
 */
 //===============================//
 
+
+// The Coordinator module will be disabled if we're using a local build.
+#if !defined LOCAL_BUILD
 //-------------------------------------------------------------------
 // Purpose: Timer that reenables coordinator queue if it's offline,
 // but it should be online.
@@ -699,6 +737,7 @@ public bool CoordinatorProcessRequestContent(HTTPRequestHandle request)
 	// Return false as there were no errors in this execution.
 	return false;
 }
+#endif
 
 //============= Copyright Amper Software, All rights reserved. ============//
 //
@@ -774,8 +813,13 @@ public void Schema_CheckForUpdates(bool bIsForced)
 
 	if(StrEqual(sOverrideURL, ""))
 	{
+#if !defined LOCAL_BUILD
 		// Otherwise use base url.
 		Format(sURL, sizeof(sURL), "%s/api/IEconomyItems/GScheme", m_sBaseEconomyURL);
+#else
+		// Otherwise use base url.
+		Format(sURL, sizeof(sURL), "%s/api/IEconomyItems/GScheme", DEFAULT_ECONOMY_BASE_URL);
+#endif
  	} else {
 		// If we set to override the schema url, use value from the cvar.
 		strcopy(sURL, sizeof(sURL), sOverrideURL);
@@ -787,11 +831,13 @@ public void Schema_CheckForUpdates(bool bIsForced)
 	Steam_SetHTTPRequestGetOrPostParameter(httpRequest, "field", "Version");
 	Steam_SetHTTPRequestNetworkActivityTimeout(httpRequest, 10);
 	Steam_SetHTTPRequestHeaderValue(httpRequest, "Accept", "text/keyvalues");
+#if !defined LOCAL_BUILD
 	Steam_SetHTTPRequestHeaderValue(httpRequest, "Authorization", m_sAuthorizationKey);
 
 	char sAccessHeader[256];
 	Format(sAccessHeader, sizeof(sAccessHeader), "Provider %s", m_sEconomyAccessKey);
 	Steam_SetHTTPRequestHeaderValue(httpRequest, "Access", sAccessHeader);
+#endif
 
 	Steam_SendHTTPRequest(httpRequest, Schema_CheckForUpdates_Callback);
 }
@@ -873,8 +919,13 @@ public void Schema_ForceUpdate()
 
 	if(StrEqual(sOverrideURL, ""))
 	{
+#if !defined LOCAL_BUILD
 		// Otherwise use base url.
 		Format(sURL, sizeof(sURL), "%s/api/IEconomyItems/GScheme", m_sBaseEconomyURL);
+#else
+		// Otherwise use base url.
+		Format(sURL, sizeof(sURL), "%s/api/IEconomyItems/GScheme", DEFAULT_ECONOMY_BASE_URL);
+#endif
 	} else {
 		// If we set to override the schema url, use value from the cvar.
 		strcopy(sURL, sizeof(sURL), sOverrideURL);
@@ -883,12 +934,13 @@ public void Schema_ForceUpdate()
 	HTTPRequestHandle httpRequest = Steam_CreateHTTPRequest(HTTPMethod_GET, sURL);
 	Steam_SetHTTPRequestNetworkActivityTimeout(httpRequest, 10);
 	Steam_SetHTTPRequestHeaderValue(httpRequest, "Accept", "text/keyvalues");
-
+#if !defined LOCAL_BUILD
 	Steam_SetHTTPRequestHeaderValue(httpRequest, "Authorization", m_sAuthorizationKey);
 
 	char sAccessHeader[256];
 	Format(sAccessHeader, sizeof(sAccessHeader), "Provider %s", m_sEconomyAccessKey);
 	Steam_SetHTTPRequestHeaderValue(httpRequest, "Access", sAccessHeader);
+#endif
 
 	Steam_SendHTTPRequest(httpRequest, Schema_ForceUpdate_Callback);
 }

@@ -1621,8 +1621,14 @@ public bool AddPointsToClientObjective(int client, CEQuestObjectiveDefinition xO
 				UpdateClientQuestProgress(client, xProgress);
 
 				// Queue backend update.
+				
+				// In a local build of the economy, the users will see contract progress
+				// go up on their HUD to test if event logic works, but those events
+				// will never be sent to the backend as they don't have access to an
+				// API key, leaving them in a "read-only" state.
+#if !defined LOCAL_BUILD
 				AddQuestUpdateBatch(client, xQuest.m_iIndex, iObjectiveIndex, iAfter);
-
+#endif
 				bool bIsHalloween = StrEqual(xQuest.m_sPostfix, "MP");
 				
 				if(xQuest.m_bBackground)
@@ -1758,6 +1764,11 @@ public int MIN(int iNum1, int iNum2)
 	if (iNum2 < iNum1)return iNum2;
 	return iNum1;
 }
+// In a local build of the economy, the users will see contract progress
+// go up on their HUD to test if event logic works, but those events
+// will never be sent to the backend as they don't have access to an
+// API key, leaving them in a "read-only" state.
+#if !defined LOCAL_BUILD
 
 enum struct CEQuestUpdateBatch
 {
@@ -1804,10 +1815,19 @@ public void AddQuestUpdateBatch(int client, int quest, int objective, int points
 	m_QuestUpdateBatches.PushArray(xBatch);
 	
 	if (m_bIsUpdatingBatch)m_bWasUpdatedWhileUpdating = true;
+
 }
+#endif
 
 public Action Timer_QuestUpdateInterval(Handle timer, any data)
 {
+	// In a local build of the economy, the users will see contract progress
+	// go up on their HUD to test if event logic works, but those events
+	// will never be sent to the backend as they don't have access to an
+	// API key, leaving them in a "read-only" state.
+#if defined LOCAL_BUILD
+	return;
+#else
 	if (m_QuestUpdateBatches == null)return;
 	if (m_QuestUpdateBatches.Length == 0)return;
 
@@ -1836,10 +1856,18 @@ public Action Timer_QuestUpdateInterval(Handle timer, any data)
 
 	Steam_SendHTTPRequest(hRequest, QuestUpdate_Callback, iCount);
 	m_bIsUpdatingBatch = true;
+#endif
 }
 
 public void QuestUpdate_Callback(HTTPRequestHandle request, bool success, HTTPStatusCode code, any count)
 {
+	// In a local build of the economy, the users will see contract progress
+	// go up on their HUD to test if event logic works, but those events
+	// will never be sent to the backend as they don't have access to an
+	// API key, leaving them in a "read-only" state.
+#if defined LOCAL_BUILD
+	return;
+#else
 	m_bIsUpdatingBatch = false;
 	bool bUpdated = m_bWasUpdatedWhileUpdating;
 	m_bWasUpdatedWhileUpdating = false;
@@ -1881,14 +1909,23 @@ public void QuestUpdate_Callback(HTTPRequestHandle request, bool success, HTTPSt
 	{
 		delete m_QuestUpdateBatches;
 	}
+#endif
 }
 
 public Action teamplay_round_win(Event event, const char[] name, bool dontBroadcast)
 {
+	// In a local build of the economy, the users will see contract progress
+	// go up on their HUD to test if event logic works, but those events
+	// will never be sent to the backend as they don't have access to an
+	// API key, leaving them in a "read-only" state.
+#if defined LOCAL_BUILD
+	return;
+#else
 	// Update progress immediately when round ends.
 	// Players usually will look up their progress after they've done playing the game.
 	// And it'll be frustrating to see their progress not being updated immediately.
 	CreateTimer(0.1, Timer_QuestUpdateInterval);
+#endif
 }
 
 public bool QuestIsListeningForEvent(CEQuestDefinition xQuest, const char[] event)

@@ -1102,8 +1102,6 @@ public any Native_SetEntityAttributeString(Handle plugin, int numParams)
     GetNativeString(2, sName, sizeof(sName));
     GetNativeString(3, sValue, sizeof(sValue));
 
-    bool bNetworked = GetNativeCell(4);
-
 	// We may have multiple instances of this item in different
 	// loadouts. Make sure to update them all.
 	if(m_hEconItem[entity].m_iIndex > 0)
@@ -1130,6 +1128,13 @@ public any Native_SetEntityAttributeString(Handle plugin, int numParams)
 		}
 	}
 
+	// In a local build of the economy, the users will not be able to update
+	// any attributes on their items using HTTP requests to the website.
+#if defined LOCAL_BUILD
+	return;
+#else
+	bool bNetworked = GetNativeCell(4);
+
 	if(bNetworked)
 	{
 		int iItemIndex = m_hEconItem[entity].m_iIndex;
@@ -1138,8 +1143,9 @@ public any Native_SetEntityAttributeString(Handle plugin, int numParams)
 			AddAttributeUpdateBatch(iItemIndex, sName, sValue);
 		}
 	}
-
+	
 	return;
+#endif
 }
 
 //---------------------------------------------------------------------
