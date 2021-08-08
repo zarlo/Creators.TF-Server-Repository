@@ -40,7 +40,12 @@ public void OnPluginStart()
 	ce_campaign_force_activate = CreateConVar("ce_campaign_force_activate", "", "Force activates a campaign, ignores the time limit.", FCVAR_PROTECTED);
 	HookConVarChange(ce_campaign_force_activate, ce_campaign_force_activate__CHANGED);
 
+	// In a local build of the economy, the users will have their campaign
+	// progress update, but it won't be written to the database via an
+	// HTTP request to the website.
+#if !defined LOCAL_BUILD
 	CreateTimer(BACKEND_CAMPAIGN_UPDATE_INTERVAL, Timer_BackendUpdateInterval, _, TIMER_REPEAT);
+#endif
 
 	HookEvent("teamplay_round_win", teamplay_round_win);
 }
@@ -289,7 +294,7 @@ public int MonthToDays(int month)
 	return iDays;
 }
 
-
+#if !defined LOCAL_BUILD
 enum struct CECampaignUpdateBatch
 {
 	char m_sSteamID[64];
@@ -302,9 +307,16 @@ bool m_bIsUpdatingBatch;
 bool m_bWasUpdatedWhileUpdating;
 
 ArrayList m_CampaignUpdateBatches;
+#endif
 
 public void AddUpdateBatch(int client, const char[] campaign, int points)
 {
+	// In a local build of the economy, the users will have their campaign
+	// progress update, but it won't be written to the database via an
+	// HTTP request to the website.
+#if defined LOCAL_BUILD
+	return;
+#else
 	if(m_CampaignUpdateBatches == null)
 	{
 		m_CampaignUpdateBatches = new ArrayList(sizeof(CECampaignUpdateBatch));
@@ -335,10 +347,17 @@ public void AddUpdateBatch(int client, const char[] campaign, int points)
 	m_CampaignUpdateBatches.PushArray(xBatch);
 	
 	if (m_bIsUpdatingBatch)m_bWasUpdatedWhileUpdating = true;
+#endif
 }
 
 public Action Timer_BackendUpdateInterval(Handle timer, any data)
 {
+	// In a local build of the economy, the users will have their campaign
+	// progress update, but it won't be written to the database via an
+	// HTTP request to the website.
+#if defined LOCAL_BUILD
+	return;
+#else
 	if (m_CampaignUpdateBatches == null)return;
 	if (m_CampaignUpdateBatches.Length == 0)return;
 
@@ -366,10 +385,17 @@ public Action Timer_BackendUpdateInterval(Handle timer, any data)
 
 	Steam_SendHTTPRequest(hRequest, BackendUpdate_Callback);
 	m_bIsUpdatingBatch = true;
+#endif
 }
 
 public void BackendUpdate_Callback(HTTPRequestHandle request, bool success, HTTPStatusCode code, any count)
 {
+	// In a local build of the economy, the users will have their campaign
+	// progress update, but it won't be written to the database via an
+	// HTTP request to the website.
+#if defined LOCAL_BUILD
+	return;
+#else
 	m_bIsUpdatingBatch = false;
 	bool bUpdated = m_bWasUpdatedWhileUpdating;
 	m_bWasUpdatedWhileUpdating = false;
@@ -411,12 +437,20 @@ public void BackendUpdate_Callback(HTTPRequestHandle request, bool success, HTTP
 	{
 		delete m_CampaignUpdateBatches;
 	}
+#endif
 }
 
 public Action teamplay_round_win(Event event, const char[] name, bool dontBroadcast)
 {
+	// In a local build of the economy, the users will have their campaign
+	// progress update, but it won't be written to the database via an
+	// HTTP request to the website.
+#if defined LOCAL_BUILD
+	return;
+#else
 	// Update progress immediately when round ends.
 	// Players usually will look up their progress after they've done playing the game.
 	// And it'll be frustrating to see their progress not being updated immediately.
 	CreateTimer(0.1, Timer_BackendUpdateInterval);
+#endif
 }

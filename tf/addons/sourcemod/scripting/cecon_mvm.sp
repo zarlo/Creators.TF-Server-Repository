@@ -72,20 +72,18 @@ public void OnPluginStart()
 
 	HookEvent("player_changeclass", player_changeclass);
 
+	// In a local build of the economy, the users will not be able to update
+	// their wave progress or see tour loot.
+#if !defined LOCAL_BUILD
 	RegConsoleCmd("sm_loot", cLoot, "Opens the latest Tour Loot page");
+#endif
+
 
 	RegAdminCmd("ce_mvm_set_wave_time", cSetWave, ADMFLAG_ROOT);
 
 	// SigSegv extension workaround.
 	AddCommandListener(cChangelevel, "changelevel");
 	ce_mvm_restart_on_changelevel_from_mvm = CreateConVar("ce_mvm_restart_on_changelevel_from_mvm", "0");
-	/*
-
-	sigRegex  = CompileRegex("\\[\\d+\\] sigsegv MvM");
-	numbersRegex = CompileRegex("\\d+");
-	dhooksRegex  = CompileRegex("\\[\\d+\\] DHooks");
-
-	*/
 }
 
 public Action cChangelevel(int client, const char[] command, int args)
@@ -452,68 +450,7 @@ public void LoadSigsegvExtension()
 	// Update true sigsegv extension file from update file
 	LoadSigsegvForReal();
 }
-/*
-// moronic that sourcemod forces me to do this instead of allowing forcible unloading of extensions by name
-Action checkDhooksExtNum(Handle timer)
-{
-	char ExtsPrintOut[2048];
-	// get exts list
-	ServerCommandEx(ExtsPrintOut, sizeof(ExtsPrintOut), "sm exts list");
-	char dhooksid[32];
-	char idid[16];
-	if (MatchRegex(dhooksRegex, ExtsPrintOut) > 0)
-	{
-		// dhooks found
-		if (GetRegexSubString(dhooksRegex, 0, dhooksid, sizeof(dhooksid)))
-		{
-			// id [still includes the "DHooks" at the front]
-			LogMessage("dhooksid %s", dhooksid);
-			TrimString(dhooksid);
-			if (MatchRegex(numbersRegex, dhooksid) > 0)
-			{
-				if (GetRegexSubString(numbersRegex, 0, idid, sizeof(idid)))
-				{
-					LogMessage("idid %s", idid);
-					// yep
-					ServerCommand("sm exts unload %s", idid);
-					ServerExecute();
-					return Plugin_Continue;
-				}
-			}
-		}
-	}
-	return Plugin_Continue;
-}
 
-void checkSigsegvExtNum()
-{
-	char ExtsPrintOut[2048];
-	// get exts list
-	ServerCommandEx(ExtsPrintOut, sizeof(ExtsPrintOut), "sm exts list");
-	char sigid[32];
-	char idid[16];
-	if (MatchRegex(sigRegex, ExtsPrintOut) > 0)
-	{
-		// dhooks found
-		if (GetRegexSubString(sigRegex, 0, sigid, sizeof(sigid)))
-		{
-			// id [still includes the "DHooks" at the front]
-			LogMessage("sigid %s", sigid);
-			TrimString(sigid);
-			if (MatchRegex(numbersRegex, sigid) > 0)
-			{
-				if (GetRegexSubString(numbersRegex, 0, idid, sizeof(idid)))
-				{
-					LogMessage("idid %s", idid);
-					// yep
-					ServerCommand("sm exts unload %s", idid);
-					ServerExecute();
-				}
-			}
-		}
-	}
-}
-*/
 Action LoadSigsegvForReal()
 {
 	ServerCommand("sm exts load sigsegv.ext.2.tf2");
@@ -700,6 +637,9 @@ public void GetPopFileName(char[] buffer, int length)
 
 public void SendWaveCompletionTime(int wave, int seconds)
 {
+	// In a local build of the economy, the users will not be able to update
+	// their wave progress or see tour loot.
+#if !defined LOCAL_BUILD
 	char sPopFile[256];
 	GetPopFileName(sPopFile, sizeof(sPopFile));
 
@@ -754,8 +694,12 @@ public void SendWaveCompletionTime(int wave, int seconds)
 	hPack.Reset();
 
 	Steam_SendHTTPRequest(hRequest, SendWaveCompletionTime_Callback, hPack);
+#endif
 }
 
+// In a local build of the economy, the users will not be able to update
+// their wave progress or see tour loot.
+#if !defined LOCAL_BUILD
 public void SendWaveCompletionTime_Callback(HTTPRequestHandle request, bool success, HTTPStatusCode code, any pack)
 {
 	DataPack hPack = pack;
@@ -875,6 +819,7 @@ public Action cLoot(int client, int args)
 	OpenLastTourLootPage(client);
 	return Plugin_Handled;
 }
+#endif
 
 //-------------------------------------------------------------------
 // Purpose: Returns true if client is a not a bot and also has a
@@ -951,13 +896,6 @@ public void RF_UpdateSteamGameName(any data)
 	}
 }
 
-/*public Action MvM_RestartWave()
-{
-	int iResource = FindEntityByClassname(-1, "tf_objective_resource");
-	int iCurrentWave = GetEntProp(iResource, Prop_Send, "m_nMannVsMachineWaveCount");
-	MvM_JumpToWave(iCurrentWave);
-}*/
-
 public Action MvM_RestartGame()
 {
 	char sPopFile[256];
@@ -965,20 +903,6 @@ public Action MvM_RestartGame()
 
 	ServerCommand("tf_mvm_popfile %s", sPopFile);
 }
-
-/* Please don't use this awful way of jumping to a wave. Instead do: https://gitlab.com/creators_tf/servers/-/blob/master/tf/addons/sourcemod/scripting/mvmadmin.sp#L621
-public void MvM_JumpToWave(int wave)
-{
-	int iOldFlags = GetCommandFlags("tf_mvm_jump_to_wave");
-	SetCommandFlags("tf_mvm_jump_to_wave", iOldFlags & ~FCVAR_CHEAT);
-	ServerCommand("tf_mvm_jump_to_wave %d", wave);
-	CreateTimer(0.25, Timer_ResetJumpToWaveCmdFlags, iOldFlags, 0);
-}
-
-public Action Timer_ResetJumpToWaveCmdFlags(Handle timer, any flags)
-{
-	SetCommandFlags("tf_mvm_jump_to_wave", flags);
-}*/
 
 public Action Timer_RestartMvMGame(Handle timer, any data)
 {

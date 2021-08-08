@@ -4,6 +4,16 @@
 //
 //=========================================================================//
 
+// If we are in a local build, we're not going to bother with
+// using API keys and instead just read from the website normally.
+// This means, however, that people using a "local build" cannot
+// write information to the database without using an API key, which
+// would need to be provided by a Creators.TF Administrator.
+
+// If this field is not defined, an economy configruation file
+// will be used to grab a base economy URL and an API key.
+#undef LOCAL_BUILD
+
 //======================================//
 // Schema
 //======================================//

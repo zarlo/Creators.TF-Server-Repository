@@ -39,7 +39,12 @@ ArrayList m_hStatDefinitions;
 public void OnPluginStart()
 {
 	RegServerCmd("ce_stats_dump", cDump, "");
+
+	// In a local build of the economy, the users wont have their stats
+	// updated on the database using HTTP requests.
+#if !defined LOCAL_BUILD
 	CreateTimer(BACKEND_STAT_UPDATE_INTERVAL, Timer_StatUpdateInterval, _, TIMER_REPEAT);
+#endif
 
 }
 
@@ -102,100 +107,6 @@ public Action cDump(int args)
 	LogMessage("CEPlayerStat Count: %d", m_hStatDefinitions.Length);
 }
 
-/*
-public void RequestClientContractProgress(int client)
-{
-	if (!IsClientReady(client))return;
-	if (m_bWaitingForProgress[client])return;
-
-	char sSteamID64[64];
-	GetClientAuthId(client, AuthId_SteamID64, sSteamID64, sizeof(sSteamID64));
-
-	HTTPRequestHandle httpRequest = CEconHTTP_CreateBaseHTTPRequest("/api/IEconomySDK/UserQuests", HTTPMethod_GET);
-	Steam_SetHTTPRequestGetOrPostParameter(httpRequest, "get", "progress");
-	Steam_SetHTTPRequestGetOrPostParameter(httpRequest, "steamid", sSteamID64);
-
-	Steam_SendHTTPRequest(httpRequest, RequestClientContractProgress_Callback, client);
-	return;
-}
-
-public void RequestClientContractProgress_Callback(HTTPRequestHandle request, bool success, HTTPStatusCode code, any client)
-{
-	// PrintToChatAll("RequestClientContractProgress_Callback() %d", code);
-	// We are not processing bots.
-	if (!IsClientReady(client))return;
-
-	// If request was not succesful, return.
-	if (!success)return;
-	if (code != HTTPStatusCode_OK)return;
-
-	// Getting response size.
-	int size = Steam_GetHTTPResponseBodySize(request);
-	if(size < 0)return;
-
-	char[] content = new char[size + 1];
-
-	// Getting actual response content body.
-	Steam_GetHTTPResponseBodyData(request, content, size);
-	Steam_ReleaseHTTPRequest(request);
-
-	KeyValues Response = new KeyValues("Response");
-
-	// ======================== //
-	// Parsing loadout response.
-
-	// If we fail to import content return.
-	if (!Response.ImportFromString(content))return;
-
-	delete m_hProgress[client];
-	m_hProgress[client] = new ArrayList(sizeof(CEQuestClientProgress));
-
-	int iActive = Response.GetNum("activated");
-
-	if(Response.JumpToKey("progress"))
-	{
-		if(Response.GotoFirstSubKey())
-		{
-			do {
-
-				char sSectionName[11];
-				Response.GetSectionName(sSectionName, sizeof(sSectionName));
-
-				int iIndex = StringToInt(sSectionName);
-
-				CEQuestClientProgress xProgress;
-				xProgress.m_iClient = client;
-				xProgress.m_iQuest = iIndex;
-
-				if(Response.GotoFirstSubKey(false))
-				{
-					do {
-
-						Response.GetSectionName(sSectionName, sizeof(sSectionName));
-						iIndex = StringToInt(sSectionName);
-
-						if (iIndex < 0 || iIndex >= MAX_OBJECTIVES)continue;
-						xProgress.m_iProgress[iIndex] = Response.GetNum(NULL_STRING);
-
-					} while (Response.GotoNextKey(false));
-
-					Response.GoBack();
-				}
-
-				UpdateClientQuestProgress(client, xProgress);
-
-			} while (Response.GotoNextKey());
-		}
-	}
-
-	SetClientActiveQuestByIndex(client, iActive);
-
-	// TODO: Make a forward call.
-
-	delete Response;
-}
-*/
-
 public bool IsClientReady(int client)
 {
 	if (!IsClientValid(client))return false;
@@ -210,87 +121,6 @@ public bool IsClientValid(int client)
 	if (!IsClientAuthorized(client))return false;
 	return true;
 }
-
-public void OnLateLoad()
-{
-	for (int i = 1; i <= MaxClients; i++)
-	{
-		if (!IsClientReady(i))continue;
-
-		PrepareClientData(i);
-	}
-}
-
-public void OnClientPostAdminCheck(int client)
-{
-	FlushClientData(client);
-	PrepareClientData(client);
-}
-
-public void OnClientDisconnect(int client)
-{
-	FlushClientData(client);
-}
-
-public void PrepareClientData(int client)
-{
-	// RequestClientContractProgress(client);
-}
-
-public void FlushClientData(int client)
-{
-	// delete m_hProgress[client];
-}
-
-/*
-public void UpdateClientQuestProgress(int client, CEQuestClientProgress xProgress)
-{
-	if(m_hProgress[client] == null)
-	{
-		m_hProgress[client] = new ArrayList(sizeof(CEQuestClientProgress));
-	}
-
-	for (int i = 0; i < m_hProgress[client].Length; i++)
-	{
-		CEQuestClientProgress xStruct;
-		m_hProgress[client].GetArray(i, xStruct);
-
-		if(xStruct.m_iQuest == xProgress.m_iQuest)
-		{
-			m_hProgress[client].Erase(i);
-			i--;
-		}
-	}
-
-	m_hProgress[client].PushArray(xProgress);
-}
-
-public bool GetClientQuestProgress(int client, CEQuestDefinition xQuest, CEQuestClientProgress xBuffer)
-{
-	xBuffer.m_iClient = client;
-	xBuffer.m_iQuest = xQuest.m_iIndex;
-
-	if (m_hProgress[client] == null)return false;
-
-	for (int i = 0; i < m_hProgress[client].Length; i++)
-	{
-		CEQuestClientProgress xStruct;
-		m_hProgress[client].GetArray(i, xStruct);
-
-		if(xStruct.m_iQuest == xQuest.m_iIndex)
-		{
-			xBuffer = xStruct;
-			return true;
-		}
-	}
-
-	return false;
-}
-
-public bool IsClientProgressLoaded(int client)
-{
-	return m_hProgress[client] != null;
-}*/
 
 public void CEcon_OnClientEvent(int client, const char[] event, int add, int unique)
 {
@@ -308,7 +138,11 @@ public void IterateAndTickleClientStats(int client, const char[] event, int add,
 		
 		if(StrEqual(xStat.m_sEvent, event))
 		{	
+			// In a local build of the economy, the users wont have their stats
+			// updated on the database using HTTP requests.
+#if !defined LOCAL_BUILD
 			AddQuestUpdateBatch(client, xStat.m_iIndex, add);
+#endif
 		}
 	}
 }
@@ -328,13 +162,16 @@ public int MIN(int iNum1, int iNum2)
 	return iNum1;
 }
 
+// In a local build of the economy, the users wont have their stats
+// updated on the database using HTTP requests.
+#if !defined LOCAL_BUILD
+
 enum struct CEStatUpdateBatch
 {
 	char m_sSteamID[64];
 	int m_iIndex;
 	int m_iDelta;
 }
-
 ArrayList m_StatUpdateBatches;
 
 public void AddQuestUpdateBatch(int client, int stat, int points)
@@ -414,11 +251,17 @@ public void StatUpdate_Callback(HTTPRequestHandle request, bool success, HTTPSta
 
 	// Cool, we've updated everything.
 }
+#endif
 
 public Action teamplay_round_win(Event event, const char[] name, bool dontBroadcast)
 {
 	// Update progress immediately when round ends.
 	// Players usually will look up their progress after they've done playing the game.
 	// And it'll be frustrating to see their progress not being updated immediately.
+	
+	// In a local build of the economy, the users wont have their stats
+	// updated on the database using HTTP requests.
+#if !defined LOCAL_BUILD
 	CreateTimer(0.1, Timer_StatUpdateInterval);
+#endif
 }
