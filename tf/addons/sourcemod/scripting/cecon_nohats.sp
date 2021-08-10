@@ -8,8 +8,7 @@
 #pragma semicolon 1
 #pragma newdecls required
 
-
-bool bHatsOff[MAXPLAYERS+1];
+bool bShowHats[MAXPLAYERS+1] = true;
 Handle ctfHatsCookie;
 
 public Plugin myinfo =
@@ -17,7 +16,7 @@ public Plugin myinfo =
     name        = "CreatorsTF Hat Removal",
     author      = "Jaro 'Monkeys' Vanderheijden, steph&",
     description = "Gives players the choice to locally toggle CreatorsTF hat visibility",
-    version     = "0.0.6",
+    version     = "1.0.0b",
     url         = ""
 };
 
@@ -29,55 +28,72 @@ public void OnPluginStart()
     RegConsoleCmd("sm_togglehats",      ToggleCTFHat, "Locally toggles Creators.TF custom cosmetic visibility");
     RegConsoleCmd("sm_ctfhats",         ToggleCTFHat, "Locally toggles Creators.TF custom cosmetic visibility");
     RegConsoleCmd("sm_nohats",          ToggleCTFHat, "Locally toggles Creators.TF custom cosmetic visibility");
+    RegConsoleCmd("sm_hats",            ToggleCTFHat, "Locally toggles Creators.TF custom cosmetic visibility");
 
-    ctfHatsCookie = RegClientCookie("ctfHatsTransmitCookie_", "Cookie for determining if Creators.TF hats are visible to player or not.", CookieAccess_Public);
+    ctfHatsCookie = RegClientCookie("CTF_ShowHats__", ".", CookieAccess_Protected);
+
+    // loop thru clients
+    for (int i = 1; i <= MaxClients; i++)
+    {
+        if (!AreClientCookiesCached(i))
+        {
+            continue;
+        }
+
+        // run OCCC for lateloading
+        OnClientCookiesCached(i);
+    }
 }
 
 public void OnClientCookiesCached(int client)
 {
-    char sValue[8];
-    // Gets stored value for specific client and stores in sValue
-    GetClientCookie(client, ctfHatsCookie, sValue, sizeof(sValue));
-    // If the string is null, it'll be set to false - we want hats defaulted on, and the bool determines if hats are OFF
-    // 0 = on, 1 = off
-    if (!sValue[0])
+    char cookievalue[8];
+    // get cookie value from db
+    GetClientCookie(client, ctfHatsCookie, cookievalue, sizeof(cookievalue));
+    // if we dont have a cookie value set it to 1
+    if (!cookievalue[0])
     {
-        // set string to 0
-        sValue = "0";
-        // save to cookie
-        SetClientCookie(client, ctfHatsCookie, sValue);
-        // convert cookie value to string and save it to the plugin bool
-        bHatsOff[client] = (StringToInt(sValue) != 0);
+        cookievalue = "1";
     }
-    else
-    {
-        // convert cookie value to string
-        bHatsOff[client] = (StringToInt(sValue) != 0);
-    }
+
+    // StringToIntToBool essentially, the bang bang double negates it, once to an inverted bool, twice to a proper bool
+    bShowHats[client] = !!StringToInt(cookievalue);
 }
 
+// when a client runs sm_nohats etc
 public Action ToggleCTFHat(int client, int args)
 {
-    // toggle
-    bHatsOff[client] = !bHatsOff[client];
-
-    if (bHatsOff[client])
+    // make sure we yell at the client if we dont have a connection to the db
+    bool nosave;
+    if (!AreClientCookiesCached(client))
     {
-        PrintToChat(client, "\x01* Toggled Creators.TF custom cosmetics \x07FF0000OFF\x01! Be warned, this may cause invisible heads or feet for some cosmetics!");
+        nosave = true;
+    }
+
+    // toggle
+    bShowHats[client] = !bShowHats[client];
+
+    char cookievalue[8];
+    if (bShowHats[client])
+    {
+        PrintToChat(client, "\x01* Toggled Creators.TF custom cosmetics \x03ON\x01!");
+        cookievalue = "1";
     }
     else
     {
-        PrintToChat(client, "\x01* Toggled Creators.TF custom cosmetics \x03ON\x01!");
+        PrintToChat(client, "\x01* Toggled Creators.TF custom cosmetics \x07FF0000OFF\x01! Be warned, this may cause invisible heads or feet for some cosmetics!");
+        cookievalue = "0";
     }
 
-    if (AreClientCookiesCached(client))
+    if (nosave)
     {
-        char sValue[8];
-        GetClientCookie(client, ctfHatsCookie, sValue, sizeof(sValue));
-        // convert cookie value to string
-        IntToString(bHatsOff[client], sValue, sizeof(sValue));
+        PrintToChat(client, "\x01* Your settings will not be saved due to our cookie server being down.");
+        return Plugin_Handled;
+    }
+    else
+    {
         // save to cookie
-        SetClientCookie(client, ctfHatsCookie, sValue);
+        SetClientCookie(client, ctfHatsCookie, cookievalue);
     }
 
     return Plugin_Handled;
@@ -85,42 +101,31 @@ public Action ToggleCTFHat(int client, int args)
 
 public void OnClientDisconnect(int client)
 {
-    bHatsOff[client] = false;
+    bShowHats[client] = false;
 }
 
-public void OnEntityCreated(int entity, const char[] classname)
+public void CEconItems_OnItemIsEquipped(int client, int entity, CEItem item, const char[] type)
 {
-    if (StrEqual(classname, "tf_wearable"))
+    // client equipped a ctf hat, hook it
+    if (StrEqual(type, "cosmetic"))
     {
-        CreateTimer(0.1, timerHookDelay, entity);
+        RequestFrame(HookDelay, entity);
     }
 }
 
-public Action timerHookDelay(Handle Timer, int entity)
+void HookDelay(int entity)
 {
-    if (IsValidEdict(entity) && IsValidEntity(entity))
-    {
-        char sClass[32];
-        GetEntityNetClass(entity, sClass, sizeof(sClass));
-        if (StrContains(sClass, "CTFWearable") != -1)
-        {
-            if (CEconItems_IsEntityCustomEconItem(entity))
-            {
-                SDKHook(entity, SDKHook_SetTransmit, SetTransmitHat);
-            }
-        }
-    }
+    SDKHook(entity, SDKHook_SetTransmit, SetTransmitHat);
 }
 
 public Action SetTransmitHat(int entity, int client)
 {
-    //Transmit when plugin's off OR if the player didn't turn it on
-    if (!bHatsOff[client])
+    if (bShowHats[client])
     {
         return Plugin_Continue;
     }
     else
     {
-        return Plugin_Handled;
+        return Plugin_Stop;
     }
 }
