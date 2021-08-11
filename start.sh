@@ -4,8 +4,10 @@
 source scripts/helpers.sh
 
 # a2s shennanigans
-export STEAM_GAMESERVER_RATE_LIMIT_200MS=25
+# https://steamcommunity.com/discussions/forum/14/2974028351344359625/
+export STEAM_GAMESERVER_RATE_LIMIT_200MS=10
 export STEAM_GAMESERVER_PACKET_HANDLER_NO_IPC=1
+export STEAM_GAMESERVER_A2S_INFO_REQUIRE_CHALLENGE=1
 
 # update server if it needs it
 ./steamcmd/steamcmd.sh +login anonymous +force_install_dir ${PWD} +app_update 232250 +exit
