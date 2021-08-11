@@ -30,6 +30,8 @@ gitguardian:
   stage: gitguardian
   script: ggshield scan ci
   needs: []
+  tags:
+  - worker
   only:
   - master
 
