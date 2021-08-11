@@ -1,6 +1,7 @@
 stages:
   - fastdl
   - compile_plugins
+  - gitguardian
   - github
   - genyml
   - trigger
@@ -24,10 +25,18 @@ compile_plugins:
   tags:
   - worker
 
+gitguardian:
+  image: gitguardian/ggshield:latest
+  stage: gitguardian
+  script: ggshield scan ci
+  needs: []
+  only:
+  - master
+
 github:
   stage: github
   script: ./scripts/push-to-github.sh
-  needs: []
+  needs: [gitguardian]
   tags:
   - backend
   only:
