@@ -31,7 +31,7 @@ gitguardian:
   script: ggshield scan ci
   needs: []
   tags:
-  - worker
+  - worker-docker
   only:
   - master
 
