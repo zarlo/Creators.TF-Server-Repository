@@ -962,7 +962,10 @@ bool IsUserLagging(int userid, bool checkcmdnum = true, bool checktickcount = tr
         )
     )
     {
-        timeSinceLagSpikeFor[Cl] = engineTime[Cl][0];
+        if (!checktickcount)
+        {
+            timeSinceLagSpikeFor[Cl] = engineTime[Cl][0];
+        }
         return true;
     }
     return false;
