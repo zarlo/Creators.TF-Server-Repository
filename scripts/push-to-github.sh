@@ -3,12 +3,14 @@ source scripts/helpers.sh
 
 # written by sappho.io
 
+# use tmpfs
+tmp="/dev/shm"
+
 bootstrap ()
 {
-    # bare --mirror gameserver repo ( uses a ssh key, don't even try it )
-    # git clone git@gitlab.com:creators_tf/gameservers/servers.git -b master --single-branch ~server/gameservers --bare
+    git clone git@gitlab.com:creators_tf/gameservers/servers.git -b master --single-branch ${tmp}/gameservers --bare --depth 50
 
-    cd /home/server/gameservers/ || exit 255
+    cd /dev/shm || exit 255
 
     ok "-> fetching master"
     git fetch origin master:master -f
@@ -60,7 +62,7 @@ stripsecrets ()
         echo 'regex:(?m)(\bhttp.*(@|/api/webhook).*\b)==>***REPLACED PRIVATE URL***';
     } >> regex.txt
 
-    git filter-repo --replace-text regex.txt --force --debug
+    git filter-repo --replace-text regex.txt --force
 }
 
 push ()
@@ -72,7 +74,7 @@ push ()
 
     # donezo
     ok "-> pushing to gh"
-    git push origin-gh --force --progress --verbose --verbose --verbose
+    git push origin-gh --progress --verbose --verbose --verbose
 }
 
 bootstrap
