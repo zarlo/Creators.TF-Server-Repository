@@ -43,7 +43,8 @@ github:
   - backend
   only:
   - master
-
+  variables:
+    GIT_STRATEGY: none
 # Secret Detection
 #include:
 #  - template: Secret-Detection.gitlab-ci.yml
@@ -79,5 +80,6 @@ trigger-ci:
   - master
   - staging
   - mvm
-
+  variables:
+    GIT_STRATEGY: none
 
