@@ -80,3 +80,6 @@ STRTA: or Scripts To Rule Them All:
 
 ## Creating a Merge/Pull Request
 If you have something to contribute, please, open a pull request! Make sure your PR tries to solve/improve one thing at a time and isn't messy. Pull requests should always have a specific goal to accomplish. Please do NOT make a pull request or change that only seeks to change code styling or do "housekeeping" as these will be denied and closed. If you have a bug report or a suggestion, open an issue! Try to use the templates and give good information.
+
+## Licensing
+This repository is dual licensed under the GPLv3 license, available at `LICENSES/GPLv3.txt`, and the MIT license, available at `LICENSES/MIT.txt`. Contributions to this repository fall under the more permissive license, AKA MIT.
