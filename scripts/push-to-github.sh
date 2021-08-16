@@ -10,7 +10,7 @@ bootstrap ()
 {
     git clone git@gitlab.com:creators_tf/gameservers/servers.git -b master --single-branch ${tmp}/gameservers --bare --depth 50
 
-    cd /dev/shm || exit 255
+    cd ${tmp}/gameservers || exit 255
 
     ok "-> fetching master"
     git fetch origin master:master -f
