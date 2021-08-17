@@ -171,7 +171,7 @@ push ()
 {
     # donezo
     ok "-> pushing to gh"
-    git push gh_origin stripped-master:master --progress
+    git push gh_origin stripped-master:master --force --progress
 }
 
 bootstrap
