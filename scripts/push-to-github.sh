@@ -21,7 +21,7 @@ bootstrap ()
         info "-> Cloning repo!"
         git clone ${gl_origin} \
         -b master --single-branch ${tmp}/gs \
-        --depth 50 --progress --verbose --verbose --verbose
+        --depth 50 --progress --verbose
         cd ${tmp}/gs || exit 255
         info "-> moving master to gl_master"
         git checkout -b gl_master
@@ -49,19 +49,19 @@ bootstrap ()
     important "-> fetching gh"
 
     info "-> fetching gh origin"
-    git pull -X theirs gh_origin master:gh_master --no-ff -f --no-edit --progress --verbose
+    git pull -X theirs gh_origin master:gh_master --no-ff -f --no-edit --progress
 
 
     #
     important "-> fetching gl"
 
     info "-> fetching gl origin"
-    git pull -X theirs gl_origin master:gl_master --no-ff -f --no-edit --progress --verbose
+    git pull -X theirs gl_origin master:gl_master --no-ff -f --no-edit --progress
 
 
     git checkout gh-master
     git checkout -b stripped-master
-    git merge -X theirs gl_master --no-edit
+    git merge -X theirs gl_master --no-edit --no-ff
 
     ok "bootstrapped!"
 }
@@ -88,14 +88,41 @@ stripchunkyblobs ()
     ok "-> [gfr] stripped big blobs"
 }
 
-movebinaries ()
+
+# we don't want to scan binaries or map files
+movebinaries_out ()
 {
-    echo a
-    # temporarily rid of files that we don't give a shit abt
-    #find . -type f -name "*.bsp" -exec rm -fv {} +;
-    #find . -type f -name "*.so"  -exec rm -fv {} +;
-    #find . -type f -name "*.dll" -exec rm -fv {} +;
-    #find . -type f -name "*.smx" -exec rm -fv {} +;
+    info "-> moving binaries out of repo to prevent scanning"
+
+    rsync -zarv \
+        --include="*/" \
+        --include="*.bsp" \
+        --include="*.smx" \
+        --include="*.dll" \
+        --include="*.so" \
+        --exclude="*" \
+        --remove-source-files \
+        "${tmp}/gs/" "${tmp}/gs_bins/"
+
+    ok "-> done moving binaries"
+
+}
+
+movebinaries_in ()
+{
+    info "-> moving binaries back into repo"
+
+    rsync -zarv \
+        --include="*/" \
+        --include="*.bsp" \
+        --include="*.smx" \
+        --include="*.dll" \
+        --include="*.so" \
+        --exclude="*" \
+        --remove-source-files \
+        "${tmp}/gs_bins/" "${tmp}/gs/"
+
+    ok "-> done moving binaries"
 }
 
 stripfiles ()
@@ -144,12 +171,14 @@ push ()
 {
     # donezo
     ok "-> pushing to gh"
-    git push gh_origin stripped-master:master --progress --verbose --verbose --verbose
+    git push gh_origin stripped-master:master --progress --verbose 
 }
 
 bootstrap
 stripchunkyblobs
+movebinaries_out
 stripfiles
 stripsecrets
+movebinaries_in
 sync
 push
