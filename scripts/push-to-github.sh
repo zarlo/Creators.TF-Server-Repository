@@ -49,24 +49,15 @@ bootstrap ()
     important "-> fetching gh"
 
     info "-> fetching gh origin"
-    git pull -X theirs gh_origin master:gh_master -f --no-edit
+    git pull -X theirs gh_origin master:gh_master -f --no-edit --progress --verbose
 
 
     #
     important "-> fetching gl"
 
     info "-> fetching gl origin"
-    git pull -X theirs gl_origin master:gl_master -f --no-edit
+    git pull -X theirs gl_origin master:gl_master -f --no-edit --progress --verbose
 
-
-    #
-    important "-> fetching gl"
-
-    info "-> deleting master"
-    git branch -D gl_master
-
-    info "-> fetching gl origin"
-    git fetch gl_origin master:gl_master -f
 
     git checkout gh-master
     git checkout -b stripped-master
