@@ -1,29 +1,12 @@
 stages:
-  - fastdl
-  - compile_plugins
   - gitguardian
   - github
+  - compile_plugins
   - genyml
   - trigger
-#  - test
-
-fastdl:
-  stage: fastdl
-  script: ./scripts/0-fastdl.sh
-  needs: []
-  tags:
   - fastdl
-  only:
-  - master
-  - staging
-  - mvm
 
-compile_plugins:
-  stage: compile_plugins
-  script: ./scripts/2-build.sh
-  needs: []
-  tags:
-  - worker
+#  - test
 
 gitguardian:
   image: gitguardian/ggshield:latest
@@ -45,6 +28,8 @@ github:
   - master
   variables:
     GIT_STRATEGY: none
+
+
 # Secret Detection
 #include:
 #  - template: Secret-Detection.gitlab-ci.yml
@@ -53,6 +38,13 @@ github:
 #  tags:
 #    - sast-runner
 
+
+compile_plugins:
+  stage: compile_plugins
+  script: ./scripts/2-build.sh
+  needs: []
+  tags:
+  - worker
 
 # this generates our yml so we don't run on more servers than needed
 generate-yml:
@@ -80,6 +72,16 @@ trigger-ci:
   - master
   - staging
   - mvm
-  variables:
-    GIT_STRATEGY: none
+
+
+fastdl:
+  stage: fastdl
+  script: ./scripts/0-fastdl.sh
+  needs: []
+  tags:
+  - fastdl
+  only:
+  - master
+  - staging
+  - mvm
 

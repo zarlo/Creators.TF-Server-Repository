@@ -21,7 +21,7 @@ bootstrap ()
         info "-> Cloning repo!"
         git clone ${gl_origin} \
         -b master --single-branch ${tmp}/gs \
-        --depth 50 --progress --verbose
+        --depth 50 --progress
         cd ${tmp}/gs || exit 255
         info "-> moving master to gl_master"
         git checkout -b gl_master
@@ -61,7 +61,7 @@ bootstrap ()
 
     git checkout gh-master
     git checkout -b stripped-master
-    git merge -X theirs gl_master --no-edit --no-ff
+    git merge -X theirs gl_master --no-edit --squash
 
     ok "bootstrapped!"
 }
@@ -171,7 +171,7 @@ push ()
 {
     # donezo
     ok "-> pushing to gh"
-    git push gh_origin stripped-master:master --progress --verbose 
+    git push gh_origin stripped-master:master --force --progress
 }
 
 bootstrap
