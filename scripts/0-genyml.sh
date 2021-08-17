@@ -67,13 +67,17 @@ do
         # only do the needs stuff if we're not on the first stage
         if (( i > 0 )); then
         # get the previous str of the jobnames array
-        echo "  needs:"
-        echo "    - job: ${jobnames[i-1]}_${tag}"
+            echo "  needs:"
+            echo "    - job: ${jobnames[i-1]}_${tag}"
         fi
         # Tags
         echo "  tags:"
         echo "    - ${tag}"
+        if [[ $jobname =~ build ]]; then
+            echo "  variables:"
+            echo "    GIT_STRATEGY: none"
+        fi
     done
-    echo ""
     ((i=i+1))
+    echo ""
 done
